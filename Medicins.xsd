@@ -10,20 +10,26 @@
 		</complexType>
 	</element>
 
-	<!-- substitution defenition -->
-	<element name="Medicine"   type="tns:MedicineType"   abstract="true"/>
+	<!-- substitutions -->
+	<element name="Medicine" type="tns:MedicineType" abstract="true"/>
 	<element name="Antibiotic" type="tns:AntibioticType" substitutionGroup="tns:Medicine"/>
-	<element name="Vitamin"    type="tns:VitaminType"    substitutionGroup="tns:Medicine"/>
-	<element name="Analgetic" type="tns:AnalgeticType"   substitutionGroup="tns:Medicine"/>
+	<element name="Vitamin" type="tns:VitaminType" substitutionGroup="tns:Medicine"/>
+	<element name="Analgetic" type="tns:AnalgeticType" substitutionGroup="tns:Medicine"/>
 
 	<!-- type defenition for abstract Medecine element -->
 	<complexType name="MedicineType">
 		<sequence>
-			<element name="Pharm"   type="string"/>
-			<element name="Analog"  type="string" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="Pharm" type="string"/>
+			<element name="Analog" type="string" minOccurs="0" maxOccurs="unbounded"/>
 			<element name="Version" type="tns:VersionType" minOccurs="1" maxOccurs="unbounded"/>
 		</sequence>
-		<attribute name="name" type="ID" use="required"/>
+		<attribute name="name" use="required">
+			<simpleType>
+				<restriction base="ID">
+					<whiteSpace value="collapse"/>
+				</restriction>
+			</simpleType>
+		</attribute>
 	</complexType>
 
 	<!-- type defenition for Antibiotic element -->
@@ -39,7 +45,7 @@
 	<complexType name="VitaminType">
 		<complexContent>
 			<extension base="tns:MedicineType">
-				<attribute name="type">
+				<attribute name="type" use="optional">
 					<restriction base="string">
 						<enumeration value="water-soluble"/>
 						<enumeration value="fat-soluble"/>
@@ -53,7 +59,7 @@
 	<complexType name="AnalgeticType">
 		<complexContent>
 			<extension base="tns:MedicineType">
-				<attribute name="type">
+				<attribute name="type" use="required">
 					<restriction base="string">
 						<enumeration value="non-narcotic"/>
 						<enumeration value="narcotic"/>
@@ -85,14 +91,14 @@
 	<!-- type defenition for Certificate element -->
 	<complexType name="CertificateType">
 		<sequence>
-			<element name="RegistredBy"      type="string"/> <!-- IMPLEMENT MIN/MAX INCLUSIVE -->
+			<element name="RegistredBy" type="string"/> <!-- IMPLEMENT MIN/MAX INCLUSIVE -->
 			<element name="RegistrationDate" type="date"/>   <!-- IMPLEMENT MIN/MAX INCLUSIVE -->
-			<element name="ExpireDate"       type="date"/>   <!-- IMPLEMENT MIN/MAX INCLUSIVE -->
+			<element name="ExpireDate" type="date"/>   <!-- IMPLEMENT MIN/MAX INCLUSIVE -->
 		</sequence>
 		<attribute name="RegistrationID" use="required">
 			<simpleType>
 				<restriction base="ID">
-					<pattern value="(\\d){3}-([A-Za-z0-9]){5}"/>
+					<pattern value="(\\d){3}-([A-Za-z0-9]){5}"/> <!-- TRY TO IMPROVE -->
 				</restriction>
 			</simpleType>
 		</attribute>
@@ -104,7 +110,7 @@
 			<element name="Amount" type="positiveInteger"/>
 			<element name="Price"  type="double"/>
 		</sequence>
-		<attribute name="size">
+		<attribute name="size" use="optional">
 			<simpleType>
 				<restriction base="string">
 					<enumeration value="small"></enumeration>
