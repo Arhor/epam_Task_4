@@ -1,103 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/Medicins" xmlns:tns="http://www.example.com/Medicins">
-    
-    <!-- TRANSLATE TO NORMAL ENGLISH -->
-    
-    <!-- XML document structure -->
-    <element name="Medicins">
-        <complexType>
-            <sequence>
-                <element ref="tns:Medicine" maxOccurs="unbounded"/>
-            </sequence>
-        </complexType>
-    </element>
 
-    <!-- substitution defenition -->
-    <element name="Medicine"   type="tns:MedicineType"   abstract="true"/>
-    <element name="Antibiotik" type="tns:AntibiotikType" substitutionGroup="tns:Medicine"/>
-    <element name="Vitamin"    type="tns:VitaminType"    substitutionGroup="tns:Medicine"/>
-    <element name="Painkiller" type="tns:PainkillerType" substitutionGroup="tns:Medicine"/>
+	<!-- XML document structure -->
+	<element name="Medicins">
+		<complexType>
+			<sequence>
+				<element ref="tns:Medicine" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
 
-    <!-- type defenition for abstract Medecine element -->
-    <complexType name="MedicineType">
-        <attribute name="Name" type="ID" use="required"/>
-        <sequence>
-            <element name="Pharm"   type="string"/>
-            <element name="Analog"  type="string" use="optional"/>
-            <element name="Version" type="tns:VersionType" minOccurs="1" maxOccurs="unbounded"/>
-        </sequence>
-    </complexType>
+	<!-- substitution defenition -->
+	<element name="Medicine"   type="tns:MedicineType"   abstract="true"/>
+	<element name="Antibiotic" type="tns:AntibioticType" substitutionGroup="tns:Medicine"/>
+	<element name="Vitamin"    type="tns:VitaminType"    substitutionGroup="tns:Medicine"/>
+	<element name="Analgetic" type="tns:AnalgeticType"   substitutionGroup="tns:Medicine"/>
 
-    <!-- type defenition for Antibiotik element -->
-    <complexType name="AntibiotikType">
-        <complexContent>
-            <extention base="tns:MedicineType">
-                <sequence>
-                    <element name="Recipie" type="boolean" default="true"/>
-                </sequence>
-            </extention>
-        </complexContent>
-    </complexType>
+	<!-- type defenition for abstract Medecine element -->
+	<complexType name="MedicineType">
+		<sequence>
+			<element name="Pharm"   type="string"/>
+			<element name="Analog"  type="string" minOccurs="0" maxOccurs="unbounded"/>
+			<element name="Version" type="tns:VersionType" minOccurs="1" maxOccurs="unbounded"/>
+		</sequence>
+		<attribute name="name" type="ID" use="required"/>
+	</complexType>
 
-    <!-- type defenition for Vitamin element -->
-    <complexType name="VitaminType"></complexType>
+	<!-- type defenition for Antibiotic element -->
+	<complexType name="AntibioticType">
+		<complexContent>
+			<extension base="tns:MedicineType">
+				 <attribute name="recipe" type="boolean" default="true"/>
+			</extension>
+		</complexContent>
+	</complexType>
 
-    <!-- type defenition for Painkiller element -->
-    <complexType name="PainkillerType"></complexType>
+	<!-- type defenition for Vitamin element -->
+	<complexType name="VitaminType">
+		<complexContent>
+			<extension base="tns:MedicineType">
+				<attribute name="type">
+					<restriction base="string">
+						<enumeration value="water-soluble"/>
+						<enumeration value="fat-soluble"/>
+					</restriction>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
 
-    <!-- type defenition for Version element -->
-    <complexType name="VersionType">
-        <attribute name="form" use="required">
-            <simpleType>
-                <restriction base="string">
-                    <enumeration value="tabs"  />
-                    <enumeration value="pills" />
-                    <enumeration value="powder"/>
-                    <enumeration value="liquid"/>
-                </restriction>
-            </simpleType>
-        </attribute>
-        <sequence>
-            <element name="Certificate" type="tns:CertificateType"/>
-            <element name="Package"     type="tns:PackageType"/>
-            <element name="Dosage"      type="tns:DosageType"/>
-        </sequence>
-    </complexType>
+	<!-- type defenition for Analgetic element -->
+	<complexType name="AnalgeticType">
+		<complexContent>
+			<extension base="tns:MedicineType">
+				<attribute name="type">
+					<restriction base="string">
+						<enumeration value="non-narcotic"/>
+						<enumeration value="narcotic"/>
+					</restriction>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
 
-    <!-- type defenition for Certificate element -->
-    <complexType name="CertificateType">
-        <attribute name="RegistrationID" use="required">
-            <simpleType>
-                <restriction base="ID">
-                    <pattern value="(\\d){3}-([A-Za-z0-9]){5}"/>
-                </restriction>
-            </simpleType>
-        </attribute>
-        <sequence>
-            <element name="RegistredBy"      type="string"/>
-            <element name="RegistrationDate" type="date"/>
-            <element name="ExpireDate"       type="date"/>
-        </sequence>
-    </complexType>
+	<!-- type defenition for Version element -->
+	<complexType name="VersionType">
+		<sequence>
+			<element name="Certificate" type="tns:CertificateType"/>
+			<element name="Package"     type="tns:PackageType"/>
+			<element name="Dosage"      type="tns:DosageType"/>
+		</sequence>
+		<attribute name="form" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="tabs"  />
+					<enumeration value="pills" />
+					<enumeration value="powder"/>
+					<enumeration value="liquid"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
 
-    <!-- type defenition for Package element -->
-    <complexType name="PackageType">
-        <attribute name="size">
-            <simpleType>
-                <restriction base="string">
-                    <enumeration value="small"></enumeration>
-                    <enumeration value="medium"></enumeration>
-                    <enumeration value="large"></enumeration>
-                </restriction>
-            </simpleType>
-        </element>
-        <element name="Amount" type="positiveInteger"/>
-        <element name="Price"  type="double"/>
-    </complexType>
+	<!-- type defenition for Certificate element -->
+	<complexType name="CertificateType">
+		<sequence>
+			<element name="RegistredBy"      type="string"/> <!-- IMPLEMENT MIN/MAX INCLUSIVE -->
+			<element name="RegistrationDate" type="date"/>   <!-- IMPLEMENT MIN/MAX INCLUSIVE -->
+			<element name="ExpireDate"       type="date"/>   <!-- IMPLEMENT MIN/MAX INCLUSIVE -->
+		</sequence>
+		<attribute name="RegistrationID" use="required">
+			<simpleType>
+				<restriction base="ID">
+					<pattern value="(\\d){3}-([A-Za-z0-9]){5}"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
 
-    <!-- type defenition for Dosage element -->
-    <complexType name="DosageType">
-        <element name="Amount"    type="string"/>
-        <element name="Frequency" type="positiveInteger"/>
-    </complexType>
+	<!-- type defenition for Package element -->
+	<complexType name="PackageType">
+		<sequence>
+			<element name="Amount" type="positiveInteger"/>
+			<element name="Price"  type="double"/>
+		</sequence>
+		<attribute name="size">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="small"></enumeration>
+					<enumeration value="medium"></enumeration>
+					<enumeration value="large"></enumeration>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+	<!-- type defenition for Dosage element -->
+	<complexType name="DosageType">
+		<sequence>
+			<element name="Amount"    type="string"/>
+			<element name="Frequency" type="positiveInteger"/>
+		</sequence>
+	</complexType>
 </schema>
