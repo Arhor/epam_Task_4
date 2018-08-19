@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:Medicins xmlns:tns="http://www.example.com/Medicins"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.example.com/Medicins Medicins.xsd">
+
+    <Antibiotik name="Betadine">
+    	<Pharm>Legacy inc.</Pharm>
+    	<Analog>Striptodine</Analog>
+    	<Version form="tabs">
+    		<Certificate registrationID="123-9AA57">
+    			<RegistredBy>World Healthprotection Federation</RegistredBy>
+    			<RegistrationDate>13-07-2009</RegistrationDate>
+    			<ExpireDate>12-07-2019</ExpireDate>
+    		</Certificate>
+    		<Package size="small">
+    			<Amount>30</Amount>
+    			<Price>19.99</Price>
+    		</Package>
+    		<Package size="medium">
+    			<Amount>60</Amount>
+    			<Price>35.99</Price>
+    		</Package>
+    		<Package size="large">
+    			<Amount>90</Amount>
+    			<Price>61.99</Price>
+    		</Package>
+    		<Dosage>
+    			<Amount>15 mg.</Amount>
+    			<Frequency>3</Frequency>
+    		</Dosage>
+    	</Version>
+    </Antibiotik>
+
+</tns:Medicins>
