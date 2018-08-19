@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/Medicins" xmlns:tns="http://www.example.com/Medicins">
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/Medicins"
+        xmlns:tns="http://www.example.com/Medicins">
 
     <!-- XML document structure -->
     <element name="Medicins">
@@ -11,10 +13,10 @@
     </element>
 
     <!-- substitutions -->
-    <element name="Medicine" type="tns:MedicineType" abstract="true"/>
+    <element name="Medicine"   type="tns:MedicineType"   abstract="true"/>
     <element name="Antibiotic" type="tns:AntibioticType" substitutionGroup="tns:Medicine"/>
-    <element name="Vitamin" type="tns:VitaminType" substitutionGroup="tns:Medicine"/>
-    <element name="Analgetic" type="tns:AnalgeticType" substitutionGroup="tns:Medicine"/>
+    <element name="Vitamin"    type="tns:VitaminType"    substitutionGroup="tns:Medicine"/>
+    <element name="Analgetic"  type="tns:AnalgeticType"  substitutionGroup="tns:Medicine"/>
 
     <!-- type defenition for abstract Medecine element -->
     <complexType name="MedicineType">
