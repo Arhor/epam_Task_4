@@ -133,7 +133,7 @@
         </Version>
     </Antibiotic>
 
-    <Vitamin name="Riboflavin" CAS="83-88-5" DrugBank="DB00140" type="water-soluble">
+    <Vitamin name="Riboflavin" CAS="83-88-5" DrugBank="DB00140" solution="water">
         <Pharm>Alexander Wynter Blyth</Pharm>
         <Version tradeName="RIBOFLAVIN">
             <Producer>Skylab Pharmaceuticals Ltd.</Producer>
