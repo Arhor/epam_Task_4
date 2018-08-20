@@ -9,9 +9,11 @@ public abstract class Medicine {
 	private String name;
 	private String cas;
 	private String drugBank;
+	
 	public String getPharm() {
 		return pharm;
 	}
+	
 	public void setPharm(String pharm) {
 		this.pharm = pharm;
 	}

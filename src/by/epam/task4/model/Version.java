@@ -4,11 +4,12 @@ import java.util.ArrayList;
 
 public class Version {
 
+	private String tradeName;
 	private String producer;
 	private Form form;
 	private Certificate certificate;
 	private ArrayList<Pack> packs;
-	private Dosage doseage;
+	private Dosage dosage;
 	
 	public static enum Form {
 		TABLET, PILLS, POWDER, LIQUID
@@ -46,11 +47,19 @@ public class Version {
 		this.packs = packs;
 	}
 
-	public Dosage getDoseage() {
-		return doseage;
+	public Dosage getDosage() {
+		return dosage;
 	}
 
-	public void setDoseage(Dosage doseage) {
-		this.doseage = doseage;
+	public void setDosage(Dosage dosage) {
+		this.dosage = dosage;
+	}
+
+	public String getTradeName() {
+		return tradeName;
+	}
+
+	public void setTradeName(String tradeName) {
+		this.tradeName = tradeName;
 	}
 }
