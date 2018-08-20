@@ -4,11 +4,7 @@ public class Pack {
 
 	private int quantity;
 	private double price;
-	private Size size;
-	
-	public static enum Size {
-		SMALL, MEDIUM, LARGE
-	}
+	private String size;
 
 	public int getQuantity() {
 		return quantity;
@@ -26,11 +22,11 @@ public class Pack {
 		this.price = price;
 	}
 
-	public Size getSize() {
+	public String getSize() {
 		return size;
 	}
 
-	public void setSize(Size size) {
+	public void setSize(String size) {
 		this.size = size;
 	}
 }

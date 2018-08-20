@@ -2,17 +2,13 @@ package by.epam.task4.model;
 
 public class Vitamin extends Medicine {
 
-	private Solution solution;
-	
-	public static enum Solution {
-		WATER, FAT
-	}
+	private String solution;
 
-	public Solution getSolution() {
+	public String getSolution() {
 		return solution;
 	}
 
-	public void setSolution(Solution solution) {
+	public void setSolution(String solution) {
 		this.solution = solution;
 	}
 }

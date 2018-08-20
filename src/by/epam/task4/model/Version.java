@@ -6,14 +6,10 @@ public class Version {
 
 	private String tradeName;
 	private String producer;
-	private Form form;
+	private String form;
 	private Certificate certificate;
 	private ArrayList<Pack> packs;
 	private Dosage dosage;
-	
-	public static enum Form {
-		TABLET, PILLS, POWDER, LIQUID
-	}
 
 	public String getProducer() {
 		return producer;
@@ -23,11 +19,11 @@ public class Version {
 		this.producer = producer;
 	}
 
-	public Form getForm() {
+	public String getForm() {
 		return form;
 	}
 
-	public void setForm(Form form) {
+	public void setForm(String form) {
 		this.form = form;
 	}
 
