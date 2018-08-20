@@ -70,4 +70,88 @@
         </Version>
     </Antibiotic>
 
+    <Antibiotic name="Cefalexin" CAS="15686-71-2" DrugBank="DB00567" recipe="true">
+        <Pharm>Ajanta Pharma</Pharm>
+        <Version tradeName="Ceporex">
+            <Producer>GlaxoSmithKline</Producer>
+            <Form>pills</Form>
+            <Certificate>
+                <RegistredBy>EDQM</RegistredBy>
+                <RegistrationDate>2013-08-06</RegistrationDate>
+                <ExpireDate>2020-08-05</ExpireDate>
+            </Certificate>
+            <Package>
+                <Quantity>12</Quantity>
+                <Price>2.64</Price>
+            </Package>
+            <Dosage>
+                <Amount>250-500 mg</Amount>
+                <Frequency>2-3/day</Frequency>
+            </Dosage>
+        </Version>
+    </Antibiotic>
+
+    <Antibiotic name="Ciprofloxacin" CAS="85721-33-1" DrugBank="DB00537" recipe="false">
+        <Pharm>Kyorin Seiyaku Kabushiki Kaisha</Pharm>
+        <Version tradeName="Neofloxin">
+            <Producer>BEXIMCO PHARMACEUTICALS LTD.</Producer>
+            <Form>liquid</Form>
+            <Certificate>
+                <RegistredBy>Therapeutic Goods Administration (TGA)</RegistredBy>
+                <RegistrationDate>2011-08-27</RegistrationDate>
+                <ExpireDate>2022-08-26</ExpireDate>
+            </Certificate>
+            <Package>
+                <Quantity>250</Quantity>
+                <Price>178.35</Price>
+            </Package>
+            <Dosage>
+                <Amount>5 ml</Amount>
+                <Frequency>6/day</Frequency>
+            </Dosage>
+        </Version>
+    </Antibiotic>
+
+    <Antibiotic name="Metronidazole" CAS="443-48-1" DrugBank="DB00916" recipe="false">
+        <Pharm>Rhone-Poulenc</Pharm>
+        <Version tradeName="Flagyl">
+            <Producer>FAMAR LYON</Producer>
+            <Form>tablet</Form>
+            <Certificate>
+                <RegistredBy>CLSI </RegistredBy>
+                <RegistrationDate>2015-11-01</RegistrationDate>
+                <ExpireDate>2021-10-30</ExpireDate>
+            </Certificate>
+            <Package>
+                <Quantity>20</Quantity>
+                <Price>78.89</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 tablet</Amount>
+                <Frequency>2-3/day</Frequency>
+            </Dosage>
+        </Version>
+    </Antibiotic>
+
+    <Vitamin name="Riboflavin" CAS="83-88-5" DrugBank="DB00140" type="water-soluble">
+        <Pharm>Alexander Wynter Blyth</Pharm>
+        <Version tradeName="RIBOFLAVIN">
+            <Producer>Skylab Pharmaceuticals Ltd.</Producer>
+            <Form>pills</Form>
+            <Certificate>
+                <RegistredBy>Special Committee of Experts of the General Secretariat of Research and Technology</RegistredBy>
+                <RegistrationDate>2001-02-13</RegistrationDate>
+                <ExpireDate>2031-02-12</ExpireDate>
+            </Certificate>
+            <Package>
+                <Quantity>500</Quantity>
+                <Price>5.99</Price>
+            </Package>
+            <Dosage>
+                <Amount>1 pill</Amount>
+                <Frequency>2-4/day</Frequency>
+            </Dosage>
+        </Version>
+    </Vitamin>
+
 </Medicins>
