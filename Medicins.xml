@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:Medicins xmlns:tns="http://www.example.com/Medicins"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<Medicins xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://www.example.com/Medicins"
               xsi:schemaLocation="http://www.example.com/Medicins Medicins.xsd">
 
     <Antibiotic name="Amoxicillin" CAS="26787-78-0" DrugBank="DB01060" recipe="false">
         <Pharm>Beecham</Pharm>
         <Version tradeName="Amoxisar">
-            <Pharm>ОАО «Биохимик»</Pharm>
+            <Producer>ОАО «Биохимик»</Producer>
             <Form>powder</Form>
             <Certificate>
                 <RegistredBy>Министерство промышленности и торговли Российской Федерации</RegistredBy>
@@ -22,9 +22,8 @@
                 <Frequency>3/day</Frequency>
             </Dosage>
         </Version>
-
         <Version tradeName="Moxatag">
-            <Pharm>Vernalis terapeutic</Pharm>
+            <Producer>Vernalis terapeutic</Producer>
             <Form>tablet</Form>
             <Certificate>
                 <RegistredBy>Specialty Pharmacy Certification Board</RegistredBy>
@@ -49,7 +48,7 @@
     <Antibiotic name="Doxycycline" CAS="564-25-0" DrugBank="DB00254" recipe="true">
         <Pharm>American Cyanamid</Pharm>
         <Version tradeName="Doryx">
-            <Pharm>Mayne Pharma</Pharm>
+            <Producer>Mayne Pharma</Producer>
             <Form>pills</Form>
             <Certificate>
                 <RegistredBy>FDA</RegistredBy>
@@ -71,4 +70,4 @@
         </Version>
     </Antibiotic>
 
-</tns:Medicins>
+</Medicins>
