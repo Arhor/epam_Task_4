@@ -39,7 +39,7 @@
                 </restriction>
             </simpleType>
         </attribute>
-        <attribute name="DrugBank" use="required">
+        <attribute name="drug_bank" use="required">
             <simpleType>
                 <restriction base="string">
                     <pattern value="DB([0-9]{5})"/>
@@ -100,21 +100,21 @@
             <element name="Package" type="tns:PackageType" minOccurs="1" maxOccurs="unbounded"/>
             <element name="Dosage" type="tns:DosageType"/>
         </sequence>
-        <attribute name="tradeName" type="string" use="required"/>
+        <attribute name="trade_name" type="string" use="required"/>
     </complexType>
 
     <!-- type defenition for Certificate element -->
     <complexType name="CertificateType">
         <sequence>
-            <element name="RegistredBy" type="string"/>
-            <element name="RegistrationDate">
+            <element name="Registred_by" type="string"/>
+            <element name="Registration_date">
                 <simpleType>
                     <restriction base="date">
                         <minInclusive value="2000-01-01"/>
                     </restriction>
                 </simpleType>
             </element>
-            <element name="ExpireDate">
+            <element name="Expire_date">
                 <simpleType>
                     <restriction base="date">
                         <minInclusive value="2019-01-01"/>

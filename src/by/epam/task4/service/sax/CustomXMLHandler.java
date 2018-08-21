@@ -11,6 +11,7 @@ import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import by.epam.task4.model.*;
+import by.epam.task4.model.factory.MedicineFactory;
 
 public class CustomXMLHandler extends DefaultHandler {
 	
@@ -19,9 +20,10 @@ public class CustomXMLHandler extends DefaultHandler {
 	private static final Logger LOG = LogManager.getLogger(CustomXMLHandler.class);
 	
 	private Set<Medicine> medicins;
-	private EnumSet<Elements> withContent;
+	private EnumSet<ElementsEnum> withContent;
 	
-	private Elements currentElement;
+	private ElementsEnum currentElement;
+	private MedicineFactory mFactory;
 	
 	private Medicine currentMedicine;
 	private Version currentVersion;
@@ -31,7 +33,8 @@ public class CustomXMLHandler extends DefaultHandler {
 	
 	public CustomXMLHandler() {
 		medicins = new HashSet<Medicine>();
-		withContent = EnumSet.range(Elements.PHARM, Elements.FREQUENCY);
+		withContent = EnumSet.range(ElementsEnum.PHARM, ElementsEnum.FREQUENCY);
+		mFactory = new MedicineFactory();
 	}
 	
 	@Override
@@ -46,32 +49,57 @@ public class CustomXMLHandler extends DefaultHandler {
 	
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attrs) {
-		switch (localName) {
-			case "Antibiotic":
-				currentMedicine = new Antibiotic();
-				// TODO: implement MedicineFactory to create different medicines !!!
-				// TODO: set attributes
-			case "Vitamin":
-				currentMedicine = new Vitamin();
-				// TODO: set attributes
-			case "Analgetic":
-				currentMedicine = new Analgetic();
-				// TODO: set attributes
-			case "Pharm":
-			case "Version":
+		currentElement = ElementsEnum.valueOf(localName.toUpperCase());
+		switch (currentElement) {
+			case ANTIBIOTIC:
+			case VITAMIN:
+			case ANALGETIC:
+				currentMedicine = mFactory.getMedicine(currentElement);
+				for (int i = 0; i < attrs.getLength(); i++) {
+					AttributesEnum currentAttribute = AttributesEnum.valueOf(
+							attrs.getLocalName(i).toUpperCase());
+					String value = attrs.getValue(i);
+					switch (currentAttribute) {
+						case NAME:
+							currentMedicine.setName(value);
+							break;
+						case CAS:
+							currentMedicine.setCas(value);
+							break;
+						case DRUG_BANK:
+							currentMedicine.setDrugBank(value);
+							break;
+						case RECIPE:
+							((Antibiotic)currentMedicine).setRecipe(Boolean.parseBoolean(value));
+							break;
+						case SOLUTION:
+							((Vitamin)currentMedicine).setSolution(value);
+							break;
+						case NARCOTIC:
+							((Analgetic)currentMedicine).setNarcotic(Boolean.parseBoolean(value));
+						default:
+							break;
+					}
+				}
+				break;
+			case VERSION:
 				currentVersion = new Version();
-			case "Producer":
-			case "Form":
-			case "Certificate":
-			case "RegistredBy":
-			case "RegistrationDate":
-			case "ExpireDate":
-			case "Package":
-			case "Quantity":
-			case "Price":
-			case "Dosage":
-			case "Amount":
-			case "Frequency":
+				currentVersion.setTradeName(attrs.getValue(0));
+				break;
+			case PRODUCER:
+			case FORM:
+			case CERTIFICATE:
+			case REGISTRED_BY:
+			case REGISTRATION_DATE:
+			case EXPIRE_DATE:
+			case PACK:
+			case QUANTITY:
+			case PRICE:
+			case DOSAGE:
+			case AMOUNT:
+			case FREQUENCY:
+			default:
+				break; // STUB
 		}
 		
 //		String line = "<" + localName;
@@ -91,7 +119,14 @@ public class CustomXMLHandler extends DefaultHandler {
 	
 	@Override
 	public void characters(char[] ch, int start, int length) {
-		
+		String content = new String(ch, start, length).trim();
+		if (currentElement != null) {
+			switch (currentElement) {
+				case PHARM:
+					currentMedicine.setPharm(content);
+					break;
+			}
+		}
 		
 		
 //		LOG.info(new String(ch, start, length));

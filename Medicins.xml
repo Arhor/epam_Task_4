@@ -3,15 +3,15 @@
               xmlns="http://www.example.com/Medicins"
               xsi:schemaLocation="http://www.example.com/Medicins Medicins.xsd">
 
-    <Antibiotic name="Amoxicillin" CAS="26787-78-0" DrugBank="DB01060" recipe="false">
+    <Antibiotic name="Amoxicillin" CAS="26787-78-0" drug_bank="DB01060" recipe="false">
         <Pharm>Beecham</Pharm>
-        <Version tradeName="Amoxisar">
+        <Version trade_name="Amoxisar">
             <Producer>ОАО «Биохимик»</Producer>
             <Form>powder</Form>
             <Certificate>
-                <RegistredBy>Министерство промышленности и торговли Российской Федерации</RegistredBy>
-                <RegistrationDate>2015-11-15</RegistrationDate>
-                <ExpireDate>2020-11-14</ExpireDate>
+                <Registred_by>Министерство промышленности и торговли Российской Федерации</Registred_by>
+                <Registration_date>2015-11-15</Registration_date>
+                <Expire_date>2020-11-14</Expire_date>
             </Certificate>
             <Package>
                 <Quantity>60</Quantity>
@@ -22,13 +22,13 @@
                 <Frequency>3/day</Frequency>
             </Dosage>
         </Version>
-        <Version tradeName="Moxatag">
+        <Version trade_name="Moxatag">
             <Producer>Vernalis terapeutic</Producer>
             <Form>tablet</Form>
             <Certificate>
-                <RegistredBy>Specialty Pharmacy Certification Board</RegistredBy>
-                <RegistrationDate>2010-03-18</RegistrationDate>
-                <ExpireDate>2021-04-17</ExpireDate>
+                <Registred_by>Specialty Pharmacy Certification Board</Registred_by>
+                <Registration_date>2010-03-18</Registration_date>
+                <Expire_date>2021-04-17</Expire_date>
             </Certificate>
             <Package size="small">
                 <Quantity>10</Quantity>
@@ -45,15 +45,15 @@
         </Version>
     </Antibiotic>
 
-    <Antibiotic name="Doxycycline" CAS="564-25-0" DrugBank="DB00254" recipe="true">
+    <Antibiotic name="Doxycycline" CAS="564-25-0" drug_bank="DB00254" recipe="true">
         <Pharm>American Cyanamid</Pharm>
-        <Version tradeName="Doryx">
+        <Version trade_name="Doryx">
             <Producer>Mayne Pharma</Producer>
             <Form>pills</Form>
             <Certificate>
-                <RegistredBy>FDA</RegistredBy>
-                <RegistrationDate>2017-05-05</RegistrationDate>
-                <ExpireDate>2027-05-04</ExpireDate>
+                <Registred_by>FDA</Registred_by>
+                <Registration_date>2017-05-05</Registration_date>
+                <Expire_date>2027-05-04</Expire_date>
             </Certificate>
             <Package size="small">
                 <Quantity>120</Quantity>
@@ -70,15 +70,15 @@
         </Version>
     </Antibiotic>
 
-    <Antibiotic name="Cefalexin" CAS="15686-71-2" DrugBank="DB00567" recipe="true">
+    <Antibiotic name="Cefalexin" CAS="15686-71-2" drug_bank="DB00567" recipe="true">
         <Pharm>Ajanta Pharma</Pharm>
-        <Version tradeName="Ceporex">
+        <Version trade_name="Ceporex">
             <Producer>GlaxoSmithKline</Producer>
             <Form>pills</Form>
             <Certificate>
-                <RegistredBy>EDQM</RegistredBy>
-                <RegistrationDate>2013-08-06</RegistrationDate>
-                <ExpireDate>2020-08-05</ExpireDate>
+                <Registred_by>EDQM</Registred_by>
+                <Registration_date>2013-08-06</Registration_date>
+                <Expire_date>2020-08-05</Expire_date>
             </Certificate>
             <Package>
                 <Quantity>12</Quantity>
@@ -91,15 +91,15 @@
         </Version>
     </Antibiotic>
 
-    <Antibiotic name="Ciprofloxacin" CAS="85721-33-1" DrugBank="DB00537" recipe="false">
+    <Antibiotic name="Ciprofloxacin" CAS="85721-33-1" drug_bank="DB00537" recipe="false">
         <Pharm>Kyorin Seiyaku Kabushiki Kaisha</Pharm>
-        <Version tradeName="Neofloxin">
+        <Version trade_name="Neofloxin">
             <Producer>BEXIMCO PHARMACEUTICALS LTD.</Producer>
             <Form>liquid</Form>
             <Certificate>
-                <RegistredBy>Therapeutic Goods Administration (TGA)</RegistredBy>
-                <RegistrationDate>2011-08-27</RegistrationDate>
-                <ExpireDate>2022-08-26</ExpireDate>
+                <Registred_by>Therapeutic Goods Administration (TGA)</Registred_by>
+                <Registration_date>2011-08-27</Registration_date>
+                <Expire_date>2022-08-26</Expire_date>
             </Certificate>
             <Package>
                 <Quantity>250</Quantity>
@@ -112,15 +112,15 @@
         </Version>
     </Antibiotic>
 
-    <Antibiotic name="Metronidazole" CAS="443-48-1" DrugBank="DB00916" recipe="false">
+    <Antibiotic name="Metronidazole" CAS="443-48-1" drug_bank="DB00916" recipe="false">
         <Pharm>Rhone-Poulenc</Pharm>
-        <Version tradeName="Flagyl">
+        <Version trade_name="Flagyl">
             <Producer>FAMAR LYON</Producer>
             <Form>tablet</Form>
             <Certificate>
-                <RegistredBy>CLSI </RegistredBy>
-                <RegistrationDate>2015-11-01</RegistrationDate>
-                <ExpireDate>2021-10-30</ExpireDate>
+                <Registred_by>CLSI </Registred_by>
+                <Registration_date>2015-11-01</Registration_date>
+                <Expire_date>2021-10-30</Expire_date>
             </Certificate>
             <Package>
                 <Quantity>20</Quantity>
@@ -133,15 +133,15 @@
         </Version>
     </Antibiotic>
 
-    <Vitamin name="Riboflavin" CAS="83-88-5" DrugBank="DB00140" solution="water">
+    <Vitamin name="Riboflavin" CAS="83-88-5" drug_bank="DB00140" solution="water">
         <Pharm>Alexander Wynter Blyth</Pharm>
-        <Version tradeName="RIBOFLAVIN">
+        <Version trade_name="RIBOFLAVIN">
             <Producer>Skylab Pharmaceuticals Ltd.</Producer>
             <Form>pills</Form>
             <Certificate>
-                <RegistredBy>Special Committee of Experts of the General Secretariat of Research and Technology</RegistredBy>
-                <RegistrationDate>2001-02-13</RegistrationDate>
-                <ExpireDate>2031-02-12</ExpireDate>
+                <Registred_by>Special Committee of Experts of the General Secretariat of Research and Technology</Registred_by>
+                <Registration_date>2001-02-13</Registration_date>
+                <Expire_date>2031-02-12</Expire_date>
             </Certificate>
             <Package>
                 <Quantity>500</Quantity>
