@@ -6,7 +6,6 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
@@ -43,6 +42,6 @@ public class MedicinsSAXBuilder {
 		} catch (IOException e) {
 			LOG.error("I/O exception: ", e);
 		}
-		medicins = null; // STUB
+		medicins = handler.getMedicins();
 	}
 }

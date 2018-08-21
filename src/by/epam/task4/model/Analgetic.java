@@ -1,6 +1,6 @@
 package by.epam.task4.model;
 
-public class Analgetic {
+public class Analgetic extends Medicine {
 
 	private boolean narcotic;
 
