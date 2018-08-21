@@ -49,12 +49,17 @@ public class CustomXMLHandler extends DefaultHandler {
 		switch (localName) {
 			case "Antibiotic":
 				currentMedicine = new Antibiotic();
+				// TODO: implement MedicineFactory to create different medicines !!!
+				// TODO: set attributes
 			case "Vitamin":
 				currentMedicine = new Vitamin();
+				// TODO: set attributes
 			case "Analgetic":
 				currentMedicine = new Analgetic();
+				// TODO: set attributes
 			case "Pharm":
 			case "Version":
+				currentVersion = new Version();
 			case "Producer":
 			case "Form":
 			case "Certificate":
