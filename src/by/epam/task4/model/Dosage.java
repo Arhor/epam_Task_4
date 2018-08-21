@@ -20,4 +20,12 @@ public class Dosage {
 	public void setFrequency(String frequency) {
 		this.frequency = frequency;
 	}
+	
+	@Override
+	public String toString() {
+		return getClass().getSimpleName()
+				+ "@"
+				+ " amount: " + amount
+				+ ", frequency: " + frequency;
+	}
 }

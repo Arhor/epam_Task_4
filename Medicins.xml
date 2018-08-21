@@ -13,10 +13,10 @@
                 <Registration_date>2015-11-15</Registration_date>
                 <Expire_date>2020-11-14</Expire_date>
             </Certificate>
-            <Package>
+            <Pack>
                 <Quantity>60</Quantity>
                 <Price>3.05</Price>
-            </Package>
+            </Pack>
             <Dosage>
                 <Amount>1 vial</Amount>
                 <Frequency>3/day</Frequency>
@@ -30,14 +30,14 @@
                 <Registration_date>2010-03-18</Registration_date>
                 <Expire_date>2021-04-17</Expire_date>
             </Certificate>
-            <Package size="small">
+            <Pack size="small">
                 <Quantity>10</Quantity>
                 <Price>172.46</Price>
-            </Package>
-            <Package size="medium">
+            </Pack>
+            <Pack size="medium">
                 <Quantity>30</Quantity>
                 <Price>501.25</Price>
-            </Package>
+            </Pack>
             <Dosage>
                 <Amount>1 tablet</Amount>
                 <Frequency>1/day</Frequency>
@@ -55,14 +55,14 @@
                 <Registration_date>2017-05-05</Registration_date>
                 <Expire_date>2027-05-04</Expire_date>
             </Certificate>
-            <Package size="small">
+            <Pack size="small">
                 <Quantity>120</Quantity>
                 <Price>1492.42</Price>
-            </Package>
-            <Package size="medium">
+            </Pack>
+            <Pack size="medium">
                 <Quantity>60</Quantity>
                 <Price>2756.09</Price>
-            </Package>
+            </Pack>
             <Dosage>
                 <Amount>100 mg</Amount>
                 <Frequency>2/day</Frequency>
@@ -80,10 +80,10 @@
                 <Registration_date>2013-08-06</Registration_date>
                 <Expire_date>2020-08-05</Expire_date>
             </Certificate>
-            <Package>
+            <Pack>
                 <Quantity>12</Quantity>
                 <Price>2.64</Price>
-            </Package>
+            </Pack>
             <Dosage>
                 <Amount>250-500 mg</Amount>
                 <Frequency>2-3/day</Frequency>
@@ -101,10 +101,10 @@
                 <Registration_date>2011-08-27</Registration_date>
                 <Expire_date>2022-08-26</Expire_date>
             </Certificate>
-            <Package>
+            <Pack>
                 <Quantity>250</Quantity>
                 <Price>178.35</Price>
-            </Package>
+            </Pack>
             <Dosage>
                 <Amount>5 ml</Amount>
                 <Frequency>6/day</Frequency>
@@ -122,10 +122,10 @@
                 <Registration_date>2015-11-01</Registration_date>
                 <Expire_date>2021-10-30</Expire_date>
             </Certificate>
-            <Package>
+            <Pack>
                 <Quantity>20</Quantity>
                 <Price>78.89</Price>
-            </Package>
+            </Pack>
             <Dosage>
                 <Amount>1 tablet</Amount>
                 <Frequency>2-3/day</Frequency>
@@ -143,10 +143,10 @@
                 <Registration_date>2001-02-13</Registration_date>
                 <Expire_date>2031-02-12</Expire_date>
             </Certificate>
-            <Package>
+            <Pack>
                 <Quantity>500</Quantity>
                 <Price>5.99</Price>
-            </Package>
+            </Pack>
             <Dosage>
                 <Amount>1 pill</Amount>
                 <Frequency>2-4/day</Frequency>

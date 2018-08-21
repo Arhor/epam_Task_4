@@ -97,7 +97,7 @@
                 </simpleType>
             </element>
             <element name="Certificate" type="tns:CertificateType"/>
-            <element name="Package" type="tns:PackageType" minOccurs="1" maxOccurs="unbounded"/>
+            <element name="Pack" type="tns:PackType" minOccurs="1" maxOccurs="unbounded"/>
             <element name="Dosage" type="tns:DosageType"/>
         </sequence>
         <attribute name="trade_name" type="string" use="required"/>
@@ -124,8 +124,8 @@
         </sequence>
     </complexType>
 
-    <!-- type defenition for Package element -->
-    <complexType name="PackageType">
+    <!-- type defenition for Pack element -->
+    <complexType name="PackType">
         <sequence>
             <element name="Quantity" type="positiveInteger"/>
             <element name="Price"  type="double"/>

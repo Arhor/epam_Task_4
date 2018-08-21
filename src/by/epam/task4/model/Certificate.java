@@ -15,16 +15,29 @@ public class Certificate {
 	public void setRegistredBy(String registredBy) {
 		this.registredBy = registredBy;
 	}
-	public Date getRegistredDate() {
+	
+	public Date getRegistrationDate() {
 		return registrationDate;
 	}
-	public void setRegistredDate(Date registredDate) {
+	
+	public void setRegistrationDate(Date registredDate) {
 		this.registrationDate = registredDate;
 	}
+	
 	public Date getExpireDate() {
 		return expireDate;
 	}
+	
 	public void setExpireDate(Date expireDate) {
 		this.expireDate = expireDate;
+	}
+	
+	@Override
+	public String toString() {
+		return getClass().getSimpleName()
+				+ "@"
+				+ " registred by: " +  registredBy
+				+ ", registration date: " + registrationDate
+				+ ", Expire date: " + expireDate;
 	}
 }

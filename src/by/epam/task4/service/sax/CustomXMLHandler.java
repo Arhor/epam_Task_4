@@ -1,6 +1,8 @@
 package by.epam.task4.service.sax;
 
-import java.util.EnumSet;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,21 +22,21 @@ public class CustomXMLHandler extends DefaultHandler {
 	private static final Logger LOG = LogManager.getLogger(CustomXMLHandler.class);
 	
 	private Set<Medicine> medicins;
-	private EnumSet<ElementsEnum> withContent;
 	
 	private ElementsEnum currentElement;
 	private MedicineFactory mFactory;
+	private DateFormat dateFormat;
 	
 	private Medicine currentMedicine;
 	private Version currentVersion;
 	private Certificate currentCertificate;
-	private Pack currentPackage;
+	private Pack currentPack;
 	private Dosage currentDosage;
 	
 	public CustomXMLHandler() {
 		medicins = new HashSet<Medicine>();
-		withContent = EnumSet.range(ElementsEnum.PHARM, ElementsEnum.FREQUENCY);
 		mFactory = new MedicineFactory();
+		dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 	}
 	
 	@Override
@@ -56,9 +58,11 @@ public class CustomXMLHandler extends DefaultHandler {
 			case ANALGETIC:
 				currentMedicine = mFactory.getMedicine(currentElement);
 				for (int i = 0; i < attrs.getLength(); i++) {
-					AttributesEnum currentAttribute = AttributesEnum.valueOf(
-							attrs.getLocalName(i).toUpperCase());
+					String name = attrs.getLocalName(i);
 					String value = attrs.getValue(i);
+					AttributesEnum currentAttribute = AttributesEnum.valueOf(
+							name.toUpperCase());
+					
 					switch (currentAttribute) {
 						case NAME:
 							currentMedicine.setName(value);
@@ -81,73 +85,122 @@ public class CustomXMLHandler extends DefaultHandler {
 							break;
 					}
 				}
+				LOG.debug("Medicine object created\n");
 				break;
 			case VERSION:
 				currentVersion = new Version();
-				currentVersion.setTradeName(attrs.getValue(0));
+				currentVersion.setTradeName(attrs.getValue(0)); // because there is only one attribute in <Version> element
+				LOG.debug("Version object created\n");
 				break;
-			case PRODUCER:
-			case FORM:
 			case CERTIFICATE:
-			case REGISTRED_BY:
-			case REGISTRATION_DATE:
-			case EXPIRE_DATE:
+				currentCertificate = new Certificate();
+				LOG.debug("Certificate object created\n");
+				break;
 			case PACK:
-			case QUANTITY:
-			case PRICE:
+				currentPack = new Pack();
+				if (attrs.getLength() > 0) {
+					currentPack.setSize(attrs.getValue(0));
+				}
+				LOG.debug("Pack object created\n");
+				break;
 			case DOSAGE:
-			case AMOUNT:
-			case FREQUENCY:
+				currentDosage = new Dosage();
+				LOG.debug("Dosage object created\n");
+				break;
 			default:
 				break; // STUB
 		}
 		
-//		String line = "<" + localName;
-//		for (int i = 0; i < attrs.getLength(); i++) {
-//			line += " " + attrs.getLocalName(i) + " = " + attrs.getValue(i);
-//		}
-//		line += ">";
-//		LOG.info(line.trim());
+		String line = "<" + localName;
+		for (int i = 0; i < attrs.getLength(); i++) {
+			line += " " + attrs.getLocalName(i) + " = " + attrs.getValue(i);
+		}
+		line += ">";
+		LOG.info(line.trim());
 	}
 	
 	@Override
 	public void endElement(String uri, String localName, String qName) {
-		LOG.info("finished element: " + localName + "\n");
+		currentElement = ElementsEnum.valueOf(localName.toUpperCase());
+		switch (currentElement) {
+			case ANTIBIOTIC:
+			case VITAMIN:
+			case ANALGETIC:
+				medicins.add(currentMedicine);
+				LOG.debug("Medicine object added to collection\n");
+				break;
+			case VERSION:
+				currentMedicine.addVersion(currentVersion);
+				LOG.debug("Medicine object added to medicine object\n");
+				break;
+			case CERTIFICATE:
+				currentVersion.setCertificate(currentCertificate);
+				LOG.debug("Certificate object added to verion object\n");
+				break;
+			case PACK:
+				currentVersion.addPack(currentPack);
+				LOG.debug("Pack object added to version object\n");
+				break;
+			case DOSAGE:
+				currentVersion.setDosage(currentDosage);
+			default:
+				break;
+		}
 		
-//		LOG.info("</" + localName + ">");
+		LOG.info("</" + localName + ">");
 	}
 	
 	@Override
 	public void characters(char[] ch, int start, int length) {
 		String content = new String(ch, start, length).trim();
-		if (currentElement != null) {
+		if (currentElement != null && !content.isEmpty()) {
 			switch (currentElement) {
 				case PHARM:
 					currentMedicine.setPharm(content);
+					break;
+				case PRODUCER:
+					currentVersion.setProducer(content);
+					break;
+				case FORM:
+					currentVersion.setForm(content);
+					break;
+				case REGISTRED_BY:
+					currentCertificate.setRegistredBy(content);
+					break;
+				case REGISTRATION_DATE:
+					try {
+						currentCertificate.setRegistrationDate(dateFormat.parse(content));
+					} catch (ParseException e) {
+						LOG.error("Date parsing exception: ", e);
+					}
+					break;
+				case EXPIRE_DATE:
+					try {
+						currentCertificate.setExpireDate(dateFormat.parse(content));
+					} catch (ParseException e) {
+						LOG.error("Date parsing exception: ", e);
+					}
+					break;
+				case QUANTITY:
+					currentPack.setQuantity(Integer.parseInt(content));
+					break;
+				case PRICE:
+					currentPack.setPrice(Double.parseDouble(content));
+					break;
+				case AMOUNT:
+					currentDosage.setAmount(content);
+					break;
+				case FREQUENCY:
+					currentDosage.setFrequency(content);
+					break;
+				default:
 					break;
 			}
 		}
 		
 		
-//		LOG.info(new String(ch, start, length));
+		LOG.info(new String(ch, start, length));
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	@Override
 	public void warning(SAXParseException e) {

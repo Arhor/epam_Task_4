@@ -1087,3 +1087,2366 @@
 	at javax.xml.validation.Validator.validate(Validator.java:124)
 	at by.epam.task4.service.ValidatorXML.validate(ValidatorXML.java:29)
 	at by.epam.task4.runner.Runner.main(Runner.java:15)
+01:13:13 ERROR - main [CustomXMLHandler]:characters:164 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:162)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:13:13 ERROR - main [CustomXMLHandler]:characters:171 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:169)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:14:30 ERROR - main [CustomXMLHandler]:characters:164 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:162)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:14:30 ERROR - main [CustomXMLHandler]:characters:171 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:169)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:16:58 ERROR - main [CustomXMLHandler]:characters:164 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:162)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:16:58 ERROR - main [CustomXMLHandler]:characters:171 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:169)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:18:38 ERROR - main [CustomXMLHandler]:characters:164 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:162)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:18:38 ERROR - main [CustomXMLHandler]:characters:171 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:169)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:19:42 ERROR - main [CustomXMLHandler]:characters:164 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:162)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:19:42 ERROR - main [CustomXMLHandler]:characters:171 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:169)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:20:08 ERROR - main [CustomXMLHandler]:characters:164 Date parsing exception:  
+ java.text.ParseException: Unparseable date: "
+                "
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:162)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:20:08 ERROR - main [CustomXMLHandler]:characters:171 Date parsing exception:  
+ java.text.ParseException: Unparseable date: "
+            "
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:169)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:20:48 ERROR - main [CustomXMLHandler]:characters:164 Date parsing exception:  
+ java.text.ParseException: Unparseable date: "
+                "
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:162)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:20:48 ERROR - main [CustomXMLHandler]:characters:171 Date parsing exception:  
+ java.text.ParseException: Unparseable date: "
+            "
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:169)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:21:31 ERROR - main [CustomXMLHandler]:characters:164 Date parsing exception:  
+ java.text.ParseException: Unparseable date: "
+                "
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:162)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:21:31 ERROR - main [CustomXMLHandler]:characters:171 Date parsing exception:  
+ java.text.ParseException: Unparseable date: "
+            "
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:169)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:22:11 ERROR - main [CustomXMLHandler]:characters:164 Date parsing exception:  
+ java.text.ParseException: Unparseable date: "
+                "
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:162)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:22:11 ERROR - main [CustomXMLHandler]:characters:171 Date parsing exception:  
+ java.text.ParseException: Unparseable date: "
+            "
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:169)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:23:10 ERROR - main [CustomXMLHandler]:characters:164 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:162)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:23:10 ERROR - main [CustomXMLHandler]:characters:171 Date parsing exception:  
+ java.text.ParseException: Unparseable date: ""
+	at java.text.DateFormat.parse(Unknown Source)
+	at by.epam.task4.service.sax.CustomXMLHandler.characters(CustomXMLHandler.java:169)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.characters(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at by.epam.task4.service.sax.MedicinsSAXBuilder.buildSetMedicins(MedicinsSAXBuilder.java:39)
+	at by.epam.task4.runner.Runner.main(Runner.java:20)
+01:26:53 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:29:06 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:29:06 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:29:06 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:29:06 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:31:48 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:31:48 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:31:48 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:31:48 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:31:48 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:33:48 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:33:48 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:33:48 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:33:48 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:33:48 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:33:48 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:33:48 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:34:58 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:35:35 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:38:50 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:39:04 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:02 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:12 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:14 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:42:16 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:46:18 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:48:40 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:49:30 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:01 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:50:39 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:54:06 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 01:59:27 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:88 Medicine object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:93 Version object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:97 Certificate object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:138 Certificate object added to verion object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:104 Pack object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:142 Pack object added to version object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:startElement:108 Dosage object created
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:134 Medicine object added to medicine object
+ 
+ 02:01:41 DEBUG - main [CustomXMLHandler]:endElement:130 Medicine object added to collection
+ 
+ 

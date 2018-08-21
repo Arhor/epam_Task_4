@@ -10,6 +10,10 @@ public abstract class Medicine {
 	private String cas;
 	private String drugBank;
 	
+	public Medicine() {
+		versions = new ArrayList<Version>();
+	}
+	
 	public String getPharm() {
 		return pharm;
 	}
@@ -40,5 +44,19 @@ public abstract class Medicine {
 	}
 	public void setDrugBank(String drugBank) {
 		this.drugBank = drugBank;
+	}
+	
+	public void addVersion(Version version) {
+		versions.add(version);
+	}
+	
+	@Override
+	public String toString() {
+		return getClass().getSimpleName()
+				+ "@"
+				+ " name: " + name
+				+ ", CAS: " + cas
+				+ ", DrugBank: " + drugBank
+				+ ", versions: " + versions;
 	}
 }

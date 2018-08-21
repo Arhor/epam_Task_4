@@ -29,4 +29,13 @@ public class Pack {
 	public void setSize(String size) {
 		this.size = size;
 	}
+	
+	@Override
+	public String toString() {
+		return getClass().getSimpleName()
+				+ "@"
+				+ " size: " + size
+				+ ", quantity: " + quantity
+				+ ", price: " + price;
+	}
 }
