@@ -4,11 +4,12 @@ import java.util.ArrayList;
 
 public abstract class Medicine {
 
-	private String pharm;
-	private ArrayList<Version> versions;
 	private String name;
 	private String cas;
 	private String drugBank;
+	private String pharm;
+	private ArrayList<Version> versions;
+	
 	
 	public Medicine() {
 		versions = new ArrayList<Version>();
@@ -55,6 +56,7 @@ public abstract class Medicine {
 		return getClass().getSimpleName()
 				+ "@"
 				+ " name: " + name
+				+ ", pharm: " + pharm
 				+ ", CAS: " + cas
 				+ ", DrugBank: " + drugBank
 				+ ", versions: " + versions;

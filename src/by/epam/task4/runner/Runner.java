@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import by.epam.task4.model.Medicine;
 import by.epam.task4.service.ValidatorXML;
+import by.epam.task4.service.dom.MedicinsDOMBuilder;
 import by.epam.task4.service.sax.MedicinsSAXBuilder;
 
 public class Runner {
@@ -14,12 +15,19 @@ public class Runner {
 	private static final Logger LOG = LogManager.getLogger(Runner.class);
 	
 	public static void main(String[] args) {
-		LOG.info(ValidatorXML.validate("Medicins.xml", "Medicins.xsd") + "\n");
+		String xml = "Medicins.xml";
+		String xsd = "Medicins.xsd";
 		
-		MedicinsSAXBuilder saxBuilder = new MedicinsSAXBuilder();
-		saxBuilder.buildSetMedicins("Medicins.xml");
+		LOG.info(ValidatorXML.validate(xml, xsd) + "\n");
 		
-		Set<Medicine> medicins = saxBuilder.getMedicins();
+//		MedicinsSAXBuilder saxBuilder = new MedicinsSAXBuilder();
+//		saxBuilder.buildSetMedicins(xml);
+		
+		MedicinsDOMBuilder domBuilder = new MedicinsDOMBuilder();
+		domBuilder.buildSetMedicins(xml);
+		
+//		Set<Medicine> medicins = saxBuilder.getMedicins();
+		Set<Medicine> medicins = domBuilder.getMedicins();
 		
 		for (Medicine medicine : medicins) {
 			LOG.info(medicine + "\n\n");

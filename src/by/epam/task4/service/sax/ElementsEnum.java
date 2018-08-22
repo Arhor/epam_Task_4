@@ -8,7 +8,7 @@ public enum ElementsEnum {
 	ANALGETIC("Analgetic"),
 	VERSION("Version"),
 	CERTIFICATE("Certificate"),
-	PACK("Package"),
+	PACK("Pack"),
 	DOSAGE("Dosage"),
 	PHARM("Pharm"),
 	PRODUCER("Producer"),
