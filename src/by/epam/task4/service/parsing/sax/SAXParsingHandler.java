@@ -1,4 +1,4 @@
-package by.epam.task4.service.sax;
+package by.epam.task4.service.parsing.sax;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -17,11 +17,11 @@ import by.epam.task4.model.factory.MedicineFactory;
 import by.epam.task4.service.AttributesEnum;
 import by.epam.task4.service.ElementsEnum;
 
-public class CustomXMLHandler extends DefaultHandler {
+public class SAXParsingHandler extends DefaultHandler {
 	
 	// TODO: modify to handle SAX parsing and build new Medicine object
 
-	private static final Logger LOG = LogManager.getLogger(CustomXMLHandler.class);
+	private static final Logger LOG = LogManager.getLogger(SAXParsingHandler.class);
 	
 	private Set<Medicine> medicins;
 	
@@ -35,7 +35,7 @@ public class CustomXMLHandler extends DefaultHandler {
 	private Pack currentPack;
 	private Dosage currentDosage;
 	
-	public CustomXMLHandler() {
+	public SAXParsingHandler() {
 		medicins = new HashSet<Medicine>();
 		mFactory = new MedicineFactory();
 		dateFormat = new SimpleDateFormat("yyyy-MM-dd");

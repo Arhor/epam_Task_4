@@ -1,4 +1,4 @@
-package by.epam.task4.service.dom;
+package by.epam.task4.service.parsing.dom;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -22,7 +22,7 @@ import by.epam.task4.model.*;
 import by.epam.task4.model.factory.MedicineFactory;
 import by.epam.task4.service.AttributesEnum;
 import by.epam.task4.service.ElementsEnum;
-import by.epam.task4.service.sax.MedicinsSAXBuilder;
+import by.epam.task4.service.parsing.sax.MedicinsSAXBuilder;
 
 public class MedicinsDOMBuilder {
 	

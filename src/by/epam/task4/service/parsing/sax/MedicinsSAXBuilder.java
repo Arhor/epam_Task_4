@@ -1,4 +1,4 @@
-package by.epam.task4.service.sax;
+package by.epam.task4.service.parsing.sax;
 
 import java.io.IOException;
 import java.util.Set;
@@ -16,11 +16,11 @@ public class MedicinsSAXBuilder {
 	private static final Logger LOG = LogManager.getLogger(MedicinsSAXBuilder.class);
 
 	private Set<Medicine> medicins;
-	private CustomXMLHandler handler;
+	private SAXParsingHandler handler;
 	private XMLReader reader;
 	
 	public MedicinsSAXBuilder() {
-		handler = new CustomXMLHandler();
+		handler = new SAXParsingHandler();
 		try {
 			reader = XMLReaderFactory.createXMLReader();
 			reader.setContentHandler(handler);
