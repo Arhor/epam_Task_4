@@ -4,7 +4,7 @@ import by.epam.task4.model.Analgetic;
 import by.epam.task4.model.Antibiotic;
 import by.epam.task4.model.Medicine;
 import by.epam.task4.model.Vitamin;
-import by.epam.task4.service.sax.ElementsEnum;
+import by.epam.task4.service.ElementsEnum;
 
 public class MedicineFactory {
 

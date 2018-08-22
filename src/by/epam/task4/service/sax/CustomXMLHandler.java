@@ -14,6 +14,8 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import by.epam.task4.model.*;
 import by.epam.task4.model.factory.MedicineFactory;
+import by.epam.task4.service.AttributesEnum;
+import by.epam.task4.service.ElementsEnum;
 
 public class CustomXMLHandler extends DefaultHandler {
 	

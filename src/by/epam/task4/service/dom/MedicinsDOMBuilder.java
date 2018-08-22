@@ -20,8 +20,8 @@ import org.xml.sax.SAXException;
 
 import by.epam.task4.model.*;
 import by.epam.task4.model.factory.MedicineFactory;
-import by.epam.task4.service.sax.AttributesEnum;
-import by.epam.task4.service.sax.ElementsEnum;
+import by.epam.task4.service.AttributesEnum;
+import by.epam.task4.service.ElementsEnum;
 import by.epam.task4.service.sax.MedicinsSAXBuilder;
 
 public class MedicinsDOMBuilder {
