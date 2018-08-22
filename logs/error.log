@@ -4099,4 +4099,264 @@
  
  15:10:06 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
  
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:22 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:90 Medicine object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:95 Version object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:99 Certificate object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:140 Certificate object added to verion object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:106 Pack object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:144 Pack object added to version object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:startElement:110 Dosage object created
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:136 Medicine object added to medicine object
+ 
+ 15:19:56 DEBUG - main [SAXParsingHandler]:endElement:132 Medicine object added to collection
+ 
  

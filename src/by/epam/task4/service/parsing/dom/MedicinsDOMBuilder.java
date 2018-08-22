@@ -22,13 +22,13 @@ import by.epam.task4.model.*;
 import by.epam.task4.model.factory.MedicineFactory;
 import by.epam.task4.service.AttributesEnum;
 import by.epam.task4.service.ElementsEnum;
+import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 import by.epam.task4.service.parsing.sax.MedicinsSAXBuilder;
 
-public class MedicinsDOMBuilder {
+public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 	
 	private static final Logger LOG = LogManager.getLogger(MedicinsSAXBuilder.class);
 
-	private Set<Medicine> medicins;
 	private DocumentBuilder docBuilder;
 	private MedicineFactory mFactory;
 	private DateFormat dateFormat;
@@ -45,10 +45,7 @@ public class MedicinsDOMBuilder {
 		}
 	}
 
-	public Set<Medicine> getMedicins() {
-		return medicins;
-	}
-
+	@Override
 	public void buildSetMedicins(String xml) {
 		Document document = null;
 		try {

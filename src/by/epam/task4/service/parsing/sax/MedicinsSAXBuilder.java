@@ -10,12 +10,12 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
 import by.epam.task4.model.Medicine;
+import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 
-public class MedicinsSAXBuilder {
+public class MedicinsSAXBuilder extends MedicinsAbstractBuilder {
 	
 	private static final Logger LOG = LogManager.getLogger(MedicinsSAXBuilder.class);
 
-	private Set<Medicine> medicins;
 	private SAXParsingHandler handler;
 	private XMLReader reader;
 	
@@ -30,10 +30,7 @@ public class MedicinsSAXBuilder {
 		}
 	}
 
-	public Set<Medicine> getMedicins() {
-		return medicins;
-	}
-
+	@Override
 	public void buildSetMedicins(String xml) {
 		try {
 			reader.parse(xml);
