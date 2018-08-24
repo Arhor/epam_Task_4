@@ -13,9 +13,9 @@ import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import by.epam.task4.model.*;
-import by.epam.task4.model.factory.MedicineFactory;
-import by.epam.task4.service.AttributesEnum;
-import by.epam.task4.service.ElementsEnum;
+import by.epam.task4.service.factory.MedicineFactory;
+import by.epam.task4.service.parsing.AttributesEnum;
+import by.epam.task4.service.parsing.ElementsEnum;
 
 public class SAXParsingHandler extends DefaultHandler {
 	

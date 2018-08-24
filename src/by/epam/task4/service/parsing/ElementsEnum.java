@@ -1,4 +1,4 @@
-package by.epam.task4.service;
+package by.epam.task4.service.parsing;
 
 public enum ElementsEnum {
 

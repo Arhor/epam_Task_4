@@ -27,7 +27,6 @@ public class ValidatorXML {
 			Validator validator = schema.newValidator();
 			Source source = new StreamSource(xml);
 			validator.validate(source);
-			
 			LOG.info(xml + " is valid\n");
 			return true;
 		} catch (IOException e) {

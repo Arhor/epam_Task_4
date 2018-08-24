@@ -19,9 +19,9 @@ import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 import by.epam.task4.model.*;
-import by.epam.task4.model.factory.MedicineFactory;
-import by.epam.task4.service.AttributesEnum;
-import by.epam.task4.service.ElementsEnum;
+import by.epam.task4.service.factory.MedicineFactory;
+import by.epam.task4.service.parsing.AttributesEnum;
+import by.epam.task4.service.parsing.ElementsEnum;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 import by.epam.task4.service.parsing.sax.MedicinsSAXBuilder;
 

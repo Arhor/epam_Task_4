@@ -7,8 +7,8 @@ import org.apache.logging.log4j.Logger;
 
 import by.epam.task4.model.Medicine;
 import by.epam.task4.service.ValidatorXML;
+import by.epam.task4.service.factory.MedicinsBuilderFactory;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
-import by.epam.task4.service.parsing.MedicinsBuilderFactory;
 import by.epam.task4.service.parsing.dom.MedicinsDOMBuilder;
 import by.epam.task4.service.parsing.sax.MedicinsSAXBuilder;
 
