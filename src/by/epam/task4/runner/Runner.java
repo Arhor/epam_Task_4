@@ -21,7 +21,8 @@ public class Runner {
 		LOG.info(ValidatorXML.validate(xml, xsd) + "\n");
 		
 		MedicinsBuilderFactory factory = new MedicinsBuilderFactory();
-		MedicinsAbstractBuilder builder = factory.getBuilder("sax");
+		
+		MedicinsAbstractBuilder builder = factory.getBuilder("dom");
 		
 		builder.buildSetMedicins(xml);
 		
