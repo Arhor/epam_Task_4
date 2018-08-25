@@ -31,6 +31,14 @@ public class Pack {
 	}
 	
 	@Override
+	public int hashCode() {
+		int hashCode = 0;
+		hashCode += (int) (31 * (quantity + price));
+		hashCode += size == null ? 0 : size.hashCode();
+		return hashCode;
+	}
+	
+	@Override
 	public String toString() {
 		return getClass().getSimpleName()
 				+ "@"

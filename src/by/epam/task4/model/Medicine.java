@@ -52,6 +52,19 @@ public abstract class Medicine {
 	}
 	
 	@Override
+	public int hashCode() {
+		int hashCode = 0;
+		hashCode += name == null ? 0 : name.hashCode();
+		hashCode += cas == null ? 0 : cas.hashCode();
+		hashCode += drugBank == null ? 0 : drugBank.hashCode();
+		hashCode += pharm == null ? 0 : pharm.hashCode();
+		for (Version version : versions) {
+			hashCode += version.hashCode();
+		}
+		return hashCode;
+	}
+	
+	@Override
 	public String toString() {
 		return getClass().getSimpleName()
 				+ "@"

@@ -68,6 +68,20 @@ public class Version {
 	}
 	
 	@Override
+	public int hashCode() {
+		int hashCode = 0;
+		hashCode += tradeName == null ? 0 : tradeName.hashCode();
+		hashCode += producer == null? 0 : producer.hashCode();
+		hashCode += form == null ? 0 : form.hashCode();
+		hashCode += certificate == null ? 0 : certificate.hashCode();
+		hashCode += dosage == null ? 0 : dosage.hashCode();
+		for (Pack pack : packs) {
+			hashCode += pack.hashCode();
+		}
+		return hashCode;
+	}
+	
+	@Override
 	public String toString() {
 		return "\n\t" + getClass().getSimpleName()
 				+ "@"

@@ -22,6 +22,14 @@ public class Dosage {
 	}
 	
 	@Override
+	public int hashCode() {
+		int hashCode = 0;
+		hashCode += amount == null ? 0 : amount.hashCode();
+		hashCode += frequency == null ? 0 : frequency.hashCode();
+		return hashCode;
+	}
+	
+	@Override
 	public String toString() {
 		return getClass().getSimpleName()
 				+ "@"

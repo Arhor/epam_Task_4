@@ -33,6 +33,15 @@ public class Certificate {
 	}
 	
 	@Override
+	public int hashCode() {
+		int hashCode = 0;
+		hashCode += registredBy == null ? 0 : registredBy.hashCode();
+		hashCode += registrationDate == null ? 0 : registrationDate.hashCode();
+		hashCode += expireDate == null ? 0 : expireDate.hashCode();
+		return hashCode;
+	}
+	
+	@Override
 	public String toString() {
 		return getClass().getSimpleName()
 				+ "@"
