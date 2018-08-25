@@ -40,10 +40,9 @@ public class Pack {
 	
 	@Override
 	public String toString() {
-		return getClass().getSimpleName()
-				+ "@"
-				+ " size: " + size
-				+ ", quantity: " + quantity
-				+ ", price: " + price;
+		return "\n        " + getClass().getSimpleName() + ":"
+				+ " size='" + size + "'"
+				+ "\n            quantity: " + quantity
+				+ "\n            price:    " + price;
 	}
 }

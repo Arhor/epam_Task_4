@@ -83,13 +83,16 @@ public class Version {
 	
 	@Override
 	public String toString() {
-		return "\n\t" + getClass().getSimpleName()
-				+ "@"
-				+ " trade name: " + tradeName
-				+ ", producer: " + producer
-				+ ", form: " + form
-				+ ", certificate: " + certificate
-				+ ", dosage: " + dosage
-				+ ", packs: " + packs;
+		StringBuilder output = new StringBuilder(
+				"\n    " + getClass().getSimpleName() + ":"
+				+ " trade name='" + tradeName + "'"
+				+ "\n        producer: " + producer
+				+ "\n        form :    " + form
+				+ certificate
+				+ dosage);
+		for (Pack pack : packs) {
+			output.append(pack);
+		}
+		return output.toString();
 	}
 }

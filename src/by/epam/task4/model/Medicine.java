@@ -59,19 +59,22 @@ public abstract class Medicine {
 		hashCode += drugBank == null ? 0 : drugBank.hashCode();
 		hashCode += pharm == null ? 0 : pharm.hashCode();
 		for (Version version : versions) {
-			hashCode += version.hashCode();
+			hashCode += version == null ? 0 : version.hashCode();
 		}
 		return hashCode;
 	}
 	
 	@Override
 	public String toString() {
-		return getClass().getSimpleName()
-				+ "@"
-				+ " name: " + name
-				+ ", pharm: " + pharm
-				+ ", CAS: " + cas
-				+ ", DrugBank: " + drugBank
-				+ ", versions: " + versions;
+		StringBuilder output = new StringBuilder(
+				getClass().getSimpleName() + ": "
+				+ " name='" + name + "'"
+				+ " CAS='" + cas + "'"
+				+ " DrugBank='" + drugBank + "'"
+				+ "\n    pharm: " + pharm);
+		for (Version version : versions) {
+			output.append(version);
+		}
+		return output.toString();
 	}
 }

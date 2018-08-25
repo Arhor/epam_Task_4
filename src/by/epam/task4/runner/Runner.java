@@ -22,7 +22,7 @@ public class Runner {
 		
 		MedicinsBuilderFactory factory = new MedicinsBuilderFactory();
 		
-		MedicinsAbstractBuilder builder = factory.getBuilder("dom");
+		MedicinsAbstractBuilder builder = factory.getBuilder("stax");
 		
 		builder.buildSetMedicins(xml);
 		

@@ -31,9 +31,8 @@ public class Dosage {
 	
 	@Override
 	public String toString() {
-		return getClass().getSimpleName()
-				+ "@"
-				+ " amount: " + amount
-				+ ", frequency: " + frequency;
+		return "\n        " + getClass().getSimpleName() + ":"
+				+ "\n            amount:    " + amount
+				+ "\n            frequency: " + frequency;
 	}
 }

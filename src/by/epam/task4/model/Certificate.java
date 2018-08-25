@@ -43,10 +43,9 @@ public class Certificate {
 	
 	@Override
 	public String toString() {
-		return getClass().getSimpleName()
-				+ "@"
-				+ " registred by: " +  registredBy
-				+ ", registration date: " + registrationDate
-				+ ", Expire date: " + expireDate;
+		return "\n        " + getClass().getSimpleName() + ":"
+				+ "\n            registred by:      " + registredBy
+				+ "\n            registration date: " + registrationDate
+				+ "\n            expire date :      " + expireDate;
 	}
 }
