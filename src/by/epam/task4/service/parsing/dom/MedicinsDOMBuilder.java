@@ -207,6 +207,6 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 			currentMedicine.addVersion(currentVersion);
 		}
 		
-		return currentMedicine; // STUB
+		return currentMedicine;
 	}
 }

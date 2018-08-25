@@ -19,4 +19,10 @@ public class Antibiotic extends Medicine {
 		hashCode += recipe ? 1 : 0;
 		return hashCode;
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString()
+				+ ", recipe: " + recipe; 
+	}
 }

@@ -11,4 +11,18 @@ public class Analgetic extends Medicine {
 	public void setNarcotic(boolean narcotic) {
 		this.narcotic = narcotic;
 	}
+	
+	@Override
+	public int hashCode() {
+		int hashCode = 0;
+		hashCode += super.hashCode();
+		hashCode += narcotic ? 1 : 0;
+		return hashCode;
+	}
+	
+	@Override
+	public String toString() {
+		return super.toString()
+				+ ", narcotic: " + narcotic;
+	}
 }
