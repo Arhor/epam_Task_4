@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import by.epam.task4.model.Medicine;
 import by.epam.task4.service.ValidatorXML;
+import by.epam.task4.service.exception.ParserNotPresentedException;
 import by.epam.task4.service.factory.MedicinsBuilderFactory;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 
@@ -22,7 +23,14 @@ public class Runner {
 		
 		MedicinsBuilderFactory factory = new MedicinsBuilderFactory();
 		
-		MedicinsAbstractBuilder builder = factory.getBuilder("stax");
+		MedicinsAbstractBuilder builder;
+		try {
+			builder = factory.getBuilder("domf");
+		} catch (ParserNotPresentedException e) {
+			LOG.error("Parser not presented exception: ", e);
+			LOG.warn("Parser not presented exception");
+			return;
+		}
 		
 		builder.buildSetMedicins(xml);
 		

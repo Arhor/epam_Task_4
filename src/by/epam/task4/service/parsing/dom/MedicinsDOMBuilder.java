@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -22,15 +23,17 @@ import by.epam.task4.service.factory.MedicineFactory;
 import by.epam.task4.service.parsing.AttributesEnum;
 import by.epam.task4.service.parsing.ElementsEnum;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
-import by.epam.task4.service.parsing.sax.MedicinsSAXBuilder;
 
 public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 	
-	private static final Logger LOG = LogManager.getLogger(MedicinsSAXBuilder.class);
+	private static final Logger LOG = LogManager.getLogger();
 
 	private DocumentBuilder docBuilder;
 	private MedicineFactory mFactory;
 	private DateFormat dateFormat;
+	
+	private Version currentVersion;
+	private Certificate currentCertificate;
 	
 	public MedicinsDOMBuilder() {
 		medicins = new HashSet<Medicine>();
@@ -67,8 +70,9 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 	}
 	
 	private Medicine buildMedicine(Element medicineElement) {
-		String medicineType = medicineElement.getTagName();
-		Medicine currentMedicine = mFactory.getMedicine(ElementsEnum.valueOf(medicineType.toUpperCase()));
+		Medicine medicine = mFactory.getMedicine(
+				ElementsEnum.valueOf(
+						medicineElement.getTagName().toUpperCase()));
 		
 		// setting Medicine attributes
 		NamedNodeMap attributes = medicineElement.getAttributes();
@@ -76,25 +80,28 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 			Attr attribute = (Attr) attributes.item(i);
 			String name = attribute.getName();
 			String value = attribute.getValue();
-			AttributesEnum currentAttribute = AttributesEnum.valueOf(name.toUpperCase());
+			AttributesEnum currentAttribute = AttributesEnum.valueOf(
+					name.toUpperCase());
 			switch (currentAttribute) {
 				case NAME:
-					currentMedicine.setName(value);
+					medicine.setName(value);
 					break;
 				case CAS:
-					currentMedicine.setCas(value);
+					medicine.setCas(value);
 					break;
 				case DRUG_BANK:
-					currentMedicine.setDrugBank(value);
+					medicine.setDrugBank(value);
 					break;
 				case RECIPE:
-					((Antibiotic)currentMedicine).setRecipe(Boolean.parseBoolean(value));
+					boolean recipe = Boolean.parseBoolean(value);
+					((Antibiotic)medicine).setRecipe(recipe);
 					break;
 				case SOLUTION:
-					((Vitamin)currentMedicine).setSolution(value);
+					((Vitamin)medicine).setSolution(value);
 					break;
 				case NARCOTIC:
-					((Analgetic)currentMedicine).setNarcotic(Boolean.parseBoolean(value));
+					boolean narcotic = Boolean.parseBoolean(value);
+					((Analgetic)medicine).setNarcotic(narcotic);
 					break;
 				default:
 					break;
@@ -102,43 +109,56 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 		}
 		
 		// setting Medicine 'pharm' field
-		Element pharm = (Element) medicineElement.getElementsByTagName(ElementsEnum.PHARM.getValue()).item(0);
-		currentMedicine.setPharm(pharm.getTextContent());
+		Element pharm = (Element) medicineElement.getElementsByTagName(
+				ElementsEnum.PHARM.getValue()).item(0);
+		medicine.setPharm(pharm.getTextContent());
 		
 		// setting 'versions' field
-		NodeList versions = medicineElement.getElementsByTagName(ElementsEnum.VERSION.getValue());
+		NodeList versions = medicineElement.getElementsByTagName(
+				ElementsEnum.VERSION.getValue());
 		for (int i = 0; i < versions.getLength(); i++) {
 			Element versionElement = (Element) versions.item(i);
-			Version currentVersion = new Version();
+			currentVersion = new Version();
 			
 			// setting 'trade name' field
-			currentVersion.setTradeName(versionElement.getAttribute(AttributesEnum.TRADE_NAME.getValue()));
+			currentVersion.setTradeName(versionElement.getAttribute(
+					AttributesEnum.TRADE_NAME.getValue()));
 			
 			// setting 'producer' field
-			currentVersion.setProducer(versionElement.getElementsByTagName(ElementsEnum.PRODUCER.getValue()).item(0).getTextContent());
+			currentVersion.setProducer(versionElement.getElementsByTagName(
+					ElementsEnum.PRODUCER.getValue()).item(0).getTextContent());
 			
 			// setting 'certificate' field
-			Element certificateElement = (Element) versionElement.getElementsByTagName(ElementsEnum.CERTIFICATE.getValue()).item(0);
-			Certificate currentCertificate = new Certificate();
+			Element certificateElement = 
+					(Element) versionElement.getElementsByTagName(
+							ElementsEnum.CERTIFICATE.getValue()).item(0);
+			currentCertificate = new Certificate();
 			NodeList certificateFields = certificateElement.getChildNodes();
 			for (int j = 0; j < certificateFields.getLength(); j++) {
 				Node certField = certificateFields.item(j);
 				if (certField.getNodeType() == Node.ELEMENT_NODE) {
-					ElementsEnum currentField = ElementsEnum.valueOf(((Element)certField).getTagName().toUpperCase());
+					ElementsEnum currentField = 
+							ElementsEnum.valueOf(
+									((Element)certField).getTagName().toUpperCase());
 					switch (currentField) {
 						case REGISTRED_BY:
-							currentCertificate.setRegistredBy(certField.getTextContent());
+							currentCertificate.setRegistredBy(
+									certField.getTextContent());
 							break;
 						case REGISTRATION_DATE:
 							try {
-								currentCertificate.setRegistrationDate(dateFormat.parse(certField.getTextContent()));
+								Date date = dateFormat.parse(
+										certField.getTextContent());
+								currentCertificate.setRegistrationDate(date);
 							} catch (ParseException e) {
 								LOG.error("Date parsing exception: ", e);
 							}
 							break;
 						case EXPIRE_DATE:
 							try {
-								currentCertificate.setExpireDate(dateFormat.parse(certField.getTextContent()));
+								Date date = dateFormat.parse(
+										certField.getTextContent());
+								currentCertificate.setExpireDate(date);
 							} catch (ParseException e) {
 								LOG.error("Date parsing exception: ", e);
 							}
@@ -151,13 +171,15 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 			currentVersion.setCertificate(currentCertificate);
 			
 			// setting 'packs' field
-			NodeList packs = versionElement.getElementsByTagName(ElementsEnum.PACK.getValue());
+			NodeList packs = versionElement.getElementsByTagName(
+					ElementsEnum.PACK.getValue());
 			for (int k = 0; k < packs.getLength(); k++) {
 				Pack currentPack = new Pack();
 				Element packElement = (Element) packs.item(k);
 				
 				if (packElement.hasAttributes()) {
-					Attr size = packElement.getAttributeNode(AttributesEnum.SIZE.getValue());
+					Attr size = packElement.getAttributeNode(
+							AttributesEnum.SIZE.getValue());
 					currentPack.setSize(size.getValue());
 				}
 				
@@ -165,13 +187,16 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 				for (int n = 0; n < packFields.getLength(); n++) {
 					Node packField = packFields.item(n);
 					if (packField.getNodeType() == Node.ELEMENT_NODE) {
-						ElementsEnum currentField = ElementsEnum.valueOf(((Element)packField).getTagName().toUpperCase());
+						ElementsEnum currentField = ElementsEnum.valueOf(
+								((Element)packField).getTagName().toUpperCase());
 						switch (currentField) {
 							case QUANTITY:
-								currentPack.setQuantity(Integer.parseInt(packField.getTextContent()));
+								currentPack.setQuantity(
+										Integer.parseInt(packField.getTextContent()));
 								break;
 							case PRICE:
-								currentPack.setPrice(Double.parseDouble(packField.getTextContent()));
+								currentPack.setPrice(
+										Double.parseDouble(packField.getTextContent()));
 								break;
 							default:
 								break;
@@ -183,19 +208,25 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 			}
 			
 			// setting 'dosage' field
-			Element dosageElement = (Element) versionElement.getElementsByTagName(ElementsEnum.DOSAGE.getValue()).item(0);
+			Element dosageElement =
+					(Element) versionElement.getElementsByTagName(
+							ElementsEnum.DOSAGE.getValue()).item(0);
 			Dosage currentDosage = new Dosage();
 			NodeList dosageFields = dosageElement.getChildNodes();
 			for (int k = 0; k < dosageFields.getLength(); k++) {
 				Node dosageField = dosageFields.item(k);
 				if (dosageField.getNodeType() == Node.ELEMENT_NODE) {
-					ElementsEnum currentField = ElementsEnum.valueOf(((Element)dosageField).getTagName().toUpperCase());
+					ElementsEnum currentField =
+							ElementsEnum.valueOf(
+									((Element)dosageField).getTagName().toUpperCase());
 					switch (currentField) {
 						case AMOUNT:
-							currentDosage.setAmount(dosageField.getTextContent());
+							currentDosage.setAmount(
+									dosageField.getTextContent());
 							break;
 						case FREQUENCY:
-							currentDosage.setFrequency(dosageField.getTextContent());
+							currentDosage.setFrequency(
+									dosageField.getTextContent());
 							break;
 						default:
 							break;
@@ -204,9 +235,9 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 			}
 			currentVersion.setDosage(currentDosage);
 			
-			currentMedicine.addVersion(currentVersion);
+			medicine.addVersion(currentVersion);
 		}
 		
-		return currentMedicine;
+		return medicine;
 	}
 }

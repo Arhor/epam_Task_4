@@ -3,6 +3,7 @@ package by.epam.task4.service.parsing.sax;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,13 +20,12 @@ import by.epam.task4.service.parsing.ElementsEnum;
 
 public class SAXParsingHandler extends DefaultHandler {
 	
-	// TODO: modify to handle SAX parsing and build new Medicine object
-
-	private static final Logger LOG = LogManager.getLogger(SAXParsingHandler.class);
+	private static final Logger LOG = LogManager.getLogger();
 	
 	private Set<Medicine> medicins;
 	
 	private ElementsEnum currentElement;
+	private AttributesEnum currentAttr;
 	private MedicineFactory mFactory;
 	private DateFormat dateFormat;
 	
@@ -52,7 +52,8 @@ public class SAXParsingHandler extends DefaultHandler {
 	}
 	
 	@Override
-	public void startElement(String uri, String localName, String qName, Attributes attrs) {
+	public void startElement(
+			String uri, String localName, String qName, Attributes attrs) {
 		currentElement = ElementsEnum.valueOf(localName.toUpperCase());
 		switch (currentElement) {
 			case ANTIBIOTIC:
@@ -62,10 +63,8 @@ public class SAXParsingHandler extends DefaultHandler {
 				for (int i = 0; i < attrs.getLength(); i++) {
 					String name = attrs.getLocalName(i);
 					String value = attrs.getValue(i);
-					AttributesEnum currentAttribute = AttributesEnum.valueOf(
-							name.toUpperCase());
-					
-					switch (currentAttribute) {
+					currentAttr = AttributesEnum.valueOf(name.toUpperCase());	
+					switch (currentAttr) {
 						case NAME:
 							currentMedicine.setName(value);
 							break;
@@ -76,49 +75,39 @@ public class SAXParsingHandler extends DefaultHandler {
 							currentMedicine.setDrugBank(value);
 							break;
 						case RECIPE:
-							((Antibiotic)currentMedicine).setRecipe(Boolean.parseBoolean(value));
+							boolean recipe = Boolean.parseBoolean(value);
+							((Antibiotic)currentMedicine).setRecipe(recipe);
 							break;
 						case SOLUTION:
 							((Vitamin)currentMedicine).setSolution(value);
 							break;
 						case NARCOTIC:
-							((Analgetic)currentMedicine).setNarcotic(Boolean.parseBoolean(value));
+							boolean narcotic = Boolean.parseBoolean(value);
+							((Analgetic)currentMedicine).setNarcotic(narcotic);
 						default:
 							break;
 					}
 				}
-				LOG.debug("Medicine object created\n");
 				break;
 			case VERSION:
 				currentVersion = new Version();
-				currentVersion.setTradeName(attrs.getValue(0)); // because there is only one attribute in <Version> element
-				LOG.debug("Version object created\n");
+				currentVersion.setTradeName(attrs.getValue(0));
 				break;
 			case CERTIFICATE:
 				currentCertificate = new Certificate();
-				LOG.debug("Certificate object created\n");
 				break;
 			case PACK:
 				currentPack = new Pack();
 				if (attrs.getLength() > 0) {
 					currentPack.setSize(attrs.getValue(0));
 				}
-				LOG.debug("Pack object created\n");
 				break;
 			case DOSAGE:
 				currentDosage = new Dosage();
-				LOG.debug("Dosage object created\n");
 				break;
 			default:
-				break; // STUB
+				break;
 		}
-		
-		String line = "<" + localName;
-		for (int i = 0; i < attrs.getLength(); i++) {
-			line += " " + attrs.getLocalName(i) + " = " + attrs.getValue(i);
-		}
-		line += ">";
-		LOG.info(line.trim());
 	}
 	
 	@Override
@@ -129,27 +118,21 @@ public class SAXParsingHandler extends DefaultHandler {
 			case VITAMIN:
 			case ANALGETIC:
 				medicins.add(currentMedicine);
-				LOG.debug("Medicine object added to collection\n");
 				break;
 			case VERSION:
 				currentMedicine.addVersion(currentVersion);
-				LOG.debug("Medicine object added to medicine object\n");
 				break;
 			case CERTIFICATE:
 				currentVersion.setCertificate(currentCertificate);
-				LOG.debug("Certificate object added to verion object\n");
 				break;
 			case PACK:
 				currentVersion.addPack(currentPack);
-				LOG.debug("Pack object added to version object\n");
 				break;
 			case DOSAGE:
 				currentVersion.setDosage(currentDosage);
 			default:
 				break;
-		}
-		
-		LOG.info("</" + localName + ">");
+		}		
 	}
 	
 	@Override
@@ -171,14 +154,16 @@ public class SAXParsingHandler extends DefaultHandler {
 					break;
 				case REGISTRATION_DATE:
 					try {
-						currentCertificate.setRegistrationDate(dateFormat.parse(content));
+						Date date = dateFormat.parse(content);
+						currentCertificate.setRegistrationDate(date);
 					} catch (ParseException e) {
 						LOG.error("Date parsing exception: ", e);
 					}
 					break;
 				case EXPIRE_DATE:
 					try {
-						currentCertificate.setExpireDate(dateFormat.parse(content));
+						Date date = dateFormat.parse(content);
+						currentCertificate.setExpireDate(date);
 					} catch (ParseException e) {
 						LOG.error("Date parsing exception: ", e);
 					}
@@ -199,9 +184,6 @@ public class SAXParsingHandler extends DefaultHandler {
 					break;
 			}
 		}
-		
-		
-		LOG.info(new String(ch, start, length));
 	}
 	
 	@Override

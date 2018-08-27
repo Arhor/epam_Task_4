@@ -32,11 +32,13 @@ import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 
 public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
 	
-	private static final Logger LOG = LogManager.getLogger(MedicinsStAXBuilder.class);
+	private static final Logger LOG = LogManager.getLogger();
 	
 	private XMLInputFactory inputFactory;
 	private MedicineFactory mFactory;
 	private DateFormat dateFormat;
+	
+	private ElementsEnum currentMedicine;
 	
 	public MedicinsStAXBuilder() {
 		super();
@@ -57,8 +59,8 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
         		int type = reader.next();
         		if (type == XMLStreamConstants.START_ELEMENT) {
         			String name = reader.getLocalName();
-        			ElementsEnum currentElement = ElementsEnum.valueOf(name.toUpperCase());
-        			switch (currentElement) {
+        			currentMedicine = ElementsEnum.valueOf(name.toUpperCase());
+        			switch (currentMedicine) {
         				case ANTIBIOTIC:
         				case ANALGETIC:
         				case VITAMIN:
@@ -84,30 +86,35 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
         }
 	}
 
-	private Medicine buildMedicine(XMLStreamReader reader) throws XMLStreamException {
+	private Medicine buildMedicine(XMLStreamReader reader)
+			throws XMLStreamException {
 		
-		ElementsEnum currentMedicine = ElementsEnum.valueOf(reader.getLocalName().toUpperCase());
 		Medicine medicine = mFactory.getMedicine(currentMedicine);
-		
-		String name = reader.getAttributeValue(null, AttributesEnum.NAME.getValue());
-		String cas = reader.getAttributeValue(null, AttributesEnum.CAS.getValue());
-		String drugBank = reader.getAttributeValue(null, AttributesEnum.DRUG_BANK.getValue());
-		
-		medicine.setName(name);
-		medicine.setCas(cas);
-		medicine.setDrugBank(drugBank);
+				
+		medicine.setName(
+				reader.getAttributeValue(null, AttributesEnum.NAME.getValue()));
+		medicine.setCas(
+				reader.getAttributeValue(null, AttributesEnum.CAS.getValue()));
+		medicine.setDrugBank(
+				reader.getAttributeValue(
+						null, AttributesEnum.DRUG_BANK.getValue()));
 		
 		switch (currentMedicine) {
 			case ANTIBIOTIC:
-				boolean recipe = Boolean.parseBoolean(reader.getAttributeValue(null, AttributesEnum.RECIPE.getValue()));
+				boolean recipe = Boolean.parseBoolean(
+						reader.getAttributeValue(
+								null, AttributesEnum.RECIPE.getValue()));
 				((Antibiotic) medicine).setRecipe(recipe);
 				break;
 			case ANALGETIC:
-				boolean narcotic = Boolean.parseBoolean(reader.getAttributeValue(null, AttributesEnum.NARCOTIC.getValue()));
+				boolean narcotic = Boolean.parseBoolean(
+						reader.getAttributeValue(
+								null, AttributesEnum.NARCOTIC.getValue()));
 				((Analgetic) medicine).setNarcotic(narcotic);
 				break;
 			case VITAMIN:
-				String solution = reader.getAttributeValue(null, AttributesEnum.SOLUTION.getValue());
+				String solution = reader.getAttributeValue(
+						null, AttributesEnum.SOLUTION.getValue());
 				((Vitamin) medicine).setSolution(solution);
 		default:
 			break;
@@ -122,71 +129,75 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
 			int type = reader.next();
 			ElementsEnum currentElement = null;
 			if (type == XMLStreamConstants.START_ELEMENT) {
-				currentElement = ElementsEnum.valueOf(reader.getLocalName().toUpperCase());
+				currentElement = ElementsEnum.valueOf(
+						reader.getLocalName().toUpperCase());
 				switch (currentElement) {
 					case PHARM:
-						medicine.setPharm(getTextContent(reader));
+						medicine.setPharm(geContent(reader));
 						break;
 					case VERSION:
 						currentVersion = new Version();
-						String tradeName = reader.getAttributeValue(null, AttributesEnum.TRADE_NAME.getValue());
+						String tradeName = reader.getAttributeValue(
+								null, AttributesEnum.TRADE_NAME.getValue());
 						currentVersion.setTradeName(tradeName);
 						break;
 					case PRODUCER:
-						currentVersion.setProducer(getTextContent(reader));
+						currentVersion.setProducer(geContent(reader));
 						break;
 					case FORM:
-						currentVersion.setForm(getTextContent(reader));
+						currentVersion.setForm(geContent(reader));
 						break;
 					case CERTIFICATE:
 						currentCertificate = new Certificate();
 						break;
 					case REGISTRED_BY:
-						currentCertificate.setRegistredBy(getTextContent(reader));
+						currentCertificate.setRegistredBy(geContent(reader));
 						break;
 					case REGISTRATION_DATE:
 						try {
-							Date registrationDate = dateFormat.parse(getTextContent(reader));
-							currentCertificate.setRegistrationDate(registrationDate);
+							Date regDate = dateFormat.parse(geContent(reader));
+							currentCertificate.setRegistrationDate(regDate);
 						} catch (ParseException e) {
 							LOG.error("Date parsing exception", e);
 						}
 						break;
 					case EXPIRE_DATE:
 						try {
-							Date expireDate = dateFormat.parse(getTextContent(reader));
-							currentCertificate.setExpireDate(expireDate);
+							Date expDate = dateFormat.parse(geContent(reader));
+							currentCertificate.setExpireDate(expDate);
 						} catch (ParseException e) {
 							LOG.error("Date parsing exception", e);
 						}
 						break;
 					case PACK:
 						currentPack = new Pack();
-						String size = reader.getAttributeValue(null, AttributesEnum.SIZE.getValue());
+						String size = reader.getAttributeValue(
+								null, AttributesEnum.SIZE.getValue());
 						currentPack.setSize(size);
 						break;
 					case QUANTITY:
-						int quantity = Integer.parseInt(getTextContent(reader));
+						int quantity = Integer.parseInt(geContent(reader));
 						currentPack.setQuantity(quantity);
 						break;
 					case PRICE:
-						double price = Double.parseDouble(getTextContent(reader));
+						double price = Double.parseDouble(geContent(reader));
 						currentPack.setPrice(price);
 						break;
 					case DOSAGE:
 						currentDosage = new Dosage();
 						break;
 					case AMOUNT:
-						currentDosage.setAmount(getTextContent(reader));
+						currentDosage.setAmount(geContent(reader));
 						break;
 					case FREQUENCY:
-						currentDosage.setFrequency(getTextContent(reader));
+						currentDosage.setFrequency(geContent(reader));
 						break;
 					default:
 						break;
 				}
 			} else if (type == XMLStreamConstants.END_ELEMENT) {
-				currentElement = ElementsEnum.valueOf(reader.getLocalName().toUpperCase());
+				currentElement = ElementsEnum.valueOf(
+						reader.getLocalName().toUpperCase());
 				if (currentElement == currentMedicine) {
 					break;
 				}
@@ -208,7 +219,6 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
 				}
 			}
 		}
-		
 		return medicine;
 	}
 	
@@ -218,7 +228,7 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
 	 * @return
 	 * @throws XMLStreamException
 	 */
-	private String getTextContent(XMLStreamReader reader) throws XMLStreamException {
+	private String geContent(XMLStreamReader reader) throws XMLStreamException {
 		String content = null;
 		if (reader.hasNext()) {
 			reader.next();

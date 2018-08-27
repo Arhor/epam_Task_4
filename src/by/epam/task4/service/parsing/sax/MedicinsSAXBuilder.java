@@ -12,7 +12,7 @@ import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 
 public class MedicinsSAXBuilder extends MedicinsAbstractBuilder {
 	
-	private static final Logger LOG = LogManager.getLogger(MedicinsSAXBuilder.class);
+	private static final Logger LOG = LogManager.getLogger();
 
 	private SAXParsingHandler handler;
 	private XMLReader reader;
@@ -22,7 +22,6 @@ public class MedicinsSAXBuilder extends MedicinsAbstractBuilder {
 		try {
 			reader = XMLReaderFactory.createXMLReader();
 			reader.setContentHandler(handler);
-			
 		} catch (SAXException e) {
 			LOG.error("SAX parser error: ", e);
 		}
