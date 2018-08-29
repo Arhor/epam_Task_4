@@ -23,6 +23,6 @@ public class Antibiotic extends Medicine {
 	@Override
 	public String toString() {
 		return super.toString()
-				+ ", recipe: " + recipe; 
+				+ ", recipe: " + recipe + "\n"; 
 	}
 }

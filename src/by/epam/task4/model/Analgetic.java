@@ -23,6 +23,6 @@ public class Analgetic extends Medicine {
 	@Override
 	public String toString() {
 		return super.toString()
-				+ ", narcotic: " + narcotic;
+				+ ", narcotic: " + narcotic + "\n";
 	}
 }

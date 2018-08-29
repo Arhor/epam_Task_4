@@ -1,29 +1,24 @@
 package by.epam.task4.service;
 
-import java.io.File;
 import java.io.IOException;
 
-import javax.xml.XMLConstants;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 
-public class ValidatorXML {
+public class XMLValidator {
 	
-	private static final Logger LOG = LogManager.getLogger(ValidatorXML.class);
+	private static final Logger LOG = LogManager.getLogger(XMLValidator.class);
 
 	public static boolean validate(String xml, String xsd) {
 		Schema schema = null;
-		String lang = XMLConstants.W3C_XML_SCHEMA_NS_URI;
-		SchemaFactory sf = SchemaFactory.newInstance(lang);
 		try {
-			schema = sf.newSchema(new File(xsd));			
+			schema = SchemaReader.getSchema(xsd);			
 			Validator validator = schema.newValidator();
 			Source source = new StreamSource(xml);
 			validator.validate(source);
@@ -34,6 +29,7 @@ public class ValidatorXML {
 		} catch (SAXException e) {
 			LOG.error("SAX exception: ", e);
 		}
+		LOG.info(xml + " is invalid\n");
 		return false;
 	}
 }

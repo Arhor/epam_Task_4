@@ -27,7 +27,7 @@
         </sequence>
         <attribute name="name" use="required">
             <simpleType>
-                <restriction base="ID">
+                <restriction base="string">
                     <whiteSpace value="collapse"/>
                 </restriction>
             </simpleType>
@@ -41,7 +41,7 @@
         </attribute>
         <attribute name="drug_bank" use="required">
             <simpleType>
-                <restriction base="string">
+                <restriction base="ID">
                     <pattern value="DB([0-9]{5})"/>
                 </restriction>
             </simpleType>

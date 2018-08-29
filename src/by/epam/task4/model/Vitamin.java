@@ -23,6 +23,6 @@ public class Vitamin extends Medicine {
 	@Override
 	public String toString() {
 		return super.toString()
-				+ ", solution: " + solution;
+				+ ", solution: " + solution + "\n";
 	}
 }
