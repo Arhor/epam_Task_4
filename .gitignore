@@ -1,6 +1,6 @@
-/lib/
-/log/
-/bin/
-/test-output/
+lib/
+log/
+bin/
+test-output/
 .classpath
 

@@ -1,4 +1,4 @@
-package test.by.epam.service.parsing;
+package test.by.epam.task4.service.parsing;
 
 import org.testng.annotations.Test;
 
@@ -18,7 +18,6 @@ import org.testng.annotations.DataProvider;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -75,7 +74,7 @@ public class MedicinsAbstractBuilderTest {
     	Pack pack = new Pack();
     	pack.setQuantity(100);
     	pack.setPrice(200.00);
-    	ArrayList<Pack> packs = new ArrayList<Pack>();
+    	HashSet<Pack> packs = new HashSet<Pack>();
     	packs.add(pack);
     	
     	
@@ -92,13 +91,14 @@ public class MedicinsAbstractBuilderTest {
 
     @AfterClass
     public void afterClass() {
+    	validMedicinsSet.clear();
     	validMedicinsSet = null;
     }
     
     @DataProvider(name = "medicinsBuilders")
     public static Object[][] createData() {
     	return new Object[][] {
-    		{"sax"}, {"dom"}, {"stax"}, {"bax"}
+    		{"sax"}, {"dom"}, {"stax"}
     	};
     } 
 }

@@ -1,4 +1,4 @@
-package test.by.epam.service;
+package test.by.epam.task4.service;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -1,6 +1,6 @@
 package by.epam.task4.model;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Version {
 
@@ -8,11 +8,11 @@ public class Version {
 	private String producer;
 	private String form;
 	private Certificate certificate;
-	private ArrayList<Pack> packs;
+	private HashSet<Pack> packs;
 	private Dosage dosage;
 	
 	public Version() {
-		packs = new ArrayList<Pack>();
+		packs = new HashSet<Pack>();
 	}
 
 	public String getProducer() {
@@ -39,11 +39,11 @@ public class Version {
 		this.certificate = certificate;
 	}
 
-	public ArrayList<Pack> getPacks() {
+	public HashSet<Pack> getPacks() {
 		return packs;
 	}
 
-	public void setPacks(ArrayList<Pack> packs) {
+	public void setPacks(HashSet<Pack> packs) {
 		this.packs = packs;
 	}
 
@@ -65,6 +65,48 @@ public class Version {
 	
 	public void addPack(Pack pack) {
 		packs.add(pack);
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		System.out.println("equals in: " + getClass());
+		if (obj == this) { return true; }
+		if (obj == null) { return false; }
+		if (obj.getClass() != getClass()) { return false; }
+		Version version = (Version) obj;
+		if (tradeName == null) {
+			if (version.tradeName != null) {
+				return false;
+			}
+		} else if(!tradeName.equals(version.tradeName)) {
+			return false;
+		}
+		if (producer == null && version.producer != null) {
+			return false;
+		} else if (!producer.equals(version.producer)) {
+			return false;
+		}
+		if (form == null && version.form != null) {
+			return false;
+		} else if (!form.equals(version.form)) {
+			return false;
+		}
+		if (certificate == null && version.certificate != null) {
+			return false;
+		} else if (!certificate.equals(version.certificate)) {
+			return false;
+		}
+		if (dosage == null && version.dosage != null) {
+			return false;
+		} else if (!dosage.equals(version.dosage)) {
+			return false;
+		}
+		if (packs == null && version.packs != null) {
+			return false;
+		} else if (!packs.equals(version.packs)) {
+			return false;
+		}
+		return true;
 	}
 	
 	@Override

@@ -31,6 +31,23 @@ public class Pack {
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+		System.out.println("equals in: " + getClass());
+		if (obj == this) { return true; }
+		if (obj == null) { return false; }
+		if (obj.getClass() != getClass()) { return false; }
+		Pack pack = (Pack) obj;
+		if (quantity != pack.quantity) { return false; }
+		if (price != pack.price) { return false; }
+		if (size == null && pack.size != null) {
+			return false;
+		} else if (!size.equals(pack.size)) {
+			return false;
+		}
+		return true;
+	}
+	
+	@Override
 	public int hashCode() {
 		int hashCode = 0;
 		hashCode += (int) (31 * (quantity + price));

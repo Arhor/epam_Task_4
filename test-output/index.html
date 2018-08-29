@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>testng-customsuite.xml</span>
+                    <span>C:\Users\Архор\AppData\Local\Temp\testng-eclipse--1499603575\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 4 failed,   </span>
+                    <span class="method-stats">3 methods, 3 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,22 +102,17 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.by.epam.service.parsing.MedicinsAbstractBuilderTest" hash-for-method="BuildeSetMedicinsTest(sax)">BuildeSetMedicinsTest(sax)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest" hash-for-method="BuildeSetMedicinsTest(dom)">BuildeSetMedicinsTest(dom)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.by.epam.service.parsing.MedicinsAbstractBuilderTest" hash-for-method="BuildeSetMedicinsTest(dom)">BuildeSetMedicinsTest(dom)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest" hash-for-method="BuildeSetMedicinsTest(sax)">BuildeSetMedicinsTest(sax)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.by.epam.service.parsing.MedicinsAbstractBuilderTest" hash-for-method="BuildeSetMedicinsTest(bax)">BuildeSetMedicinsTest(bax)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.by.epam.service.parsing.MedicinsAbstractBuilderTest" hash-for-method="BuildeSetMedicinsTest(stax)">BuildeSetMedicinsTest(stax)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest" hash-for-method="BuildeSetMedicinsTest(stax)">BuildeSetMedicinsTest(stax)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -135,79 +130,9 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">test.by.epam.service.parsing.MedicinsAbstractBuilderTest</span>
+              <span class="class-name">test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="BuildeSetMedicinsTest(sax)">
-                  </a> <!-- BuildeSetMedicinsTest(sax) -->
-                  <span class="method-name">BuildeSetMedicinsTest</span>
-                  <span class="parameters">(sax)</span>
-                  <div class="stack-trace">java.lang.AssertionError: Sets differ: expected [Antibiotic:  name=&apos;Test antibiotic&apos; CAS=&apos;12345-67-8&apos; DrugBank=&apos;DB00000&apos;
-    pharm: Test Pharmacy
-    Version: trade name=&apos;Test trade name&apos;
-        producer: Test producer
-        form :    pills
-        Certificate:
-            registred by:      Test registration
-            registration date: Fri Jan 01 00:00:00 MSK 2010
-            expire date :      Wed Jan 01 00:00:00 MSK 2020
-        Dosage:
-            amount:    Test amount
-            frequency: Test frequency
-        Pack: size=&apos;null&apos;
-            quantity: 100
-            price:    200.0, recipe: true
-] but got [Antibiotic:  name=&apos;Test antibiotic&apos; CAS=&apos;12345-67-8&apos; DrugBank=&apos;DB00000&apos;
-    pharm: Test Pharmacy
-    Version: trade name=&apos;Test trade name&apos;
-        producer: Test producer
-        form :    pills
-        Certificate:
-            registred by:      Test registration
-            registration date: Fri Jan 01 00:00:00 MSK 2010
-            expire date :      Wed Jan 01 00:00:00 MSK 2020
-        Dosage:
-            amount:    Test amount
-            frequency: Test frequency
-        Pack: size=&apos;null&apos;
-            quantity: 100
-            price:    200.0, recipe: true
-]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.assertEquals(Assert.java:1042)
-	at org.testng.Assert.assertEquals(Assert.java:1020)
-	at test.by.epam.service.parsing.MedicinsAbstractBuilderTest.BuildeSetMedicinsTest(MedicinsAbstractBuilderTest.java:43)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="BuildeSetMedicinsTest(dom)">
@@ -248,11 +173,11 @@
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.assertEquals(Assert.java:1042)
 	at org.testng.Assert.assertEquals(Assert.java:1020)
-	at test.by.epam.service.parsing.MedicinsAbstractBuilderTest.BuildeSetMedicinsTest(MedicinsAbstractBuilderTest.java:43)
+	at test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest.BuildeSetMedicinsTest(MedicinsAbstractBuilderTest.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
@@ -280,17 +205,49 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="BuildeSetMedicinsTest(bax)">
-                  </a> <!-- BuildeSetMedicinsTest(bax) -->
+                  <a name="BuildeSetMedicinsTest(sax)">
+                  </a> <!-- BuildeSetMedicinsTest(sax) -->
                   <span class="method-name">BuildeSetMedicinsTest</span>
-                  <span class="parameters">(bax)</span>
-                  <div class="stack-trace">java.lang.AssertionError: Parser not presented
-	at org.testng.Assert.fail(Assert.java:85)
-	at test.by.epam.service.parsing.MedicinsAbstractBuilderTest.BuildeSetMedicinsTest(MedicinsAbstractBuilderTest.java:45)
+                  <span class="parameters">(sax)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Sets differ: expected [Antibiotic:  name=&apos;Test antibiotic&apos; CAS=&apos;12345-67-8&apos; DrugBank=&apos;DB00000&apos;
+    pharm: Test Pharmacy
+    Version: trade name=&apos;Test trade name&apos;
+        producer: Test producer
+        form :    pills
+        Certificate:
+            registred by:      Test registration
+            registration date: Fri Jan 01 00:00:00 MSK 2010
+            expire date :      Wed Jan 01 00:00:00 MSK 2020
+        Dosage:
+            amount:    Test amount
+            frequency: Test frequency
+        Pack: size=&apos;null&apos;
+            quantity: 100
+            price:    200.0, recipe: true
+] but got [Antibiotic:  name=&apos;Test antibiotic&apos; CAS=&apos;12345-67-8&apos; DrugBank=&apos;DB00000&apos;
+    pharm: Test Pharmacy
+    Version: trade name=&apos;Test trade name&apos;
+        producer: Test producer
+        form :    pills
+        Certificate:
+            registred by:      Test registration
+            registration date: Fri Jan 01 00:00:00 MSK 2010
+            expire date :      Wed Jan 01 00:00:00 MSK 2020
+        Dosage:
+            amount:    Test amount
+            frequency: Test frequency
+        Pack: size=&apos;null&apos;
+            quantity: 100
+            price:    200.0, recipe: true
+]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.assertEquals(Assert.java:1042)
+	at org.testng.Assert.assertEquals(Assert.java:1020)
+	at test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest.BuildeSetMedicinsTest(MedicinsAbstractBuilderTest.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
@@ -312,10 +269,6 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: by.epam.task4.service.exception.ParserNotPresentedException: There is not such parser: bax
-	at by.epam.task4.service.factory.MedicinsBuilderFactory.getBuilder(MedicinsBuilderFactory.java:29)
-	at test.by.epam.service.parsing.MedicinsAbstractBuilderTest.BuildeSetMedicinsTest(MedicinsAbstractBuilderTest.java:40)
-	... 25 more
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -360,11 +313,11 @@ Caused by: by.epam.task4.service.exception.ParserNotPresentedException: There is
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.assertEquals(Assert.java:1042)
 	at org.testng.Assert.assertEquals(Assert.java:1020)
-	at test.by.epam.service.parsing.MedicinsAbstractBuilderTest.BuildeSetMedicinsTest(MedicinsAbstractBuilderTest.java:43)
+	at test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest.BuildeSetMedicinsTest(MedicinsAbstractBuilderTest.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
@@ -395,7 +348,7 @@ Caused by: by.epam.task4.service.exception.ParserNotPresentedException: There is
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse--1506929578/testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Архор\AppData\Local\Temp\testng-eclipse--1499603575\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -404,7 +357,7 @@ Caused by: by.epam.task4.service.exception.ParserNotPresentedException: There is
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.by.epam.service.parsing.MedicinsAbstractBuilderTest&quot;/&gt;
+      &lt;class name=&quot;test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -444,28 +397,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'BuildeSetMedicinsTest')
-data.setCell(0, 2, 'test.by.epam.service.parsing.MedicinsAbstractBuilderTest')
-data.setCell(0, 3, 59);
+data.setCell(0, 2, 'test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest')
+data.setCell(0, 3, 19);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'BuildeSetMedicinsTest')
-data.setCell(1, 2, 'test.by.epam.service.parsing.MedicinsAbstractBuilderTest')
-data.setCell(1, 3, 53);
+data.setCell(1, 2, 'test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest')
+data.setCell(1, 3, 4);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'BuildeSetMedicinsTest')
-data.setCell(2, 2, 'test.by.epam.service.parsing.MedicinsAbstractBuilderTest')
-data.setCell(2, 3, 13);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'BuildeSetMedicinsTest')
-data.setCell(3, 2, 'test.by.epam.service.parsing.MedicinsAbstractBuilderTest')
-data.setCell(3, 3, 6);
+data.setCell(2, 2, 'test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest')
+data.setCell(2, 3, 4);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 131 ms</span>
+              <span class="suite-total-time">Total running time: 27 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -491,7 +440,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.by.epam.service.parsing.MedicinsAbstractBuilderTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.by.epam.task4.service.parsing.MedicinsAbstractBuilderTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
                 <span class="method-start">0 ms</span>
@@ -500,29 +449,23 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">BuildeSetMedicinsTest(sax)</span>
-                <span class="method-start">49 ms</span>
+                <span class="method-start">16 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">BuildeSetMedicinsTest(dom)</span>
-                <span class="method-start">120 ms</span>
+                <span class="method-start">38 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">BuildeSetMedicinsTest(stax)</span>
-                <span class="method-start">140 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">BuildeSetMedicinsTest(bax)</span>
-                <span class="method-start">205 ms</span>
+                <span class="method-start">44 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">223 ms</span>
+                <span class="method-start">59 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
