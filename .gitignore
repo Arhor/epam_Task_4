@@ -3,4 +3,4 @@ log/
 bin/
 test-output/
 .classpath
-
+.project

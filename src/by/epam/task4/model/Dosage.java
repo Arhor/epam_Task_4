@@ -28,13 +28,17 @@ public class Dosage {
 		if (obj == null) { return false; }
 		if (obj.getClass() != getClass()) { return false; }
 		Dosage dosage = (Dosage) obj;
-		if (amount == null && dosage.amount != null) {
-			return false;
+		if (amount == null) {
+			if (dosage.amount != null) {
+				return false;
+			}
 		} else if (!amount.equals(dosage.amount)) {
 			return false;
 		}
-		if (frequency == null && dosage.frequency != null) {
-			return false;
+		if (frequency == null) {
+			if (dosage.frequency != null) {
+				return false;
+			}
 		} else if (!frequency.equals(dosage.frequency)) {
 			return false;
 		}

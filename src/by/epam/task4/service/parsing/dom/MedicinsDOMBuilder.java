@@ -128,6 +128,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
 			currentVersion.setProducer(versionElement.getElementsByTagName(
 					ElementsEnum.PRODUCER.getValue()).item(0).getTextContent());
 			
+			// setting 'form field'
+			currentVersion.setForm(versionElement.getElementsByTagName(
+					ElementsEnum.FORM.getValue()).item(0).getTextContent());
+			
 			// setting 'certificate' field
 			Element certificateElement = 
 					(Element) versionElement.getElementsByTagName(

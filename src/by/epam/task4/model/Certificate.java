@@ -39,18 +39,24 @@ public class Certificate {
 		if (obj == null) { return false; }
 		if (obj.getClass() != getClass()) { return false; }
 		Certificate certificate = (Certificate) obj;
-		if (registredBy == null && certificate.registredBy != null) {
-			return false;
+		if (registredBy == null) {
+			if (certificate.registredBy != null) {
+				return false;
+			}
 		} else if (!registredBy.equals(certificate.registredBy)) {
 			return false;
 		}
-		if (registrationDate == null && certificate.registrationDate != null) {
-			return false;
+		if (registrationDate == null) {
+			if (certificate.registrationDate != null) {
+				return false;
+			}
 		} else if (!registrationDate.equals(certificate.registrationDate)) {
 			return false;
 		}
-		if (expireDate == null && certificate.expireDate != null) {
-			return false;
+		if (expireDate == null) {
+			if (certificate.expireDate != null) {
+				return false;
+			}
 		} else if (!expireDate.equals(certificate.expireDate)) {
 			return false;
 		}

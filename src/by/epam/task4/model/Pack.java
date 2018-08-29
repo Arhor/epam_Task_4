@@ -39,8 +39,10 @@ public class Pack {
 		Pack pack = (Pack) obj;
 		if (quantity != pack.quantity) { return false; }
 		if (price != pack.price) { return false; }
-		if (size == null && pack.size != null) {
-			return false;
+		if (size == null) {
+			if (pack.size != null) {
+				return false;
+			}
 		} else if (!size.equals(pack.size)) {
 			return false;
 		}

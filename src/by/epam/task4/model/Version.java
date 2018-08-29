@@ -81,28 +81,38 @@ public class Version {
 		} else if(!tradeName.equals(version.tradeName)) {
 			return false;
 		}
-		if (producer == null && version.producer != null) {
-			return false;
+		if (producer == null) {
+			if (version.producer != null) {
+				return false;
+			}
 		} else if (!producer.equals(version.producer)) {
 			return false;
 		}
-		if (form == null && version.form != null) {
-			return false;
+		if (form == null) {
+			if (version.form != null) {
+				return false;
+			}
 		} else if (!form.equals(version.form)) {
 			return false;
 		}
-		if (certificate == null && version.certificate != null) {
-			return false;
+		if (certificate == null) {
+			if (version.certificate != null) {
+				return false;
+			}
 		} else if (!certificate.equals(version.certificate)) {
 			return false;
 		}
-		if (dosage == null && version.dosage != null) {
-			return false;
+		if (dosage == null) {
+			if (version.dosage != null) {
+				return false;
+			}
 		} else if (!dosage.equals(version.dosage)) {
 			return false;
 		}
-		if (packs == null && version.packs != null) {
-			return false;
+		if (packs == null) {
+			if (version.packs != null) {
+				return false;
+			}
 		} else if (!packs.equals(version.packs)) {
 			return false;
 		}

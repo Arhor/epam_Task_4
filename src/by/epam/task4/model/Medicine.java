@@ -58,28 +58,32 @@ public abstract class Medicine {
 		if (obj == null) { return false; }
 		if (obj.getClass() != getClass()) { return false; }
 		Medicine medicine = (Medicine) obj;
-		if (name == null && medicine.name != null) {
-			System.out.println("failed in: " + getClass());
-			return false;
+		if (name == null) {
+			if (medicine.name != null) {
+				return false;
+			}			
 		} else if (!name.equals(medicine.name)) {
-			System.out.println("failed in: " + getClass());
 			return false;
 		}
-		if (cas == null && medicine.cas != null) {
-			return false;
+		if (cas == null) {
+			if (medicine.cas != null) {
+				return false;
+			}
 		} else if (!cas.equals(medicine.cas)) {
 			return false;
 		}
-		if (drugBank == null && medicine.drugBank != null) {
-			return false;
+		if (drugBank == null) {
+			if (medicine.drugBank != null) {
+				return false;
+			}
 		} else if (!drugBank.equals(medicine.drugBank)) {
 			return false;
 		}
-		if (versions == null && medicine.versions != null) {
-			System.out.println("failed in: " + getClass());
-			return false;
+		if (versions == null) {
+			if (medicine.versions != null) {
+				return false;
+			}
 		} else if (!versions.equals(medicine.versions)) {
-			// FAIL HERE !!!
 			return false;
 		}
 		return true;
