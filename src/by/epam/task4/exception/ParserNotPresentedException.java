@@ -1,10 +1,16 @@
+/*
+ * class: ParserNotPresentedException
+ */
+
 package by.epam.task4.exception;
 
+/**
+ * @author Maxim Burishinets
+ * @version 1.0
+ * @since 25 Aug 2018
+ */
 public class ParserNotPresentedException extends Exception {
 
-    /**
-     * 
-     */
     private static final long serialVersionUID = 3488687349870618790L;
 
     public ParserNotPresentedException() {

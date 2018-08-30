@@ -1,13 +1,18 @@
+/*
+ * class: XMLVelidationException
+ */
+
 package by.epam.task4.exception;
 
+/**
+ * @author Maxim Burishinets
+ * @version 1.0 
+ * @since 25 Aug 2018
+ */
 public class XMLValidationException extends Exception {
 
-    /**
-     * 
-     */
     private static final long serialVersionUID = -4249213355583170171L;
 
-    // TODO: 
     public XMLValidationException() {
         super();
     }
