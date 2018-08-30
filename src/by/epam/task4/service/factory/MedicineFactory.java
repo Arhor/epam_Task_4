@@ -9,22 +9,22 @@ import by.epam.task4.service.parsing.ElementsEnum;
 
 public class MedicineFactory {
 
-	public Medicine getMedicine(ElementsEnum element)
-			throws MedicineNotPresentedException {
-		Medicine medicine = null;
-		switch (element) {
-			case ANTIBIOTIC:
-				medicine = new Antibiotic();
-				break;
-			case VITAMIN:
-				medicine = new Vitamin();
-				break;
-			case ANALGETIC:
-				medicine = new Analgetic();
-				break;
-			default:
-				throw new MedicineNotPresentedException();
-		}
-		return medicine;
-	}
+    public Medicine getMedicine(ElementsEnum element)
+            throws MedicineNotPresentedException {
+        Medicine medicine = null;
+        switch (element) {
+            case ANTIBIOTIC:
+                medicine = new Antibiotic();
+                break;
+            case VITAMIN:
+                medicine = new Vitamin();
+                break;
+            case ANALGETIC:
+                medicine = new Analgetic();
+                break;
+            default:
+                throw new MedicineNotPresentedException();
+        }
+        return medicine;
+    }
 }

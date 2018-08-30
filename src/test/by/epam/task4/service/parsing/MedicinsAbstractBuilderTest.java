@@ -27,79 +27,79 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class MedicinsAbstractBuilderTest {
-	
-	private static final Logger LOG = LogManager.getLogger(
-			MedicinsAbstractBuilderTest.class);
-	
-	private static Set<Medicine> validMedicinsSet;
-	
+    
+    private static final Logger LOG = LogManager.getLogger(
+            MedicinsAbstractBuilderTest.class);
+    
+    private static Set<Medicine> validMedicinsSet;
+    
     @Test(dataProvider = "medicinsBuilders")
     public void BuildeSetMedicinsTest(String jaxp) {
-    	MedicinsBuilderFactory factory = new MedicinsBuilderFactory();
-    	try {
-			MedicinsAbstractBuilder builder = factory.getBuilder(jaxp);
-			builder.buildSetMedicins("validTest.xml");
-			Set<Medicine> actualMedicinsSet = builder.getMedicins();
-			Assert.assertEquals(actualMedicinsSet, validMedicinsSet);
-		} catch (ParserNotPresentedException e) {
-			Assert.fail("Parser not presented", e);
-		}
+        MedicinsBuilderFactory factory = new MedicinsBuilderFactory();
+        try {
+            MedicinsAbstractBuilder builder = factory.getBuilder(jaxp);
+            builder.buildSetMedicins("validTest.xml");
+            Set<Medicine> actualMedicinsSet = builder.getMedicins();
+            Assert.assertEquals(actualMedicinsSet, validMedicinsSet);
+        } catch (ParserNotPresentedException e) {
+            Assert.fail("Parser not presented", e);
+        }
     }
 
     @BeforeClass
     public void beforeClass() {
-    	validMedicinsSet = new HashSet<Medicine>();
-    	
-    	Medicine medicine = new Antibiotic();
-    	medicine.setName("Test antibiotic");
-    	medicine.setCas("12345-67-8");
-    	medicine.setDrugBank("DB00000");
-    	medicine.setPharm("Test Pharmacy");
-    	((Antibiotic) medicine).setRecipe(true);
-    	
-    	Version version = new Version();
-    	version.setTradeName("Test trade name");
-    	version.setProducer("Test producer");
-    	version.setForm("pills");
-    	
-    	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-    	Certificate certificate = new Certificate();
-    	certificate.setRegistredBy("Test registration");
-    	try {
-    		certificate.setRegistrationDate(dateFormat.parse("2010-01-01"));
-			certificate.setExpireDate(dateFormat.parse("2020-01-01"));
-		} catch (ParseException e) {
-			LOG.error("Date parsing exception", e);
-		}
-    	
-    	Pack pack = new Pack();
-    	pack.setQuantity(100);
-    	pack.setPrice(200.00);
-    	HashSet<Pack> packs = new HashSet<Pack>();
-    	packs.add(pack);
-    	
-    	
-    	Dosage dosage = new Dosage();
-    	dosage.setAmount("Test amount");
-    	dosage.setFrequency("Test frequency");
-    	
-    	version.setCertificate(certificate);
-    	version.setPacks(packs);
-    	version.setDosage(dosage);
-    	medicine.addVersion(version);
-    	validMedicinsSet.add(medicine);
+        validMedicinsSet = new HashSet<Medicine>();
+        
+        Medicine medicine = new Antibiotic();
+        medicine.setName("Test antibiotic");
+        medicine.setCas("12345-67-8");
+        medicine.setDrugBank("DB00000");
+        medicine.setPharm("Test Pharmacy");
+        ((Antibiotic) medicine).setRecipe(true);
+        
+        Version version = new Version();
+        version.setTradeName("Test trade name");
+        version.setProducer("Test producer");
+        version.setForm("pills");
+        
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Certificate certificate = new Certificate();
+        certificate.setRegistredBy("Test registration");
+        try {
+            certificate.setRegistrationDate(dateFormat.parse("2010-01-01"));
+            certificate.setExpireDate(dateFormat.parse("2020-01-01"));
+        } catch (ParseException e) {
+            LOG.error("Date parsing exception", e);
+        }
+        
+        Pack pack = new Pack();
+        pack.setQuantity(100);
+        pack.setPrice(200.00);
+        HashSet<Pack> packs = new HashSet<Pack>();
+        packs.add(pack);
+        
+        
+        Dosage dosage = new Dosage();
+        dosage.setAmount("Test amount");
+        dosage.setFrequency("Test frequency");
+        
+        version.setCertificate(certificate);
+        version.setPacks(packs);
+        version.setDosage(dosage);
+        medicine.addVersion(version);
+        validMedicinsSet.add(medicine);
     }
 
     @AfterClass
     public void afterClass() {
-    	validMedicinsSet.clear();
-    	validMedicinsSet = null;
+        validMedicinsSet.clear();
+        validMedicinsSet = null;
     }
     
     @DataProvider(name = "medicinsBuilders")
     public static Object[][] createData() {
-    	return new Object[][] {
-    		{"sax"}, {"dom"}, {"stax"}
-    	};
+        return new Object[][] {
+            {"sax"}, {"dom"}, {"stax"}
+        };
     } 
 }

@@ -9,7 +9,7 @@ public class SchemaReaderTest {
 
     @Test(expectedExceptions = SAXException.class)
     public void getSchemaTest() throws SAXException {
-	    String xsd = "fictive_file";
-	    SchemaReader.getSchema(xsd);
+        String xsd = "fictive_file";
+        SchemaReader.getSchema(xsd);
     }
 }
