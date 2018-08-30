@@ -6,8 +6,7 @@ package by.epam.task4.exception;
 
 /**
  * @author Maxim Burishinets
- * @version 1.0 25
- * @since 25 Aug 2018
+ * @version 1.0 25 Aug 2018
  */
 public class MedicineNotPresentedException extends Exception {
 

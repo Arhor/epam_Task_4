@@ -11,8 +11,7 @@ import java.util.HashSet;
  * 
  * 
  * @author Maxim Burishinets
- * @version 1.0
- * @since 20 Aug 2018
+ * @version 1.0 20 Aug 2018
  */
 public abstract class Medicine {
 
