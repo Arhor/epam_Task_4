@@ -28,14 +28,16 @@ public class MedicinsSAXBuilder extends MedicinsAbstractBuilder {
 	}
 
 	@Override
-	public void buildSetMedicins(String xml) {
+	public boolean buildSetMedicins(String xml) {
 		try {
 			reader.parse(xml);
+			medicins = handler.getMedicins();
+			return true;
 		} catch (SAXException e) {
 			LOG.error("SAX parser exception: ", e);
 		} catch (IOException e) {
 			LOG.error("I/O exception: ", e);
 		}
-		medicins = handler.getMedicins();
+		return false;
 	}
 }

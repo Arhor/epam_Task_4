@@ -69,7 +69,6 @@ public class Version {
 	
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("equals in: " + getClass());
 		if (obj == this) { return true; }
 		if (obj == null) { return false; }
 		if (obj.getClass() != getClass()) { return false; }

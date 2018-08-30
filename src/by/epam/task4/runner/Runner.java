@@ -28,16 +28,17 @@ public class Runner {
 			builder = factory.getBuilder("dom");
 		} catch (ParserNotPresentedException e) {
 			LOG.error("Parser not presented exception: ", e);
-			LOG.warn("Parser not presented exception");
+			LOG.warn("Parser not presented exception,"
+					+ " application will be closed");
 			return;
 		}
 		
-		builder.buildSetMedicins(xml);
-		
-		Set<Medicine> medicins = builder.getMedicins();
-		
-		for (Medicine medicine : medicins) {
-			LOG.info("\n" + medicine + "\n");
+		if (builder.buildSetMedicins(xml)) {
+			Set<Medicine> medicins = builder.getMedicins();
+			
+			for (Medicine medicine : medicins) {
+				LOG.info("\n" + medicine + "\n");
+			}
 		}
 	}
 }

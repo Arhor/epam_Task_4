@@ -17,6 +17,8 @@ import javax.xml.stream.XMLStreamReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import by.epam.task4.exception.BuildMedicineException;
+import by.epam.task4.exception.MedicineNotPresentedException;
 import by.epam.task4.model.Analgetic;
 import by.epam.task4.model.Antibiotic;
 import by.epam.task4.model.Certificate;
@@ -49,7 +51,7 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
 	}
 
 	@Override
-	public void buildSetMedicins(String xml) {
+	public boolean buildSetMedicins(String xml) {
 		XMLStreamReader reader = null;
 		FileInputStream fis = null;
         try {
@@ -70,11 +72,14 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
         			}
         		}
         	}
+        	return true;
         } catch (FileNotFoundException e) {
         	LOG.fatal(xml + " file not found", e);
         	throw new RuntimeException();
         } catch (XMLStreamException e) {
         	LOG.error("StAX parsing exception", e);
+        } catch (BuildMedicineException e) {
+        	LOG.error("An error occured within building Medicine object", e);
         } finally {
         	if (reader != null) {
         		try {
@@ -84,12 +89,19 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
         		}
         	}
         }
+        return false;
 	}
 
 	private Medicine buildMedicine(XMLStreamReader reader)
-			throws XMLStreamException {
+			throws XMLStreamException, BuildMedicineException {
 		
-		Medicine medicine = mFactory.getMedicine(currentMedicine);
+		Medicine medicine;
+		try {
+			medicine = mFactory.getMedicine(currentMedicine);
+		} catch (MedicineNotPresentedException e) {
+			LOG.error("Medicine not presented exception", e);
+			throw new BuildMedicineException("Medicine not presented", e);
+		}
 				
 		medicine.setName(
 				reader.getAttributeValue(null, AttributesEnum.NAME.getValue()));

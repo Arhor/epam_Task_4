@@ -13,6 +13,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import by.epam.task4.exception.MedicineNotPresentedException;
 import by.epam.task4.model.*;
 import by.epam.task4.service.factory.MedicineFactory;
 import by.epam.task4.service.parsing.AttributesEnum;
@@ -42,16 +43,6 @@ public class SAXParsingHandler extends DefaultHandler {
 	}
 	
 	@Override
-	public void startDocument() {
-		LOG.info("\nParsing started\n");
-	}
-	
-	@Override
-	public void endDocument() {
-		LOG.info("\nParsing finished\n");
-	}
-	
-	@Override
 	public void startElement(
 			String uri, String localName, String qName, Attributes attrs) {
 		currentElement = ElementsEnum.valueOf(localName.toUpperCase());
@@ -59,7 +50,11 @@ public class SAXParsingHandler extends DefaultHandler {
 			case ANTIBIOTIC:
 			case VITAMIN:
 			case ANALGETIC:
+			try {
 				currentMedicine = mFactory.getMedicine(currentElement);
+			} catch (MedicineNotPresentedException e) {
+				LOG.error("Medicine not presented exception", e);
+			}
 				for (int i = 0; i < attrs.getLength(); i++) {
 					String name = attrs.getLocalName(i);
 					String value = attrs.getValue(i);
@@ -207,9 +202,5 @@ public class SAXParsingHandler extends DefaultHandler {
 
 	public Set<Medicine> getMedicins() {
 		return medicins;
-	}
-
-	public void setMedicins(Set<Medicine> medicins) {
-		this.medicins = medicins;
 	}
 }

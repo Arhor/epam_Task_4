@@ -1,4 +1,4 @@
-package test.by.epam.task4.service;
+package test.by.epam.task4.service.validation;
 
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;

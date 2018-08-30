@@ -1,5 +1,6 @@
 package by.epam.task4.service.factory;
 
+import by.epam.task4.exception.MedicineNotPresentedException;
 import by.epam.task4.model.Analgetic;
 import by.epam.task4.model.Antibiotic;
 import by.epam.task4.model.Medicine;
@@ -8,7 +9,8 @@ import by.epam.task4.service.parsing.ElementsEnum;
 
 public class MedicineFactory {
 
-	public Medicine getMedicine(ElementsEnum element) {
+	public Medicine getMedicine(ElementsEnum element)
+			throws MedicineNotPresentedException {
 		Medicine medicine = null;
 		switch (element) {
 			case ANTIBIOTIC:
@@ -21,7 +23,7 @@ public class MedicineFactory {
 				medicine = new Analgetic();
 				break;
 			default:
-				break;
+				throw new MedicineNotPresentedException();
 		}
 		return medicine;
 	}
