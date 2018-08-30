@@ -2,13 +2,13 @@ package test.by.epam.task4.service.parsing;
 
 import org.testng.annotations.Test;
 
+import by.epam.task4.exception.ParserNotPresentedException;
 import by.epam.task4.model.Antibiotic;
 import by.epam.task4.model.Certificate;
 import by.epam.task4.model.Dosage;
 import by.epam.task4.model.Medicine;
 import by.epam.task4.model.Pack;
 import by.epam.task4.model.Version;
-import by.epam.task4.service.exception.ParserNotPresentedException;
 import by.epam.task4.service.factory.MedicinsBuilderFactory;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 
@@ -28,7 +28,8 @@ import org.testng.annotations.AfterClass;
 
 public class MedicinsAbstractBuilderTest {
 	
-	private static final Logger LOG = LogManager.getLogger(MedicinsAbstractBuilderTest.class);
+	private static final Logger LOG = LogManager.getLogger(
+			MedicinsAbstractBuilderTest.class);
 	
 	private static Set<Medicine> validMedicinsSet;
 	

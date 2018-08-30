@@ -1,6 +1,6 @@
 package by.epam.task4.service.factory;
 
-import by.epam.task4.service.exception.ParserNotPresentedException;
+import by.epam.task4.exception.ParserNotPresentedException;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 import by.epam.task4.service.parsing.dom.MedicinsDOMBuilder;
 import by.epam.task4.service.parsing.sax.MedicinsSAXBuilder;

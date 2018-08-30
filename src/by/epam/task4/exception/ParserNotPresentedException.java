@@ -1,4 +1,4 @@
-package by.epam.task4.service.exception;
+package by.epam.task4.exception;
 
 public class ParserNotPresentedException extends Exception {
 

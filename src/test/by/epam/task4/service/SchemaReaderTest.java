@@ -3,7 +3,7 @@ package test.by.epam.task4.service;
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 
-import by.epam.task4.service.SchemaReader;
+import by.epam.task4.service.validation.SchemaReader;
 
 public class SchemaReaderTest {
 

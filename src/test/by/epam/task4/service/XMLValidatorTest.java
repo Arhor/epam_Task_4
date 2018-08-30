@@ -3,7 +3,7 @@ package test.by.epam.task4.service;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import by.epam.task4.service.XMLValidator;
+import by.epam.task4.service.validation.XMLValidator;
 
 public class XMLValidatorTest {
 	

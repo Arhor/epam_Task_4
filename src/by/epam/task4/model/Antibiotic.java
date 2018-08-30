@@ -13,6 +13,14 @@ public class Antibiotic extends Medicine {
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+		if (!super.equals(obj)) { return false; }
+		Antibiotic antibiotic = (Antibiotic) obj;
+		if (recipe != antibiotic.recipe) { return false; }
+		return true;
+	}
+	
+	@Override
 	public int hashCode() {
 		int hashCode = 0;
 		hashCode += super.hashCode();

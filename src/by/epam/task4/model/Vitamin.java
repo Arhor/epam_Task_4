@@ -13,6 +13,20 @@ public class Vitamin extends Medicine {
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+		if (!super.equals(obj)) { return false; }
+		Vitamin vitamin = (Vitamin) obj;
+		if (solution == null) {
+			if (vitamin.solution != null) {
+				return false;
+			}
+		} else if (!solution.equals(vitamin.solution)) {
+			return false;
+		}
+		return true;
+	}
+	
+	@Override
 	public int hashCode() {
 		int hashCode = 0;
 		hashCode += super.hashCode();

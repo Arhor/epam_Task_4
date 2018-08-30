@@ -13,6 +13,14 @@ public class Analgetic extends Medicine {
 	}
 	
 	@Override
+	public boolean equals(Object obj) {
+		if (!super.equals(obj)) { return false; }
+		Analgetic analgetic = (Analgetic) obj;
+		if (narcotic != analgetic.narcotic) { return false; }
+		return true;
+	}
+	
+	@Override
 	public int hashCode() {
 		int hashCode = 0;
 		hashCode += super.hashCode();
