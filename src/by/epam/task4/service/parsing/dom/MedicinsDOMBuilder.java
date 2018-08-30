@@ -36,7 +36,8 @@ import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
  * it using DOM-parser for XML
  * 
  * @author Maxim Burishinets
- * @version 2.0 30 Aug 2018
+ * @version 2.0
+ * @since 30 Aug 2018
  */
 public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
     

@@ -1,5 +1,16 @@
+/*
+ * class: Antibiotic
+ */
+
 package by.epam.task4.model;
 
+/**
+ * Concrete class that represents antibiotic-type medicine
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0
+ * @since 20 Aug 2018
+ */
 public class Antibiotic extends Medicine {
 
     private boolean recipe;

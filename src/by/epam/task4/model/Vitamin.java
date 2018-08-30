@@ -1,5 +1,16 @@
+/*
+ * class: Vitamin
+ */
+
 package by.epam.task4.model;
 
+/**
+ * Concrete class that represents vitamin-type medicine
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0
+ * @since 20 Aug 2018
+ */
 public class Vitamin extends Medicine {
 
     private String solution;

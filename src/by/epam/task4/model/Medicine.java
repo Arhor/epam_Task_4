@@ -1,7 +1,19 @@
+/*
+ * class: Medicine
+ */
+
 package by.epam.task4.model;
 
 import java.util.HashSet;
 
+/**
+ * Represents abstract medicine wich has it's own name, CAS-number, DrugBank ID
+ * 
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0
+ * @since 20 Aug 2018
+ */
 public abstract class Medicine {
 
     private String name;
