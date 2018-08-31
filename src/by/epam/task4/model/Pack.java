@@ -1,5 +1,15 @@
+/*
+ * class: Pack
+ */
+
 package by.epam.task4.model;
 
+/**
+ * Represents package form, size and price for concrete medicine version
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0 20 Aug 2018
+ */
 public class Pack {
 
     private int quantity;

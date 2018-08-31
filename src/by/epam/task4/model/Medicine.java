@@ -7,7 +7,8 @@ package by.epam.task4.model;
 import java.util.HashSet;
 
 /**
- * Represents abstract medicine wich has it's own name, CAS-number, DrugBank ID
+ * Represents abstract medicine wich has it's own name, CAS-number, unique 
+ * DrugBank ID etc.
  * 
  * 
  * @author Maxim Burishinets

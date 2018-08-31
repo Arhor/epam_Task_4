@@ -1,7 +1,17 @@
+/*
+ * class: Version
+ */
+
 package by.epam.task4.model;
 
 import java.util.HashSet;
 
+/**
+ * Represents concrete version of medicine, it's producer, certificate etc.
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0 20 Aug 2018
+ */
 public class Version {
 
     private String tradeName;

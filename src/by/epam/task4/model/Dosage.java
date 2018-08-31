@@ -1,5 +1,15 @@
+/*
+ * class: Dosage
+ */
+
 package by.epam.task4.model;
 
+/**
+ * Represents dosage of concrete medicine version
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0 20 Aug 2018
+ */
 public class Dosage {
 
     private String amount;

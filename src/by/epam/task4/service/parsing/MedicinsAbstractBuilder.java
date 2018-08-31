@@ -10,7 +10,8 @@ import by.epam.task4.model.Medicine;
 
 /**
  * Abstract class MedicinsAbstractBuilder serves as basis for concrete builders
- * for Medicine object sets, depending on concrete XML parsing technology
+ * for {@link Medicine} object sets, depending on concrete XML parsing 
+ * technology
  * 
  * @author Maxim Burishinets
  * @version 1.0 25 Aug 2018

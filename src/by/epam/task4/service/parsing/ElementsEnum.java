@@ -1,5 +1,15 @@
+/*
+ * class: ElementsEnum
+ */
+
 package by.epam.task4.service.parsing;
 
+/**
+ * Serves as enumeration of possible XML elements and their String values
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0 20 Aug 2018
+ */
 public enum ElementsEnum {
 
     MEDICINS("Medicins"),

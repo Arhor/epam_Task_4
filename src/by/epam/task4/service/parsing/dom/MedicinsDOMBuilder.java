@@ -31,9 +31,9 @@ import by.epam.task4.service.parsing.ElementsEnum;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 
 /**
- * Class MedicinsDOMBuilder extends abstract class MedicinsAbstractBuilder,
- * serves for building set of Medicine objects based on XML-document by parsing
- * it using DOM-parser for XML
+ * Class MedicinsDOMBuilder extends abstract class 
+ * {@link MedicinsAbstractBuilder}, serves for building set of Medicine objects
+ * based on XML-document by parsing it using DOM-parser for XML
  * 
  * @author Maxim Burishinets
  * @version 2.0 30 Aug 2018
@@ -97,7 +97,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * Medicine object depending on it
      * 
      * @param medicineElement - DOM-element that represents concrete medicine
-     * @return Medicine object
+     * @return {@link Medicine} object
      * @throws BuildMedicineException
      */
     private Medicine buildMedicine(Element medicineElement)
@@ -166,7 +166,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * Version objects
      * 
      * @param medicineElement - DOM-element that represents concrete medicine
-     * @return set of Version objects
+     * @return set of {@link Version} objects
      */
     private HashSet<Version> buildVersions(Element medicineElement) {
         HashSet<Version> versions = new HashSet<>();
@@ -185,7 +185,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * 
      * @param versionElement - DOM-element that represents version of 
      * concrete medicine
-     * @return Version object
+     * @return {@link Version} object
      */
     private Version buildVersion(Element versionElement) {
         Version currentVersion = new Version();
@@ -213,7 +213,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * 
      * @param certificateElement - DOM-element that represents certificate of 
      * concrete medicine version
-     * @return Certificate object
+     * @return {@link Certificate} object
      */
     private Certificate buildCertificate(Element certificateElement) {
         Certificate currentCertificate = new Certificate();
@@ -261,7 +261,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * 
      * @param versionElement - DOM-element that represents version of 
      * concrete medicine
-     * @return set of Pack objects
+     * @return set of {@link Pack} objects
      */
     private HashSet<Pack> buildPacks(Element versionElement) {
         HashSet<Pack> packs = new HashSet<Pack>();
@@ -280,7 +280,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * 
      * @param packElement - DOM-element that represents package form for 
      * version of concrete medicine
-     * @return Pack object
+     * @return {@link Pack} object
      */
     private Pack buildPack(Element packElement) {
         Pack currentPack = new Pack();
@@ -318,7 +318,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * 
      * @param dosageElement - DOM-element that represents dosage for version 
      * of concrete medicine
-     * @return Dosage object
+     * @return {@link Dosage} object
      */
     private Dosage buildDosage(Element dosageElement) {
         Dosage currentDosage = new Dosage();

@@ -1,3 +1,7 @@
+/*
+ * class: Runner
+ */
+
 package by.epam.task4.runner;
 
 import java.util.Set;
@@ -11,6 +15,12 @@ import by.epam.task4.service.factory.MedicinsBuilderFactory;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 import by.epam.task4.service.validation.XMLValidator;
 
+/**
+ * Application controller
+ * 
+ * @author Maxim Burishinets
+ * @version 1.1 25 Aug 2018
+ */
 public class Runner {
 
     private static final Logger LOG = LogManager.getLogger(Runner.class);

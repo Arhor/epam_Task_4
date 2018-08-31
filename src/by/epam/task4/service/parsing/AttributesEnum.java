@@ -1,5 +1,15 @@
+/*
+ * class: AttributesEnum
+ */
+
 package by.epam.task4.service.parsing;
 
+/**
+ * Serves as enumeration of possible tag-attributes for XML elements
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0 20 Aug 2018
+ */
 public enum AttributesEnum {
 
     NAME("name"),

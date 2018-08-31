@@ -1,7 +1,17 @@
+/*
+ * class: Certificate
+ */
+
 package by.epam.task4.model;
 
 import java.util.Date;
 
+/**
+ * Represents certificate which refers to concrete medicine version
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0 20 Aug 2018
+ */
 public class Certificate {
 
     private String registredBy;

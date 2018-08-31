@@ -1,3 +1,7 @@
+/*
+ * class: XMLValidator
+ */
+
 package by.epam.task4.service.validation;
 
 import java.io.IOException;
@@ -11,10 +15,24 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 
+/**
+ * Provides easy way to validate XML document by XSD schema
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0 20 Aug 2018
+ */
 public class XMLValidator {
     
     private static final Logger LOG = LogManager.getLogger(XMLValidator.class);
 
+    /**
+     * Tries to validate XML document located on the specified path using XSD
+     * schema
+     * 
+     * @param xml - path to XML document
+     * @param xsd - path to XSD schema
+     * @return true - if validation was successful, else - returns false;
+     */
     public static boolean validate(String xml, String xsd) {
         Schema schema = null;
         try {
