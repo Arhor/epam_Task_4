@@ -19,4 +19,8 @@ public class ParserNotPresentedException extends Exception {
     public ParserNotPresentedException(String message) {
         super(message);
     }
+    
+    public ParserNotPresentedException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

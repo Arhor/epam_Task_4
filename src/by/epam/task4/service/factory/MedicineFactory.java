@@ -43,7 +43,8 @@ public class MedicineFactory {
                 medicine = new Analgetic();
                 break;
             default:
-                throw new MedicineNotPresentedException();
+                throw new MedicineNotPresentedException(
+                        "There is not such medicine type: " + element);
         }
         return medicine;
     }

@@ -10,11 +10,12 @@
             <Form>pills</Form>
             <Certificate>
                 <Registration_date>2010-01-01</Registration_date>
+                <Amount>Is not supposed to be here</Amount>
                 <Registred_by>Test registration</Registred_by>
                 <Expire_date>2020-01-01</Expire_date>
             </Certificate>
             <Pack>
-                <Quantity>Ten</Quantity>
+                <Quantity>0</Quantity>
                 <Price>200.00</Price>
             </Pack>
             <Dosage>

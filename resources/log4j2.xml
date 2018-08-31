@@ -6,7 +6,7 @@
 			<LevelRangeFilter minLevel="WARN" maxLevel="DEBUG"/>
 		</Console>
 		<File name="ErrorLog" fileName="logs/error.log">
-			<PatternLayout pattern="%d{dd.MM.yyyy - HH:mm:ss} %level - [%t] %c{3}:%M:%L %msg%n %throwable"/>
+			<PatternLayout pattern="%d{dd.MM.yyyy - HH:mm:ss} %level - [%t] %c{3}:%M:%L %msg %throwable%n"/>
 			<LevelRangeFilter minLevel="FATAL" maxLevel="ERROR"/>
 		</File>
 		<File name="DebugLog" fileName="logs/error.log">

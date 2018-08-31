@@ -20,20 +20,28 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class MedicinsAbstractBuilderTest {
+	
+	private static final String VALID_XML = "validTest.xml";
+	private static final String INVALID_XML = "invalidTest.xml";
 
     private static MedicinsBuilderFactory factory;
-
-    MedicinsAbstractBuilder builder;
-
+    private static MedicinsAbstractBuilder builder;
     private static Set<Medicine> validMedicinsSet;
 
-    @Test(dataProvider = "medicinsBuilders")
-    public void BuildeSetMedicinsTest(String jaxp)
+    @Test(dataProvider = "medicinsBuilders", description = "positive test")
+    public void buildSetMedicinsPositiveTest(String jaxp)
             throws ParserNotPresentedException {
-        MedicinsAbstractBuilder builder = factory.getBuilder(jaxp);
-        builder.buildSetMedicins("validTest.xml");
+        builder = factory.getBuilder(jaxp);
+        builder.buildSetMedicins(VALID_XML);
         Set<Medicine> actualMedicinsSet = builder.getMedicins();
         Assert.assertEquals(actualMedicinsSet, validMedicinsSet);
+    }
+    
+    @Test(dataProvider = "medicinsBuilders", description = "negative test")
+    public void buildSetMedicinsNegativeTest(String jaxp)
+    		throws ParserNotPresentedException {
+    	builder = factory.getBuilder(jaxp);
+        Assert.assertFalse(builder.buildSetMedicins(INVALID_XML));
     }
 
     @DataProvider(name = "medicinsBuilders")

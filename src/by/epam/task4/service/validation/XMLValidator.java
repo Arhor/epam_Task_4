@@ -24,6 +24,8 @@ import org.xml.sax.SAXException;
 public class XMLValidator {
     
     private static final Logger LOG = LogManager.getLogger(XMLValidator.class);
+    
+    public static final String VALIDATION_XSD = "Medicins.xsd";
 
     /**
      * Tries to validate XML document located on the specified path using XSD
@@ -33,10 +35,10 @@ public class XMLValidator {
      * @param xsd - path to XSD schema
      * @return true - if validation was successful, else - returns false;
      */
-    public static boolean validate(String xml, String xsd) {
+    public static boolean validate(String xml) {
         Schema schema = null;
         try {
-            schema = SchemaReader.getSchema(xsd);            
+            schema = SchemaReader.getSchema(VALIDATION_XSD);            
             Validator validator = schema.newValidator();
             Source source = new StreamSource(xml);
             validator.validate(source);

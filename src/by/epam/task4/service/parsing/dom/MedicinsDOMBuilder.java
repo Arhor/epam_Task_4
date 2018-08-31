@@ -22,7 +22,12 @@ import org.w3c.dom.*;
 
 import org.xml.sax.SAXException;
 
+import by.epam.task4.exception.BuildCertificateException;
+import by.epam.task4.exception.BuildDosageException;
 import by.epam.task4.exception.BuildMedicineException;
+import by.epam.task4.exception.BuildPackException;
+import by.epam.task4.exception.BuildVersionException;
+import by.epam.task4.exception.MedicineAttributeException;
 import by.epam.task4.exception.MedicineNotPresentedException;
 import by.epam.task4.model.*;
 import by.epam.task4.service.factory.MedicineFactory;
@@ -85,9 +90,9 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
         } catch (IOException e) {
             LOG.error("I/O exception", e);
         } catch (SAXException e) {
-            LOG.error("SAX pasring exception: ", e);
+            LOG.error("SAX pasring exception", e);
         } catch (BuildMedicineException e) {
-            LOG.error("An error occured within building Medicine object", e);
+            LOG.error("An error occurred within building Medicine object", e);
         }
         return false;
     }
@@ -107,16 +112,19 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
             currentMedicine = mFactory.getMedicine(
                     ElementsEnum.valueOf(
                             medicineElement.getTagName().toUpperCase()));
-        } catch (MedicineNotPresentedException e) {
-            LOG.error("Medicine not presented exception", e);
-            throw new BuildMedicineException("Medicine not presented", e);
+            setMedicineAttributes(currentMedicine, medicineElement);
+            Element pharm = (Element) medicineElement.getElementsByTagName(
+                    ElementsEnum.PHARM.getValue()).item(0);
+            currentMedicine.setPharm(pharm.getTextContent());
+            currentMedicine.setVersions(buildVersions(medicineElement));
+            return currentMedicine;
+        } catch (MedicineNotPresentedException
+        		| MedicineAttributeException
+        		| BuildVersionException e) {
+        	String errorMessage = "Build medicine exception";
+        	LOG.error(errorMessage);
+            throw new BuildMedicineException(errorMessage, e);
         }
-        setMedicineAttributes(currentMedicine, medicineElement);
-        Element pharm = (Element) medicineElement.getElementsByTagName(
-                ElementsEnum.PHARM.getValue()).item(0);
-        currentMedicine.setPharm(pharm.getTextContent());
-        currentMedicine.setVersions(buildVersions(medicineElement));
-        return currentMedicine;
     }
     
     /**
@@ -125,8 +133,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * 
      * @param medicine - Medicine object with fields supposed to initialize
      * @param medElement - DOM-element which contains relevant attributes
+     * @throws MedicineAttributeException 
      */
-    private void setMedicineAttributes(Medicine medicine, Element medElement) {
+    private void setMedicineAttributes(Medicine medicine, Element medElement)
+    		throws MedicineAttributeException {
         NamedNodeMap attributes = medElement.getAttributes();
         for (int i = 0; i < attributes.getLength() ; i++) {
             Attr attribute = (Attr) attributes.item(i);
@@ -156,7 +166,11 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
                     ((Analgetic)medicine).setNarcotic(narcotic);
                     break;
                 default:
-                    break;
+                	String errorMessage = "attribute <" 
+                            + currentAttribute
+                            + "> is not valid";
+                	LOG.error(errorMessage);
+                    throw new MedicineAttributeException(errorMessage);
             }
         }
     }
@@ -167,8 +181,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * 
      * @param medicineElement - DOM-element that represents concrete medicine
      * @return set of {@link Version} objects
+     * @throws BuildVersionException 
      */
-    private HashSet<Version> buildVersions(Element medicineElement) {
+    private HashSet<Version> buildVersions(Element medicineElement)
+    		throws BuildVersionException {
         HashSet<Version> versions = new HashSet<>();
         NodeList versionElements = medicineElement.getElementsByTagName(
                 ElementsEnum.VERSION.getValue());
@@ -186,8 +202,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @param versionElement - DOM-element that represents version of 
      * concrete medicine
      * @return {@link Version} object
+     * @throws BuildVersionException 
      */
-    private Version buildVersion(Element versionElement) {
+    private Version buildVersion(Element versionElement)
+    		throws BuildVersionException {
         Version currentVersion = new Version();
         currentVersion.setTradeName(versionElement.getAttribute(
                 AttributesEnum.TRADE_NAME.getValue()));
@@ -198,12 +216,21 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
         Element certificateElement = 
                 (Element) versionElement.getElementsByTagName(
                         ElementsEnum.CERTIFICATE.getValue()).item(0);
-        currentVersion.setCertificate(buildCertificate(certificateElement));
-        currentVersion.setPacks(buildPacks(versionElement));
         Element dosageElement =    
                 (Element) versionElement.getElementsByTagName(
                         ElementsEnum.DOSAGE.getValue()).item(0);
-        currentVersion.setDosage(buildDosage(dosageElement));
+        try {
+			currentVersion.setCertificate(buildCertificate(certificateElement));
+			currentVersion.setPacks(buildPacks(versionElement));
+	        currentVersion.setDosage(buildDosage(dosageElement));
+		} catch (BuildCertificateException
+				| BuildPackException
+				| BuildDosageException e) {
+			String errorMessage = "Building version exception";
+			LOG.error(errorMessage);
+			throw new BuildVersionException(errorMessage, e);
+		}
+        
         return currentVersion;
     }
     
@@ -214,8 +241,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @param certificateElement - DOM-element that represents certificate of 
      * concrete medicine version
      * @return {@link Certificate} object
+     * @throws BuildCertificateException 
      */
-    private Certificate buildCertificate(Element certificateElement) {
+    private Certificate buildCertificate(Element certificateElement)
+    		throws BuildCertificateException {
         Certificate currentCertificate = new Certificate();
         NodeList certificateFields = certificateElement.getChildNodes();
         for (int j = 0; j < certificateFields.getLength(); j++) {
@@ -248,7 +277,11 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
                         }
                         break;
                     default:
-                        break;
+                    	String errorMessage = "element <" 
+                                + currentField
+                                + "> is not supposed to be here";
+                    	LOG.error(errorMessage);
+                        throw new BuildCertificateException(errorMessage);
                 }
             }
         }
@@ -262,8 +295,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @param versionElement - DOM-element that represents version of 
      * concrete medicine
      * @return set of {@link Pack} objects
+     * @throws BuildPackException 
      */
-    private HashSet<Pack> buildPacks(Element versionElement) {
+    private HashSet<Pack> buildPacks(Element versionElement)
+    		throws BuildPackException {
         HashSet<Pack> packs = new HashSet<Pack>();
         NodeList packElements = versionElement.getElementsByTagName(
                 ElementsEnum.PACK.getValue());
@@ -281,8 +316,9 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @param packElement - DOM-element that represents package form for 
      * version of concrete medicine
      * @return {@link Pack} object
+     * @throws BuildPackException 
      */
-    private Pack buildPack(Element packElement) {
+    private Pack buildPack(Element packElement) throws BuildPackException {
         Pack currentPack = new Pack();
         if (packElement.hasAttributes()) {
             Attr size = packElement.getAttributeNode(
@@ -305,7 +341,11 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
                                 packField.getTextContent()));
                         break;
                     default:
-                        break;
+                    	String errorMessage = "element <" 
+                                + currentField
+                                + "> is not supposed to be here";
+                    	LOG.error(errorMessage);
+                        throw new BuildPackException(errorMessage);
                 }
             }
         }
@@ -319,8 +359,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @param dosageElement - DOM-element that represents dosage for version 
      * of concrete medicine
      * @return {@link Dosage} object
+     * @throws BuildDosageException 
      */
-    private Dosage buildDosage(Element dosageElement) {
+    private Dosage buildDosage(Element dosageElement)
+    		throws BuildDosageException {
         Dosage currentDosage = new Dosage();
         NodeList dosageFields = dosageElement.getChildNodes();
         for (int k = 0; k < dosageFields.getLength(); k++) {
@@ -338,7 +380,11 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
                                 dosageField.getTextContent());
                         break;
                     default:
-                        break;
+                    	String errorMessage = "element <" 
+                                + currentField
+                                + "> is not supposed to be here";
+                    	LOG.error(errorMessage);
+                        throw new BuildDosageException(errorMessage);
                 }
             }
         }

@@ -27,9 +27,8 @@ public class Runner {
     
     public static void main(String[] args) {
         String xml = "Medicins.xml";
-        String xsd = "Medicins.xsd";
         
-        LOG.info(XMLValidator.validate(xml, xsd) + "\n");
+        LOG.info(XMLValidator.validate(xml) + "\n");
         
         MedicinsBuilderFactory factory = new MedicinsBuilderFactory();
         

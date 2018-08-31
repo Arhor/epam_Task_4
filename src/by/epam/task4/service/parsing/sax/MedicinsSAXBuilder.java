@@ -13,6 +13,7 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
+import by.epam.task4.service.validation.XMLValidator;
 
 /**
  * Class MedicinsDOMBuilder extends abstract class 
@@ -49,15 +50,17 @@ public class MedicinsSAXBuilder extends MedicinsAbstractBuilder {
      */
     @Override
     public boolean buildSetMedicins(String xml) {
-        try {
-            reader.parse(xml);
-            medicins = handler.getMedicins();
-            return true;
-        } catch (SAXException e) {
-            LOG.error("SAX parser exception: ", e);
-        } catch (IOException e) {
-            LOG.error("I/O exception: ", e);
-        }
+    	if (XMLValidator.validate(xml)) {
+    		try {
+                reader.parse(xml);
+                medicins = handler.getMedicins();
+                return true;
+            } catch (SAXException e) {
+                LOG.error("SAX parser exception: ", e);
+            } catch (IOException e) {
+                LOG.error("I/O exception: ", e);
+            }
+    	}
         return false;
     }
 }

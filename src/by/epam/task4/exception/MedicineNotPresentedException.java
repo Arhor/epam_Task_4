@@ -19,4 +19,8 @@ public class MedicineNotPresentedException extends Exception {
     public MedicineNotPresentedException(String message) {
         super(message);
     }
+    
+    public MedicineNotPresentedException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

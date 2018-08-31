@@ -20,7 +20,7 @@ public class BuildMedicineException extends Exception {
         super(message);
     }
     
-    public BuildMedicineException(String message, Exception e) {
-        super(message, e);
+    public BuildMedicineException(String message, Throwable cause) {
+        super(message, cause);
     }
 }

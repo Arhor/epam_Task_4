@@ -35,6 +35,7 @@ import by.epam.task4.service.factory.MedicineFactory;
 import by.epam.task4.service.parsing.AttributesEnum;
 import by.epam.task4.service.parsing.ElementsEnum;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
+import by.epam.task4.service.validation.XMLValidator;
 
 /**
  * Class MedicinsStAXBuilder extends abstract class 
@@ -77,43 +78,46 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
      */
     @Override
     public boolean buildSetMedicins(String xml) {
-        XMLStreamReader reader = null;
-        FileInputStream fis = null;
-        try {
-            fis = new FileInputStream(new File(xml));
-            reader = inputFactory.createXMLStreamReader(fis);
-            while (reader.hasNext()) {
-                int type = reader.next();
-                if (type == XMLStreamConstants.START_ELEMENT) {
-                    String name = reader.getLocalName();
-                    currentMedicine = ElementsEnum.valueOf(name.toUpperCase());
-                    switch (currentMedicine) {
-                        case ANTIBIOTIC:
-                        case ANALGETIC:
-                        case VITAMIN:
-                            medicins.add(buildMedicine(reader));
-                        default:
-                            break;
+    	if (XMLValidator.validate(xml)) {
+    		XMLStreamReader reader = null;
+            FileInputStream fis = null;
+            try {
+                fis = new FileInputStream(new File(xml));
+                reader = inputFactory.createXMLStreamReader(fis);
+                while (reader.hasNext()) {
+                    int type = reader.next();
+                    if (type == XMLStreamConstants.START_ELEMENT) {
+                        String name = reader.getLocalName();
+                        currentMedicine = ElementsEnum.valueOf(
+                        		name.toUpperCase());
+                        switch (currentMedicine) {
+                            case ANTIBIOTIC:
+                            case ANALGETIC:
+                            case VITAMIN:
+                                medicins.add(buildMedicine(reader));
+                            default:
+                                break;
+                        }
+                    }
+                }
+                return true;
+            } catch (FileNotFoundException e) {
+                LOG.fatal(xml + " file not found", e);
+                throw new RuntimeException();
+            } catch (XMLStreamException e) {
+                LOG.error("StAX parsing exception", e);
+            } catch (BuildMedicineException e) {
+                LOG.error("An error occured within building Medicine object", e);
+            } finally {
+                if (reader != null) {
+                    try {
+                        reader.close();
+                    } catch (XMLStreamException e) {
+                        LOG.error("XML stream exception", e);
                     }
                 }
             }
-            return true;
-        } catch (FileNotFoundException e) {
-            LOG.fatal(xml + " file not found", e);
-            throw new RuntimeException();
-        } catch (XMLStreamException e) {
-            LOG.error("StAX parsing exception", e);
-        } catch (BuildMedicineException e) {
-            LOG.error("An error occured within building Medicine object", e);
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (XMLStreamException e) {
-                    LOG.error("XML stream exception", e);
-                }
-            }
-        }
+    	}
         return false;
     }
 
