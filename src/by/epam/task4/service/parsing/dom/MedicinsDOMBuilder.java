@@ -119,10 +119,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
             currentMedicine.setVersions(buildVersions(medicineElement));
             return currentMedicine;
         } catch (MedicineNotPresentedException
-        		| MedicineAttributeException
-        		| BuildVersionException e) {
-        	String errorMessage = "Build medicine exception";
-        	LOG.error(errorMessage);
+                | MedicineAttributeException
+                | BuildVersionException e) {
+            String errorMessage = "Build medicine exception";
+            LOG.error(errorMessage);
             throw new BuildMedicineException(errorMessage, e);
         }
     }
@@ -136,7 +136,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @throws MedicineAttributeException 
      */
     private void setMedicineAttributes(Medicine medicine, Element medElement)
-    		throws MedicineAttributeException {
+            throws MedicineAttributeException {
         NamedNodeMap attributes = medElement.getAttributes();
         for (int i = 0; i < attributes.getLength() ; i++) {
             Attr attribute = (Attr) attributes.item(i);
@@ -166,10 +166,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
                     ((Analgetic)medicine).setNarcotic(narcotic);
                     break;
                 default:
-                	String errorMessage = "attribute <" 
+                    String errorMessage = "attribute <" 
                             + currentAttribute
                             + "> is not valid";
-                	LOG.error(errorMessage);
+                    LOG.error(errorMessage);
                     throw new MedicineAttributeException(errorMessage);
             }
         }
@@ -184,7 +184,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @throws BuildVersionException 
      */
     private HashSet<Version> buildVersions(Element medicineElement)
-    		throws BuildVersionException {
+            throws BuildVersionException {
         HashSet<Version> versions = new HashSet<>();
         NodeList versionElements = medicineElement.getElementsByTagName(
                 ElementsEnum.VERSION.getValue());
@@ -205,7 +205,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @throws BuildVersionException 
      */
     private Version buildVersion(Element versionElement)
-    		throws BuildVersionException {
+            throws BuildVersionException {
         Version currentVersion = new Version();
         currentVersion.setTradeName(versionElement.getAttribute(
                 AttributesEnum.TRADE_NAME.getValue()));
@@ -220,16 +220,16 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
                 (Element) versionElement.getElementsByTagName(
                         ElementsEnum.DOSAGE.getValue()).item(0);
         try {
-			currentVersion.setCertificate(buildCertificate(certificateElement));
-			currentVersion.setPacks(buildPacks(versionElement));
-	        currentVersion.setDosage(buildDosage(dosageElement));
-		} catch (BuildCertificateException
-				| BuildPackException
-				| BuildDosageException e) {
-			String errorMessage = "Building version exception";
-			LOG.error(errorMessage);
-			throw new BuildVersionException(errorMessage, e);
-		}
+            currentVersion.setCertificate(buildCertificate(certificateElement));
+            currentVersion.setPacks(buildPacks(versionElement));
+            currentVersion.setDosage(buildDosage(dosageElement));
+        } catch (BuildCertificateException
+                | BuildPackException
+                | BuildDosageException e) {
+            String errorMessage = "Building version exception";
+            LOG.error(errorMessage);
+            throw new BuildVersionException(errorMessage, e);
+        }
         
         return currentVersion;
     }
@@ -244,7 +244,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @throws BuildCertificateException 
      */
     private Certificate buildCertificate(Element certificateElement)
-    		throws BuildCertificateException {
+            throws BuildCertificateException {
         Certificate currentCertificate = new Certificate();
         NodeList certificateFields = certificateElement.getChildNodes();
         for (int j = 0; j < certificateFields.getLength(); j++) {
@@ -277,10 +277,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
                         }
                         break;
                     default:
-                    	String errorMessage = "element <" 
+                        String errorMessage = "element <" 
                                 + currentField
                                 + "> is not supposed to be here";
-                    	LOG.error(errorMessage);
+                        LOG.error(errorMessage);
                         throw new BuildCertificateException(errorMessage);
                 }
             }
@@ -298,7 +298,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @throws BuildPackException 
      */
     private HashSet<Pack> buildPacks(Element versionElement)
-    		throws BuildPackException {
+            throws BuildPackException {
         HashSet<Pack> packs = new HashSet<Pack>();
         NodeList packElements = versionElement.getElementsByTagName(
                 ElementsEnum.PACK.getValue());
@@ -341,10 +341,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
                                 packField.getTextContent()));
                         break;
                     default:
-                    	String errorMessage = "element <" 
+                        String errorMessage = "element <" 
                                 + currentField
                                 + "> is not supposed to be here";
-                    	LOG.error(errorMessage);
+                        LOG.error(errorMessage);
                         throw new BuildPackException(errorMessage);
                 }
             }
@@ -362,7 +362,7 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * @throws BuildDosageException 
      */
     private Dosage buildDosage(Element dosageElement)
-    		throws BuildDosageException {
+            throws BuildDosageException {
         Dosage currentDosage = new Dosage();
         NodeList dosageFields = dosageElement.getChildNodes();
         for (int k = 0; k < dosageFields.getLength(); k++) {
@@ -380,10 +380,10 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
                                 dosageField.getTextContent());
                         break;
                     default:
-                    	String errorMessage = "element <" 
+                        String errorMessage = "element <" 
                                 + currentField
                                 + "> is not supposed to be here";
-                    	LOG.error(errorMessage);
+                        LOG.error(errorMessage);
                         throw new BuildDosageException(errorMessage);
                 }
             }

@@ -32,5 +32,4 @@ public abstract class SchemaReader {
         schema = sf.newSchema(new File(xsd));
         return schema;
     }
-
 }

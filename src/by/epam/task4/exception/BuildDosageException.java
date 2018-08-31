@@ -10,17 +10,17 @@ package by.epam.task4.exception;
  */
 public class BuildDosageException extends Exception {
 
-	private static final long serialVersionUID = 3731630959386551415L;
+    private static final long serialVersionUID = 3731630959386551415L;
 
-	public BuildDosageException() {
-		super();
-	}
+    public BuildDosageException() {
+        super();
+    }
 
-	public BuildDosageException(String message) {
-		super(message);
-	}
+    public BuildDosageException(String message) {
+        super(message);
+    }
 
-	public BuildDosageException(String message, Throwable cause) {
-		super(message, cause);
-	}
+    public BuildDosageException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

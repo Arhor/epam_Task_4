@@ -10,17 +10,17 @@ package by.epam.task4.exception;
  */
 public class BuildPackException extends Exception {
 
-	private static final long serialVersionUID = -6596694279024538896L;
+    private static final long serialVersionUID = -6596694279024538896L;
 
-	public BuildPackException() {
-		super();
-	}
+    public BuildPackException() {
+        super();
+    }
 
-	public BuildPackException(String message) {
-		super(message);
-	}
+    public BuildPackException(String message) {
+        super(message);
+    }
 
-	public BuildPackException(String message, Throwable cause) {
-		super(message, cause);
-	}
+    public BuildPackException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

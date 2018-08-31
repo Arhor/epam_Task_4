@@ -20,9 +20,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class MedicinsAbstractBuilderTest {
-	
-	private static final String VALID_XML = "validTest.xml";
-	private static final String INVALID_XML = "invalidTest.xml";
+    
+    private static final String VALID_XML = "validTest.xml";
+    private static final String INVALID_XML = "invalidTest.xml";
 
     private static MedicinsBuilderFactory factory;
     private static MedicinsAbstractBuilder builder;
@@ -39,8 +39,8 @@ public class MedicinsAbstractBuilderTest {
     
     @Test(dataProvider = "medicinsBuilders", description = "negative test")
     public void buildSetMedicinsNegativeTest(String jaxp)
-    		throws ParserNotPresentedException {
-    	builder = factory.getBuilder(jaxp);
+            throws ParserNotPresentedException {
+        builder = factory.getBuilder(jaxp);
         Assert.assertFalse(builder.buildSetMedicins(INVALID_XML));
     }
 

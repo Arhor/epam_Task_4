@@ -25,5 +25,4 @@ public abstract class MedicinsAbstractBuilder {
     }
     
     public abstract boolean buildSetMedicins(String xml);
-
 }

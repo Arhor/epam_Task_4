@@ -50,8 +50,8 @@ public class MedicinsSAXBuilder extends MedicinsAbstractBuilder {
      */
     @Override
     public boolean buildSetMedicins(String xml) {
-    	if (XMLValidator.validate(xml)) {
-    		try {
+        if (XMLValidator.validate(xml)) {
+            try {
                 reader.parse(xml);
                 medicins = handler.getMedicins();
                 return true;
@@ -60,7 +60,7 @@ public class MedicinsSAXBuilder extends MedicinsAbstractBuilder {
             } catch (IOException e) {
                 LOG.error("I/O exception: ", e);
             }
-    	}
+        }
         return false;
     }
 }

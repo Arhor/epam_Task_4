@@ -78,8 +78,8 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
      */
     @Override
     public boolean buildSetMedicins(String xml) {
-    	if (XMLValidator.validate(xml)) {
-    		XMLStreamReader reader = null;
+        if (XMLValidator.validate(xml)) {
+            XMLStreamReader reader = null;
             FileInputStream fis = null;
             try {
                 fis = new FileInputStream(new File(xml));
@@ -89,7 +89,7 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
                     if (type == XMLStreamConstants.START_ELEMENT) {
                         String name = reader.getLocalName();
                         currentMedicine = ElementsEnum.valueOf(
-                        		name.toUpperCase());
+                                name.toUpperCase());
                         switch (currentMedicine) {
                             case ANTIBIOTIC:
                             case ANALGETIC:
@@ -117,7 +117,7 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
                     }
                 }
             }
-    	}
+        }
         return false;
     }
 
@@ -305,7 +305,7 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
      * @throws XMLStreamException
      */
     private String getTextContent(XMLStreamReader reader)
-    		throws XMLStreamException {
+            throws XMLStreamException {
         String content = null;
         if (reader.hasNext()) {
             reader.next();
@@ -313,5 +313,4 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
         }
         return content;
     }
-
 }
