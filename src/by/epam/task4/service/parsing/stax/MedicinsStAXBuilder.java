@@ -118,7 +118,7 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
     }
 
     /**
-     * 
+     * Builds medicine object by parsing XML document using XML stream reader
      * 
      * @param reader - XMLStreamReader for current XML document
      * @return {@link Medicine} object
@@ -300,7 +300,8 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
      * @return String that represents text content of current element
      * @throws XMLStreamException
      */
-    private String getTextContent(XMLStreamReader reader) throws XMLStreamException {
+    private String getTextContent(XMLStreamReader reader)
+    		throws XMLStreamException {
         String content = null;
         if (reader.hasNext()) {
             reader.next();
