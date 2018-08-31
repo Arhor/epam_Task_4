@@ -11,7 +11,7 @@ public class SchemaReaderTest {
 
     @Test(expectedExceptions = SAXException.class)
     public void getSchemaTest() throws SAXException {
-        String xsd = "FICTIVE_FILE";
+        String xsd = FICTIVE_FILE;
         SchemaReader.getSchema(xsd);
     }
 }
