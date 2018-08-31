@@ -1,3 +1,7 @@
+/*
+ * class: MedicinsSAXBuilder
+ */
+
 package by.epam.task4.service.parsing.sax;
 
 import java.io.IOException;
@@ -10,6 +14,14 @@ import org.xml.sax.helpers.XMLReaderFactory;
 
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 
+/**
+ * Class MedicinsDOMBuilder extends abstract class 
+ * {@link MedicinsAbstractBuilder}, serves for building set of Medicine objects
+ * based on XML-document by parsing it using SAX-parser for XML
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0 19 Aug 2018
+ */
 public class MedicinsSAXBuilder extends MedicinsAbstractBuilder {
     
     private static final Logger LOG = LogManager.getLogger();
@@ -27,6 +39,14 @@ public class MedicinsSAXBuilder extends MedicinsAbstractBuilder {
         }
     }
 
+    /**
+     * Parses XML-document using SAX-parser, gets set of Medicine objects built
+     * by {@link SAXParsingHandler}
+     * 
+     * @param xml - path to XML-document to parse
+     * @return true - if parsing was successful; false - if there occurred any 
+     * kind of exception during XML-document parsing
+     */
     @Override
     public boolean buildSetMedicins(String xml) {
         try {

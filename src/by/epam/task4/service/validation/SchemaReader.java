@@ -20,11 +20,11 @@ import org.xml.sax.SAXException;
  */
 public abstract class SchemaReader {
     
-	/**
-	 * @param xsd - path to XSD file
-	 * @return {@link Schema} object builded by parsing passed XSD file
-	 * @throws SAXException
-	 */
+    /**
+     * @param xsd - path to XSD file
+     * @return {@link Schema} object builded by parsing passed XSD file
+     * @throws SAXException
+     */
     public static Schema getSchema(String xsd) throws SAXException {
         Schema schema = null;
         String lang = XMLConstants.W3C_XML_SCHEMA_NS_URI;

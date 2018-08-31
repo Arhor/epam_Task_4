@@ -20,15 +20,15 @@ import by.epam.task4.service.parsing.ElementsEnum;
  */
 public class MedicineFactory {
 
-	/**
-	 * Factory method for creation concrete medicine objects
-	 * 
-	 * @param element - {@link ElementsEnum} object which represents concrete 
-	 * type of medicine to create
-	 * @return {@link Medicine} object ({@link Antibiotic} , {@link Analgetic} 
-	 * or {@link Vitamin})
-	 * @throws MedicineNotPresentedException
-	 */
+    /**
+     * Factory method for creation concrete medicine objects
+     * 
+     * @param element - {@link ElementsEnum} object which represents concrete 
+     * type of medicine to create
+     * @return {@link Medicine} object ({@link Antibiotic} , {@link Analgetic} 
+     * or {@link Vitamin})
+     * @throws MedicineNotPresentedException
+     */
     public Medicine getMedicine(ElementsEnum element)
             throws MedicineNotPresentedException {
         Medicine medicine = null;

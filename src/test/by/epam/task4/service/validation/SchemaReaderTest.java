@@ -7,9 +7,11 @@ import by.epam.task4.service.validation.SchemaReader;
 
 public class SchemaReaderTest {
 
+    private static final String FICTIVE_FILE = "fictive_file";
+
     @Test(expectedExceptions = SAXException.class)
     public void getSchemaTest() throws SAXException {
-        String xsd = "fictive_file";
+        String xsd = "FICTIVE_FILE";
         SchemaReader.getSchema(xsd);
     }
 }

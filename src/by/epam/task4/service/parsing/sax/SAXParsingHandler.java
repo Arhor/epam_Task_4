@@ -1,3 +1,7 @@
+/*
+ * class: SAXParsingHandler
+ */
+
 package by.epam.task4.service.parsing.sax;
 
 import java.text.DateFormat;
@@ -19,6 +23,12 @@ import by.epam.task4.service.factory.MedicineFactory;
 import by.epam.task4.service.parsing.AttributesEnum;
 import by.epam.task4.service.parsing.ElementsEnum;
 
+/**
+ * Handles SAX parsing of XML document
+ * 
+ * @author Maxim Burishinets
+ * @version 1.0 19 Aug 2018
+ */
 public class SAXParsingHandler extends DefaultHandler {
     
     private static final Logger LOG = LogManager.getLogger();

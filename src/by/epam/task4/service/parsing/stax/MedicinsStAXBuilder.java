@@ -1,3 +1,7 @@
+/*
+ * class: MedicinsStAXBuilder
+ */
+
 package by.epam.task4.service.parsing.stax;
 
 import java.io.File;
@@ -32,6 +36,14 @@ import by.epam.task4.service.parsing.AttributesEnum;
 import by.epam.task4.service.parsing.ElementsEnum;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 
+/**
+ * Class MedicinsStAXBuilder extends abstract class 
+ * {@link MedicinsAbstractBuilder}, serves for building set of Medicine objects
+ * based on XML-document by parsing it using StAX-parser for XML
+ * 
+ * @author Maxim Burishinets
+ * @version 2.0 25 Aug 2018
+ */
 public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
     
     private static final Logger LOG = LogManager.getLogger();
@@ -130,7 +142,7 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
                         reader.getLocalName().toUpperCase());
                 openingTag(medicine, reader);
             } else if (type == XMLStreamConstants.END_ELEMENT) {
-            	currentElement = ElementsEnum.valueOf(
+                currentElement = ElementsEnum.valueOf(
                         reader.getLocalName().toUpperCase());
                 if (currentElement == currentMedicine) {
                     break;
@@ -149,16 +161,16 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
      * @throws XMLStreamException
      */
     private void openingTag(Medicine medicine, XMLStreamReader reader)
-    		throws XMLStreamException {
-    	switch (currentElement) {
+            throws XMLStreamException {
+        switch (currentElement) {
             case PHARM:
                 medicine.setPharm(getTextContent(reader));
                 break;
             case VERSION:
                 currentVersion = new Version();
                 currentVersion.setTradeName(
-            	        reader.getAttributeValue(
-            			        null, AttributesEnum.TRADE_NAME.getValue()));
+                        reader.getAttributeValue(
+                                null, AttributesEnum.TRADE_NAME.getValue()));
                 break;
             case PRODUCER:
                 currentVersion.setProducer(getTextContent(reader));
@@ -191,15 +203,15 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
             case PACK:
                 currentPack = new Pack();
                 currentPack.setSize(reader.getAttributeValue(
-                		null, AttributesEnum.SIZE.getValue()));
+                        null, AttributesEnum.SIZE.getValue()));
                 break;
             case QUANTITY:
                 currentPack.setQuantity(Integer.parseInt(
-                		getTextContent(reader)));
+                        getTextContent(reader)));
                 break;
             case PRICE:
                 currentPack.setPrice(Double.parseDouble(
-                		getTextContent(reader)));
+                        getTextContent(reader)));
                 break;
             case DOSAGE:
                 currentDosage = new Dosage();
@@ -251,7 +263,7 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
      * @param reader - XMLStreamReader for current XML document
      */
     private void setMedAttributes(Medicine medicine, XMLStreamReader reader) {
-    	medicine.setName(
+        medicine.setName(
                 reader.getAttributeValue(null, AttributesEnum.NAME.getValue()));
         medicine.setCas(
                 reader.getAttributeValue(null, AttributesEnum.CAS.getValue()));
