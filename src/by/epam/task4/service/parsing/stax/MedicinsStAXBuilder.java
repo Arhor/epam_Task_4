@@ -40,7 +40,12 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
     private MedicineFactory mFactory;
     private DateFormat dateFormat;
     
+    private ElementsEnum currentElement;
     private ElementsEnum currentMedicine;
+    private Version currentVersion;
+    private Certificate currentCertificate;
+    private Pack currentPack;
+    private Dosage currentDosage;
     
     public MedicinsStAXBuilder() {
         super();
@@ -50,6 +55,14 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
         inputFactory = XMLInputFactory.newInstance();
     }
 
+    /**
+     * Parses XML-document using StAX-parser, gets XML stream reader of current 
+     * document runs through it and builds set of Medicine objects
+     * 
+     * @param xml - path to XML-document to parse
+     * @return true - if parsing was successful; false - if there occurred any 
+     * kind of exception during XML-document parsing
+     */
     @Override
     public boolean buildSetMedicins(String xml) {
         XMLStreamReader reader = null;
@@ -92,9 +105,16 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
         return false;
     }
 
+    /**
+     * 
+     * 
+     * @param reader - XMLStreamReader for current XML document
+     * @return {@link Medicine} object
+     * @throws XMLStreamException
+     * @throws BuildMedicineException
+     */
     private Medicine buildMedicine(XMLStreamReader reader)
             throws XMLStreamException, BuildMedicineException {
-        
         Medicine medicine;
         try {
             medicine = mFactory.getMedicine(currentMedicine);
@@ -102,15 +122,142 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
             LOG.error("Medicine not presented exception", e);
             throw new BuildMedicineException("Medicine not presented", e);
         }
-                
-        medicine.setName(
+        setMedAttributes(medicine, reader);
+        while (reader.hasNext()) {
+            int type = reader.next();
+            if (type == XMLStreamConstants.START_ELEMENT) {
+                currentElement = ElementsEnum.valueOf(
+                        reader.getLocalName().toUpperCase());
+                openingTag(medicine, reader);
+            } else if (type == XMLStreamConstants.END_ELEMENT) {
+            	currentElement = ElementsEnum.valueOf(
+                        reader.getLocalName().toUpperCase());
+                if (currentElement == currentMedicine) {
+                    break;
+                }
+                closingTag(medicine, reader);
+            }
+        }
+        return medicine;
+    }
+    
+    /**
+     * Handles XML opening tag
+     * 
+     * @param medicine - current medicine object
+     * @param reader - XMLStreamReader for current XML document
+     * @throws XMLStreamException
+     */
+    private void openingTag(Medicine medicine, XMLStreamReader reader)
+    		throws XMLStreamException {
+    	switch (currentElement) {
+            case PHARM:
+                medicine.setPharm(getTextContent(reader));
+                break;
+            case VERSION:
+                currentVersion = new Version();
+                currentVersion.setTradeName(
+            	        reader.getAttributeValue(
+            			        null, AttributesEnum.TRADE_NAME.getValue()));
+                break;
+            case PRODUCER:
+                currentVersion.setProducer(getTextContent(reader));
+                break;
+            case FORM:
+                currentVersion.setForm(getTextContent(reader));
+                break;
+            case CERTIFICATE:
+                currentCertificate = new Certificate();
+                break;
+            case REGISTRED_BY:
+                currentCertificate.setRegistredBy(getTextContent(reader));
+                break;
+            case REGISTRATION_DATE:
+                try {
+                    Date regDate = dateFormat.parse(getTextContent(reader));
+                    currentCertificate.setRegistrationDate(regDate);
+                } catch (ParseException e) {
+                    LOG.error("Date parsing exception", e);
+                }
+                break;
+            case EXPIRE_DATE:
+                try {
+                    Date expDate = dateFormat.parse(getTextContent(reader));
+                    currentCertificate.setExpireDate(expDate);
+                } catch (ParseException e) {
+                    LOG.error("Date parsing exception", e);
+                }
+                break;
+            case PACK:
+                currentPack = new Pack();
+                currentPack.setSize(reader.getAttributeValue(
+                		null, AttributesEnum.SIZE.getValue()));
+                break;
+            case QUANTITY:
+                currentPack.setQuantity(Integer.parseInt(
+                		getTextContent(reader)));
+                break;
+            case PRICE:
+                currentPack.setPrice(Double.parseDouble(
+                		getTextContent(reader)));
+                break;
+            case DOSAGE:
+                currentDosage = new Dosage();
+                break;
+            case AMOUNT:
+                currentDosage.setAmount(getTextContent(reader));
+                break;
+            case FREQUENCY:
+                currentDosage.setFrequency(getTextContent(reader));
+                break;
+            default:
+                break;
+        }
+    }
+    
+    /**
+     * Handles closing XML tag
+     * 
+     * @param medicine - current medicine object
+     * @param reader - XMLStreamReader for current XML document
+     */
+    private void closingTag(Medicine medicine, XMLStreamReader reader) {
+        switch (currentElement) {
+            case VERSION:
+                medicine.addVersion(currentVersion);
+                currentVersion = null;
+                break;
+            case CERTIFICATE:
+                currentVersion.setCertificate(currentCertificate);
+                currentCertificate = null;
+                break;
+            case PACK:
+                currentVersion.addPack(currentPack);
+                currentPack = null;
+                break;
+            case DOSAGE:
+                currentVersion.setDosage(currentDosage);
+                currentDosage = null;
+                break;
+            default:
+                break;
+        }
+    }
+    
+    /**
+     * Sets attributes for current medicine object
+     * 
+     * @param medicine - medicine which attributes have to be setted
+     * @param reader - XMLStreamReader for current XML document
+     */
+    private void setMedAttributes(Medicine medicine, XMLStreamReader reader) {
+    	medicine.setName(
                 reader.getAttributeValue(null, AttributesEnum.NAME.getValue()));
         medicine.setCas(
                 reader.getAttributeValue(null, AttributesEnum.CAS.getValue()));
         medicine.setDrugBank(
                 reader.getAttributeValue(
                         null, AttributesEnum.DRUG_BANK.getValue()));
-        
         switch (currentMedicine) {
             case ANTIBIOTIC:
                 boolean recipe = Boolean.parseBoolean(
@@ -128,119 +275,20 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
                 String solution = reader.getAttributeValue(
                         null, AttributesEnum.SOLUTION.getValue());
                 ((Vitamin) medicine).setSolution(solution);
-        default:
-            break;
+            default:
+                break;
         }
-        
-        Version currentVersion = null;
-        Certificate currentCertificate = null;
-        Pack currentPack = null;
-        Dosage currentDosage = null;
-        
-        while (reader.hasNext()) {
-            int type = reader.next();
-            ElementsEnum currentElement = null;
-            if (type == XMLStreamConstants.START_ELEMENT) {
-                currentElement = ElementsEnum.valueOf(
-                        reader.getLocalName().toUpperCase());
-                switch (currentElement) {
-                    case PHARM:
-                        medicine.setPharm(geContent(reader));
-                        break;
-                    case VERSION:
-                        currentVersion = new Version();
-                        String tradeName = reader.getAttributeValue(
-                                null, AttributesEnum.TRADE_NAME.getValue());
-                        currentVersion.setTradeName(tradeName);
-                        break;
-                    case PRODUCER:
-                        currentVersion.setProducer(geContent(reader));
-                        break;
-                    case FORM:
-                        currentVersion.setForm(geContent(reader));
-                        break;
-                    case CERTIFICATE:
-                        currentCertificate = new Certificate();
-                        break;
-                    case REGISTRED_BY:
-                        currentCertificate.setRegistredBy(geContent(reader));
-                        break;
-                    case REGISTRATION_DATE:
-                        try {
-                            Date regDate = dateFormat.parse(geContent(reader));
-                            currentCertificate.setRegistrationDate(regDate);
-                        } catch (ParseException e) {
-                            LOG.error("Date parsing exception", e);
-                        }
-                        break;
-                    case EXPIRE_DATE:
-                        try {
-                            Date expDate = dateFormat.parse(geContent(reader));
-                            currentCertificate.setExpireDate(expDate);
-                        } catch (ParseException e) {
-                            LOG.error("Date parsing exception", e);
-                        }
-                        break;
-                    case PACK:
-                        currentPack = new Pack();
-                        String size = reader.getAttributeValue(
-                                null, AttributesEnum.SIZE.getValue());
-                        currentPack.setSize(size);
-                        break;
-                    case QUANTITY:
-                        int quantity = Integer.parseInt(geContent(reader));
-                        currentPack.setQuantity(quantity);
-                        break;
-                    case PRICE:
-                        double price = Double.parseDouble(geContent(reader));
-                        currentPack.setPrice(price);
-                        break;
-                    case DOSAGE:
-                        currentDosage = new Dosage();
-                        break;
-                    case AMOUNT:
-                        currentDosage.setAmount(geContent(reader));
-                        break;
-                    case FREQUENCY:
-                        currentDosage.setFrequency(geContent(reader));
-                        break;
-                    default:
-                        break;
-                }
-            } else if (type == XMLStreamConstants.END_ELEMENT) {
-                currentElement = ElementsEnum.valueOf(
-                        reader.getLocalName().toUpperCase());
-                if (currentElement == currentMedicine) {
-                    break;
-                }
-                switch (currentElement) {
-                    case VERSION:
-                        medicine.addVersion(currentVersion);
-                        break;
-                    case CERTIFICATE:
-                        currentVersion.setCertificate(currentCertificate);
-                        break;
-                    case PACK:
-                        currentVersion.addPack(currentPack);
-                        break;
-                    case DOSAGE:
-                        currentVersion.setDosage(currentDosage);
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-        return medicine;
     }
     
     /**
+     * Gets text content of the current XML element
      * 
-     * @param reader
-     * @return
+     * @param reader - XMLStreamReader refers to XML element that contains text
+     * content
+     * @return String that represents text content of current element
      * @throws XMLStreamException
      */
-    private String geContent(XMLStreamReader reader) throws XMLStreamException {
+    private String getTextContent(XMLStreamReader reader) throws XMLStreamException {
         String content = null;
         if (reader.hasNext()) {
             reader.next();

@@ -3,12 +3,7 @@ package test.by.epam.task4.service.parsing;
 import org.testng.annotations.Test;
 
 import by.epam.task4.exception.ParserNotPresentedException;
-import by.epam.task4.model.Antibiotic;
-import by.epam.task4.model.Certificate;
-import by.epam.task4.model.Dosage;
-import by.epam.task4.model.Medicine;
-import by.epam.task4.model.Pack;
-import by.epam.task4.model.Version;
+import by.epam.task4.model.*;
 import by.epam.task4.service.factory.MedicinsBuilderFactory;
 import by.epam.task4.service.parsing.MedicinsAbstractBuilder;
 
@@ -21,33 +16,37 @@ import java.text.SimpleDateFormat;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class MedicinsAbstractBuilderTest {
     
-    private static final Logger LOG = LogManager.getLogger(
-            MedicinsAbstractBuilderTest.class);
-    
+	private static MedicinsBuilderFactory factory;
+	
+	MedicinsAbstractBuilder builder;
+	
     private static Set<Medicine> validMedicinsSet;
     
     @Test(dataProvider = "medicinsBuilders")
-    public void BuildeSetMedicinsTest(String jaxp) {
-        MedicinsBuilderFactory factory = new MedicinsBuilderFactory();
-        try {
-            MedicinsAbstractBuilder builder = factory.getBuilder(jaxp);
-            builder.buildSetMedicins("validTest.xml");
-            Set<Medicine> actualMedicinsSet = builder.getMedicins();
-            Assert.assertEquals(actualMedicinsSet, validMedicinsSet);
-        } catch (ParserNotPresentedException e) {
-            Assert.fail("Parser not presented", e);
-        }
+    public void BuildeSetMedicinsTest(String jaxp)
+    		throws ParserNotPresentedException {
+        MedicinsAbstractBuilder builder = factory.getBuilder(jaxp);
+        builder.buildSetMedicins("validTest.xml");
+        Set<Medicine> actualMedicinsSet = builder.getMedicins();
+        Assert.assertEquals(actualMedicinsSet, validMedicinsSet);
+    }
+    
+    @DataProvider(name = "medicinsBuilders")
+    public static Object[][] createData() {
+        return new Object[][] {
+            {"sax"}, {"dom"}, {"stax"}
+        };
     }
 
     @BeforeClass
-    public void beforeClass() {
+    public void beforeClass() throws ParseException {
+    	factory = new MedicinsBuilderFactory();
+    	
         validMedicinsSet = new HashSet<Medicine>();
         
         Medicine medicine = new Antibiotic();
@@ -65,12 +64,8 @@ public class MedicinsAbstractBuilderTest {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Certificate certificate = new Certificate();
         certificate.setRegistredBy("Test registration");
-        try {
-            certificate.setRegistrationDate(dateFormat.parse("2010-01-01"));
-            certificate.setExpireDate(dateFormat.parse("2020-01-01"));
-        } catch (ParseException e) {
-            LOG.error("Date parsing exception", e);
-        }
+        certificate.setRegistrationDate(dateFormat.parse("2010-01-01"));
+        certificate.setExpireDate(dateFormat.parse("2020-01-01"));
         
         Pack pack = new Pack();
         pack.setQuantity(100);
@@ -95,11 +90,4 @@ public class MedicinsAbstractBuilderTest {
         validMedicinsSet.clear();
         validMedicinsSet = null;
     }
-    
-    @DataProvider(name = "medicinsBuilders")
-    public static Object[][] createData() {
-        return new Object[][] {
-            {"sax"}, {"dom"}, {"stax"}
-        };
-    } 
 }
