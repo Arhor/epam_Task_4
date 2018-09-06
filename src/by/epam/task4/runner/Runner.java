@@ -27,27 +27,27 @@ public class Runner {
     
     public static void main(String[] args) {
         String xml = "Medicins.xml";
-        
-        LOG.info(XMLValidator.validate(xml) + "\n");
-        
-        MedicinsBuilderFactory factory = new MedicinsBuilderFactory();
-        
-        MedicinsAbstractBuilder builder;
-        try {
-            builder = factory.getBuilder("dom");
-        } catch (ParserNotPresentedException e) {
-            LOG.error("Parser not presented exception: ", e);
-            LOG.warn("Parser not presented exception,"
-                    + " application will be closed");
-            return;
-        }
-        
-        if (builder.buildSetMedicins(xml)) {
-            Set<Medicine> medicins = builder.getMedicins();
+        if (XMLValidator.validate(xml)) {
+        	MedicinsBuilderFactory factory = new MedicinsBuilderFactory();
             
-            for (Medicine medicine : medicins) {
-                LOG.info("\n" + medicine + "\n");
+            MedicinsAbstractBuilder builder;
+            try {
+                builder = factory.getBuilder("dom");
+            } catch (ParserNotPresentedException e) {
+                LOG.error("Parser not presented exception: ", e);
+                LOG.warn("Parser not presented exception,"
+                        + " application will be closed");
+                return;
             }
+            if (builder.buildSetMedicins(xml)) {
+                Set<Medicine> medicins = builder.getMedicins();
+                
+                for (Medicine medicine : medicins) {
+                    LOG.info("\n" + medicine + "\n");
+                }
+            }
+        } else {
+        	LOG.info(xml + " is invalid");
         }
     }
 }

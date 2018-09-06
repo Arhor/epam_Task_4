@@ -154,212 +154,228 @@
         </Version>
     </Vitamin>
 
-    <Vitamin name="" CAS="" drug_bank="" solution="">
-        <Pharm></Pharm>
-        <Version trade_name="">
-            <Producer></Producer>
-            <Form></Form>
+    <Vitamin name="Retinol" CAS="68-26-8" drug_bank="DB00162" solution="fat">
+        <Pharm>various scientists</Pharm>
+        <Version trade_name="Retinol Serum">
+            <Producer>Eva NAturals</Producer>
+            <Form>liquid</Form>
             <Certificate>
-                <Registred_by></Registred_by>
-                <Registration_date></Registration_date>
-                <Expire_date></Expire_date>
+                <Registred_by>Special Committee of Experts of the General Secretariat of Research and Technology</Registred_by>
+                <Registration_date>2009-07-12</Registration_date>
+                <Expire_date>2020-09-20</Expire_date>
             </Certificate>
             <Pack>
-                <Quantity></Quantity>
-                <Price></Price>
+                <Quantity>60</Quantity>
+                <Price>14.95</Price>
             </Pack>
             <Dosage>
-                <Amount></Amount>
-                <Frequency></Frequency>
+                <Amount>1 ml</Amount>
+                <Frequency>2/day</Frequency>
             </Dosage>
         </Version>
     </Vitamin>
 
-    <Vitamin name="" CAS="" drug_bank="" solution="">
-        <Pharm></Pharm>
-        <Version trade_name="">
-            <Producer></Producer>
-            <Form></Form>
+    <Vitamin name="Thiamine" CAS="70-16-6" drug_bank="DB00152" solution="water">
+        <Pharm>Takaki Kanehiro</Pharm>
+        <Version trade_name="NEUROVIT">
+            <Producer>Medimet Pharmaceuticals Ltd</Producer>
+            <Form>tablet</Form>
             <Certificate>
-                <Registred_by></Registred_by>
-                <Registration_date></Registration_date>
-                <Expire_date></Expire_date>
+                <Registred_by>GMP</Registred_by>
+                <Registration_date>2015-12-01</Registration_date>
+                <Expire_date>2025-12-02</Expire_date>
             </Certificate>
-            <Pack>
-                <Quantity></Quantity>
-                <Price></Price>
+            <Pack size="medium">
+                <Quantity>100</Quantity>
+                <Price>15.78</Price>
             </Pack>
             <Dosage>
-                <Amount></Amount>
-                <Frequency></Frequency>
+                <Amount>1 tablet</Amount>
+                <Frequency>1/day</Frequency>
             </Dosage>
         </Version>
     </Vitamin>
 
-    <Vitamin name="" CAS="" drug_bank="" solution="">
-        <Pharm></Pharm>
-        <Version trade_name="">
-            <Producer></Producer>
-            <Form></Form>
+    <Vitamin name="Choline" CAS="62-49-7" drug_bank="DB00122" solution="water">
+        <Pharm>Adolph Strecker</Pharm>
+        <Version trade_name="B-Colen DPS">
+            <Producer>Galpha Laboratories Ltd</Producer>
+            <Form>liquid</Form>
             <Certificate>
-                <Registred_by></Registred_by>
-                <Registration_date></Registration_date>
-                <Expire_date></Expire_date>
+                <Registred_by>FDA</Registred_by>
+                <Registration_date>2014-04-12</Registration_date>
+                <Expire_date>2029-05-12</Expire_date>
             </Certificate>
-            <Pack>
-                <Quantity></Quantity>
-                <Price></Price>
+            <Pack size="small">
+                <Quantity>60</Quantity>
+                <Price>24.11</Price>
             </Pack>
             <Dosage>
-                <Amount></Amount>
-                <Frequency></Frequency>
+                <Amount>5 ml</Amount>
+                <Frequency>2-3/day</Frequency>
             </Dosage>
         </Version>
     </Vitamin>
 
-    <Vitamin name="" CAS="" drug_bank="" solution="">
-        <Pharm></Pharm>
-        <Version trade_name="">
-            <Producer></Producer>
-            <Form></Form>
+    <Vitamin name="Pantothenic acid" CAS="599-54-2" drug_bank="DB01783" solution="water">
+        <Pharm>Rojer J. Williams</Pharm>
+        <Version trade_name="Theragran Stress">
+            <Producer>GlaxoSmithKline</Producer>
+            <Form>tablet</Form>
             <Certificate>
-                <Registred_by></Registred_by>
-                <Registration_date></Registration_date>
-                <Expire_date></Expire_date>
+                <Registred_by>DIS</Registred_by>
+                <Registration_date>2010-01-01</Registration_date>
+                <Expire_date>2020-01-01</Expire_date>
             </Certificate>
-            <Pack>
-                <Quantity></Quantity>
-                <Price></Price>
+            <Pack size="small">
+                <Quantity>20</Quantity>
+                <Price>72.93</Price>
+            </Pack>
+            <Pack size="medium">
+                <Quantity>30</Quantity>
+                <Price>129.20</Price>
             </Pack>
             <Dosage>
-                <Amount></Amount>
-                <Frequency></Frequency>
+                <Amount>1 tablet</Amount>
+                <Frequency>3-4/day</Frequency>
             </Dosage>
         </Version>
     </Vitamin>
 
-    <Analgetic name="" CAS="" drug_bank="" narcotic="">
-        <Pharm></Pharm>
-        <Version trade_name="">
-            <Producer></Producer>
-            <Form></Form>
+    <Analgetic name="Paracetamol" CAS="103-90-2" drug_bank="DB00316" narcotic="false">
+        <Pharm>Johns Hopkins University</Pharm>
+        <Version trade_name="Panadol">
+            <Producer>GlaxoSmithKline</Producer>
+            <Form>tablet</Form>
             <Certificate>
-                <Registred_by></Registred_by>
-                <Registration_date></Registration_date>
-                <Expire_date></Expire_date>
+                <Registred_by>EDQM</Registred_by>
+                <Registration_date>2005-05-05</Registration_date>
+                <Expire_date>2030-01-15</Expire_date>
             </Certificate>
-            <Pack>
-                <Quantity></Quantity>
-                <Price></Price>
+            <Pack size="small">
+                <Quantity>6</Quantity>
+                <Price>17.35</Price>
+            </Pack>
+            <Pack size="medium">
+                <Quantity>12</Quantity>
+                <Price>21.12</Price>
             </Pack>
             <Dosage>
-                <Amount></Amount>
-                <Frequency></Frequency>
+                <Amount>1-2 tablet</Amount>
+                <Frequency>4/day</Frequency>
             </Dosage>
         </Version>
     </Analgetic>
 
-    <Analgetic name="" CAS="" drug_bank="" narcotic="">
-        <Pharm></Pharm>
-        <Version trade_name="">
-            <Producer></Producer>
-            <Form></Form>
+    <Analgetic name="Aspirin" CAS="50-78-2" drug_bank="DB00945" narcotic="false">
+        <Pharm>Charles Frederic Gerhardt</Pharm>
+        <Version trade_name="Bayer ASpirin">
+            <Producer>Bayer</Producer>
+            <Form>tablet</Form>
             <Certificate>
-                <Registred_by></Registred_by>
-                <Registration_date></Registration_date>
-                <Expire_date></Expire_date>
+                <Registred_by>EDQM</Registred_by>
+                <Registration_date>2001-11-11</Registration_date>
+                <Expire_date>2024-03-04</Expire_date>
             </Certificate>
             <Pack>
-                <Quantity></Quantity>
-                <Price></Price>
+                <Quantity>15</Quantity>
+                <Price>9.99</Price>
             </Pack>
             <Dosage>
-                <Amount></Amount>
-                <Frequency></Frequency>
+                <Amount>1 tablet</Amount>
+                <Frequency>2-3/day</Frequency>
             </Dosage>
         </Version>
     </Analgetic>
 
-    <Analgetic name="" CAS="" drug_bank="" narcotic="">
-        <Pharm></Pharm>
-        <Version trade_name="">
-            <Producer></Producer>
-            <Form></Form>
+    <Analgetic name="Tramadol" CAS="27203-92-5" drug_bank="DB00193" narcotic="true">
+        <Pharm>GRUNENTHAL Gmbh</Pharm>
+        <Version trade_name="Ultram">
+            <Producer>Janssen Pharmaceuticals Inc</Producer>
+            <Form>powder</Form>
             <Certificate>
-                <Registred_by></Registred_by>
-                <Registration_date></Registration_date>
-                <Expire_date></Expire_date>
+                <Registred_by>FDA</Registred_by>
+                <Registration_date>2013-05-08</Registration_date>
+                <Expire_date>2023-06-11</Expire_date>
             </Certificate>
             <Pack>
-                <Quantity></Quantity>
-                <Price></Price>
+                <Quantity>60</Quantity>
+                <Price>1899.99</Price>
             </Pack>
             <Dosage>
-                <Amount></Amount>
-                <Frequency></Frequency>
+                <Amount>5 mg</Amount>
+                <Frequency>2-3/day</Frequency>
             </Dosage>
         </Version>
     </Analgetic>
 
-    <Analgetic name="" CAS="" drug_bank="" narcotic="">
-        <Pharm></Pharm>
-        <Version trade_name="">
-            <Producer></Producer>
-            <Form></Form>
+    <Analgetic name="Ibuprofen" CAS="15687-27-1" drug_bank="DB01050" narcotic="false">
+        <Pharm>Stewart Adams</Pharm>
+        <Version trade_name="Neurofen">
+            <Producer>Reckitt Benckiser</Producer>
+            <Form>tablet</Form>
             <Certificate>
-                <Registred_by></Registred_by>
-                <Registration_date></Registration_date>
-                <Expire_date></Expire_date>
+                <Registred_by>FDA</Registred_by>
+                <Registration_date>2015-09-10</Registration_date>
+                <Expire_date>2030-10-10</Expire_date>
             </Certificate>
-            <Pack>
-                <Quantity></Quantity>
-                <Price></Price>
+            <Pack size="small">
+                <Quantity>6</Quantity>
+                <Price>7.99</Price>
+            </Pack>
+            <Pack size="medium">
+                <Quantity>8</Quantity>
+                <Price>9.11</Price>
+            </Pack>
+            <Pack size="large">
+                <Quantity>12</Quantity>
+                <Price>11.12</Price>
             </Pack>
             <Dosage>
-                <Amount></Amount>
-                <Frequency></Frequency>
+                <Amount>1 tablet</Amount>
+                <Frequency>3-4/day</Frequency>
             </Dosage>
         </Version>
     </Analgetic>
 
-    <Analgetic name="" CAS="" drug_bank="" narcotic="">
-        <Pharm></Pharm>
-        <Version trade_name="">
-            <Producer></Producer>
-            <Form></Form>
+    <Analgetic name="Dihydrocodeine" CAS="125-28-0" drug_bank="DB01551" narcotic="true">
+        <Pharm>William S. Burroughs</Pharm>
+        <Version trade_name="Aspalgin">
+            <Producer>NPS Medicinewise</Producer>
+            <Form>tablet</Form>
             <Certificate>
-                <Registred_by></Registred_by>
-                <Registration_date></Registration_date>
-                <Expire_date></Expire_date>
+                <Registred_by>AGDH</Registred_by>
+                <Registration_date>2011-11-04</Registration_date>
+                <Expire_date>2021-12-05</Expire_date>
             </Certificate>
             <Pack>
-                <Quantity></Quantity>
-                <Price></Price>
+                <Quantity>20</Quantity>
+                <Price>117.99</Price>
             </Pack>
             <Dosage>
-                <Amount></Amount>
-                <Frequency></Frequency>
+                <Amount>1-2 tablet</Amount>
+                <Frequency>3/day</Frequency>
             </Dosage>
         </Version>
     </Analgetic>
 
-    <Analgetic name="" CAS="" drug_bank="" narcotic="">
-        <Pharm></Pharm>
-        <Version trade_name="">
-            <Producer></Producer>
-            <Form></Form>
+    <Analgetic name="Fentanyl" CAS="437-38-7" drug_bank="DB00813" narcotic="true">
+        <Pharm>Paul Janssen</Pharm>
+        <Version trade_name="DURAGESIC">
+            <Producer>Janssen Pharmaceuticals Inc</Producer>
+            <Form>pills</Form>
             <Certificate>
-                <Registred_by></Registred_by>
-                <Registration_date></Registration_date>
-                <Expire_date></Expire_date>
+                <Registred_by>FDA</Registred_by>
+                <Registration_date>2010-07-27</Registration_date>
+                <Expire_date>2022-11-22</Expire_date>
             </Certificate>
             <Pack>
-                <Quantity></Quantity>
-                <Price></Price>
+                <Quantity>6</Quantity>
+                <Price>150.13</Price>
             </Pack>
             <Dosage>
-                <Amount></Amount>
-                <Frequency></Frequency>
+                <Amount>1 pill</Amount>
+                <Frequency>1/1-2 day</Frequency>
             </Dosage>
         </Version>
     </Analgetic>
