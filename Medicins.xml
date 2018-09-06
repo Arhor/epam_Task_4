@@ -154,4 +154,214 @@
         </Version>
     </Vitamin>
 
+    <Vitamin name="" CAS="" drug_bank="" solution="">
+        <Pharm></Pharm>
+        <Version trade_name="">
+            <Producer></Producer>
+            <Form></Form>
+            <Certificate>
+                <Registred_by></Registred_by>
+                <Registration_date></Registration_date>
+                <Expire_date></Expire_date>
+            </Certificate>
+            <Pack>
+                <Quantity></Quantity>
+                <Price></Price>
+            </Pack>
+            <Dosage>
+                <Amount></Amount>
+                <Frequency></Frequency>
+            </Dosage>
+        </Version>
+    </Vitamin>
+
+    <Vitamin name="" CAS="" drug_bank="" solution="">
+        <Pharm></Pharm>
+        <Version trade_name="">
+            <Producer></Producer>
+            <Form></Form>
+            <Certificate>
+                <Registred_by></Registred_by>
+                <Registration_date></Registration_date>
+                <Expire_date></Expire_date>
+            </Certificate>
+            <Pack>
+                <Quantity></Quantity>
+                <Price></Price>
+            </Pack>
+            <Dosage>
+                <Amount></Amount>
+                <Frequency></Frequency>
+            </Dosage>
+        </Version>
+    </Vitamin>
+
+    <Vitamin name="" CAS="" drug_bank="" solution="">
+        <Pharm></Pharm>
+        <Version trade_name="">
+            <Producer></Producer>
+            <Form></Form>
+            <Certificate>
+                <Registred_by></Registred_by>
+                <Registration_date></Registration_date>
+                <Expire_date></Expire_date>
+            </Certificate>
+            <Pack>
+                <Quantity></Quantity>
+                <Price></Price>
+            </Pack>
+            <Dosage>
+                <Amount></Amount>
+                <Frequency></Frequency>
+            </Dosage>
+        </Version>
+    </Vitamin>
+
+    <Vitamin name="" CAS="" drug_bank="" solution="">
+        <Pharm></Pharm>
+        <Version trade_name="">
+            <Producer></Producer>
+            <Form></Form>
+            <Certificate>
+                <Registred_by></Registred_by>
+                <Registration_date></Registration_date>
+                <Expire_date></Expire_date>
+            </Certificate>
+            <Pack>
+                <Quantity></Quantity>
+                <Price></Price>
+            </Pack>
+            <Dosage>
+                <Amount></Amount>
+                <Frequency></Frequency>
+            </Dosage>
+        </Version>
+    </Vitamin>
+
+    <Analgetic name="" CAS="" drug_bank="" narcotic="">
+        <Pharm></Pharm>
+        <Version trade_name="">
+            <Producer></Producer>
+            <Form></Form>
+            <Certificate>
+                <Registred_by></Registred_by>
+                <Registration_date></Registration_date>
+                <Expire_date></Expire_date>
+            </Certificate>
+            <Pack>
+                <Quantity></Quantity>
+                <Price></Price>
+            </Pack>
+            <Dosage>
+                <Amount></Amount>
+                <Frequency></Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+    <Analgetic name="" CAS="" drug_bank="" narcotic="">
+        <Pharm></Pharm>
+        <Version trade_name="">
+            <Producer></Producer>
+            <Form></Form>
+            <Certificate>
+                <Registred_by></Registred_by>
+                <Registration_date></Registration_date>
+                <Expire_date></Expire_date>
+            </Certificate>
+            <Pack>
+                <Quantity></Quantity>
+                <Price></Price>
+            </Pack>
+            <Dosage>
+                <Amount></Amount>
+                <Frequency></Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+    <Analgetic name="" CAS="" drug_bank="" narcotic="">
+        <Pharm></Pharm>
+        <Version trade_name="">
+            <Producer></Producer>
+            <Form></Form>
+            <Certificate>
+                <Registred_by></Registred_by>
+                <Registration_date></Registration_date>
+                <Expire_date></Expire_date>
+            </Certificate>
+            <Pack>
+                <Quantity></Quantity>
+                <Price></Price>
+            </Pack>
+            <Dosage>
+                <Amount></Amount>
+                <Frequency></Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+    <Analgetic name="" CAS="" drug_bank="" narcotic="">
+        <Pharm></Pharm>
+        <Version trade_name="">
+            <Producer></Producer>
+            <Form></Form>
+            <Certificate>
+                <Registred_by></Registred_by>
+                <Registration_date></Registration_date>
+                <Expire_date></Expire_date>
+            </Certificate>
+            <Pack>
+                <Quantity></Quantity>
+                <Price></Price>
+            </Pack>
+            <Dosage>
+                <Amount></Amount>
+                <Frequency></Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+    <Analgetic name="" CAS="" drug_bank="" narcotic="">
+        <Pharm></Pharm>
+        <Version trade_name="">
+            <Producer></Producer>
+            <Form></Form>
+            <Certificate>
+                <Registred_by></Registred_by>
+                <Registration_date></Registration_date>
+                <Expire_date></Expire_date>
+            </Certificate>
+            <Pack>
+                <Quantity></Quantity>
+                <Price></Price>
+            </Pack>
+            <Dosage>
+                <Amount></Amount>
+                <Frequency></Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
+    <Analgetic name="" CAS="" drug_bank="" narcotic="">
+        <Pharm></Pharm>
+        <Version trade_name="">
+            <Producer></Producer>
+            <Form></Form>
+            <Certificate>
+                <Registred_by></Registred_by>
+                <Registration_date></Registration_date>
+                <Expire_date></Expire_date>
+            </Certificate>
+            <Pack>
+                <Quantity></Quantity>
+                <Price></Price>
+            </Pack>
+            <Dosage>
+                <Amount></Amount>
+                <Frequency></Frequency>
+            </Dosage>
+        </Version>
+    </Analgetic>
+
 </Medicins>
