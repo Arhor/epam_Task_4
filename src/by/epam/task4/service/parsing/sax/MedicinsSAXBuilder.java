@@ -50,10 +50,14 @@ public class MedicinsSAXBuilder extends MedicinsAbstractBuilder {
      * kind of exception during XML-document parsing
      */
     @Override
-    public boolean buildSetMedicins(String xml) throws IOException, SAXException {
-                InputSource source = new InputSource(new InputStreamReader(new FileInputStream(xml), "UTF-8"));
-                reader.parse(source);
-                medicins = handler.getMedicins();
-                return true;
+    public boolean buildSetMedicins(String xml, String xsd)
+            throws IOException, SAXException {
+        if (XMLValidator.validate(xml, xsd)) {
+            InputSource source = new InputSource(new InputStreamReader(new FileInputStream(xml), "UTF-8"));
+            reader.parse(source);
+            medicins = handler.getMedicins();
+            return true;
+        }
+        return false;
     }
 }

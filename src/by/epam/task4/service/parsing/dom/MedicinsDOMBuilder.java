@@ -17,6 +17,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import by.epam.task4.service.validation.XMLValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -74,27 +75,29 @@ public class MedicinsDOMBuilder extends MedicinsAbstractBuilder {
      * kind of exception during XML-document parsing
      */
     @Override
-    public boolean buildSetMedicins(String xml) {
-        Document document = null;
-        try {
-            document = docBuilder.parse(new File(xml));
-            Element root = document.getDocumentElement();
-            NodeList medicinsList = root.getChildNodes();
-            for (int i = 0; i < medicinsList.getLength(); i++) {
-                Node node = medicinsList.item(i);
-                if (node.getNodeType() == Node.ELEMENT_NODE) {
-                    Element medicineElement = (Element) node;
-                    Medicine medicine = buildMedicine(medicineElement);
-                    medicins.add(medicine);
+    public boolean buildSetMedicins(String xml, String xsd) {
+        if (XMLValidator.validate(xml, xsd)) {
+            Document document = null;
+            try {
+                document = docBuilder.parse(new File(xml));
+                Element root = document.getDocumentElement();
+                NodeList medicinsList = root.getChildNodes();
+                for (int i = 0; i < medicinsList.getLength(); i++) {
+                    Node node = medicinsList.item(i);
+                    if (node.getNodeType() == Node.ELEMENT_NODE) {
+                        Element medicineElement = (Element) node;
+                        Medicine medicine = buildMedicine(medicineElement);
+                        medicins.add(medicine);
+                    }
                 }
+                return true;
+            } catch (IOException e) {
+                LOG.error("I/O exception", e);
+            } catch (SAXException e) {
+                LOG.error("SAX pasring exception", e);
+            } catch (BuildMedicineException e) {
+                LOG.error("An error occurred within building Medicine object", e);
             }
-            return true;
-        } catch (IOException e) {
-            LOG.error("I/O exception", e);
-        } catch (SAXException e) {
-            LOG.error("SAX pasring exception", e);
-        } catch (BuildMedicineException e) {
-            LOG.error("An error occurred within building Medicine object", e);
         }
         return false;
     }

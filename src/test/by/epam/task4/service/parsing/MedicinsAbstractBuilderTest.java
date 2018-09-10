@@ -26,6 +26,7 @@ public class MedicinsAbstractBuilderTest {
     
     private static final String VALID_XML = "validTest.xml";
     private static final String INVALID_XML = "invalidTest.xml";
+    private static final String VALIDTION_XML = "Medicins.xsd";
 
     private static MedicinsBuilderFactory factory;
     private static MedicinsAbstractBuilder builder;
@@ -35,7 +36,7 @@ public class MedicinsAbstractBuilderTest {
     public void buildSetMedicinsPositiveTest(String jaxp)
             throws ParserNotPresentedException, IOException, SAXException, BuildMedicineException {
         builder = factory.getBuilder(jaxp);
-        builder.buildSetMedicins(VALID_XML);
+        builder.buildSetMedicins(VALID_XML, VALIDTION_XML);
         Set<Medicine> actualMedicinsSet = builder.getMedicins();
         Assert.assertEquals(actualMedicinsSet, validMedicinsSet);
     }
@@ -44,7 +45,7 @@ public class MedicinsAbstractBuilderTest {
     public void buildSetMedicinsNegativeTest(String jaxp)
             throws ParserNotPresentedException, IOException, SAXException, BuildMedicineException {
         builder = factory.getBuilder(jaxp);
-        Assert.assertFalse(builder.buildSetMedicins(INVALID_XML));
+        Assert.assertFalse(builder.buildSetMedicins(INVALID_XML, VALIDTION_XML));
     }
 
     @DataProvider(name = "medicinsBuilders")

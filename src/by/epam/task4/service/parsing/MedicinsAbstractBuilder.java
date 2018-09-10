@@ -27,5 +27,6 @@ public abstract class MedicinsAbstractBuilder {
         return medicins;
     }
     
-    public abstract boolean buildSetMedicins(String xml) throws BuildMedicineException, IOException, SAXException;
+    public abstract boolean buildSetMedicins(String xml, String xsd)
+            throws BuildMedicineException, IOException, SAXException;
 }

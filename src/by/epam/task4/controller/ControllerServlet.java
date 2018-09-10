@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -41,7 +42,9 @@ public class ControllerServlet extends HttpServlet {
         Set<Medicine> validMedicinsSet;
 
         String path = this.getServletContext().getRealPath("/");
-        String concretePath = path + "xml" + "/" + "Medicins.xml";
+
+        String xmlPath = path + "xml" + File.separator + "Medicins.xml";
+        String xsdPath = path + "xml" + File.separator + "Medicins.xsd";
 
         factory = new MedicinsBuilderFactory();
 
@@ -49,7 +52,7 @@ public class ControllerServlet extends HttpServlet {
 
         try {
             builder = factory.getBuilder(parser);
-            if(builder.buildSetMedicins(concretePath)) {
+            if(builder.buildSetMedicins(xmlPath, xsdPath)) {
                 validMedicinsSet = builder.getMedicins();
                 for (Medicine medicine : validMedicinsSet) {
                     int primaRSpan = 0;

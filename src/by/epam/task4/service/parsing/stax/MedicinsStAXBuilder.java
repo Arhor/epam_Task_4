@@ -77,7 +77,8 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
      * kind of exception during XML-document parsing
      */
     @Override
-    public boolean buildSetMedicins(String xml) {
+    public boolean buildSetMedicins(String xml, String xsd) {
+        if (XMLValidator.validate(xml, xsd)) {
             XMLStreamReader reader = null;
             FileInputStream fis = null;
             try {
@@ -116,7 +117,7 @@ public class MedicinsStAXBuilder extends MedicinsAbstractBuilder{
                     }
                 }
             }
-
+        }
         return false;
     }
 
